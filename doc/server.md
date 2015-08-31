@@ -10,7 +10,8 @@
     分两组服务：一组用于业务处理（8080）、一组用于静态文件服务器（8081）
     服务通过PM2开启集群模式，集群内进程实例数由CPU数决定，开发模式下不开启集群
 ### 工作流程图 ###
-	![工作流程图](https://raw.githubusercontent.com/tftc/zeus/master/doc/flow.png?token=AM-npnRbmop_akD9Oiz5o9AqCfR41Js_ks5V7W72wA%3D%3D)
+
+![工作流程图](https://raw.githubusercontent.com/tftc/zeus/master/doc/flow.png?token=AM-npnRbmop_akD9Oiz5o9AqCfR41Js_ks5V7W72wA%3D%3D)
 
 ### bootstrap ###
     启动程序，程序的总入口，负责加载配置文件，公共模块，初始化日志组件、初始化模板引擎、初始化koajs、注册中间件等
