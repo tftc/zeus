@@ -19,4 +19,4 @@
 
 ### 线下、线上部署示意 ###
 
-	![线下、线上部署示意](https://raw.githubusercontent.com/tftc/zeus/master/doc/flow.png?token=AM-npnRbmop_akD9Oiz5o9AqCfR41Js_ks5V7W72wA%3D%3D)
+	![线下、线上部署示意](https://raw.githubusercontent.com/tftc/zeus/master/doc/online.png?token=AM-npqoXYjMmu1SfpBpjRJSdOGhfLds1ks5V8jb4wA%3D%3D)
