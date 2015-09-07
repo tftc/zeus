@@ -1,0 +1,424 @@
+/*normal*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font: 400 normal 14px Arial, SimSun, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    cursor: pointer;
+}
+
+html,
+body {
+    width: 100%;
+    min-width: 1280px;
+    height: 100%;
+}
+/*header*/
+header {
+    position: absolute;
+    z-index: 99;
+
+    width: 100%;
+    min-width: 1280px;
+    height: 60px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    background-color: #ddd;
+}
+/*ie8的min-width不包括padding border*/
+header h1 {
+    padding-left: 12px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+
+    font-size: 20px;
+    line-height: 60px;
+
+    color: #969696;
+}
+
+main {
+    min-width: 1280px;
+    height: 100%;
+}
+
+.list,
+.task-container,
+.task {
+    position: relative;
+
+    height: 100%;
+    min-height: 720px;
+    padding-top: 60px;
+    border-bottom: 1px solid #ccc;
+}
+
+.list {
+    float: left;
+
+    width: 230px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+
+    background-color: #ededed;
+}
+
+.task-container {
+    float: left;
+
+    width: 230px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+}
+
+.task {
+    overflow: hidden;
+
+    height: 100%;
+    border-right: 1px solid #ccc;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+
+    width: 230px;
+    height: 40px;
+    padding-left: 44px;
+    border-top: 1px solid #cbcbcb;
+
+    line-height: 40px;
+}
+/*icon-font*/
+@font-face {
+    font-family: "icomoon";
+    font-weight: normal;
+    font-style: normal;
+
+    src: url("../fonts/icomoon.eot?#iefix-i1e5dg") format("embedded-opentype"),
+    url("../fonts/icomoon.woff?-i1e5dg") format("woff"),
+    url("../fonts/icomoon.ttf?-i1e5dg") format("truetype"),
+    url("../fonts/icomoon.svg?-i1e5dg#icomoon") format("svg");
+    src: url("../fonts/icomoon.eot?-i1e5dg");
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: "icomoon";
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    /* Better Font Rendering =========== */
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    speak: none;
+}
+
+
+/*.list*/
+.all-tasks {
+    padding-top: 24px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.classify-list {
+    overflow: auto;
+
+    height: 80%;
+}
+
+.all-list-title {
+    padding-left: 10px;
+
+    line-height: 2;
+}
+
+.classify-list h1 {
+    cursor: pointer;
+}
+
+.classify-list h2 {
+    position: relative;
+
+    padding-left: 48px;
+
+    line-height: 2;
+    vertical-align: text-bottom;
+}
+/*.classify-list ul {*/
+/*display: none;*/
+/*}*/
+.classify-list ul li {
+    position: relative;
+
+    padding-left: 55px;
+
+    line-height: 2;
+    vertical-align: text-bottom;
+}
+
+.active-classify {
+    background-color: #fff;
+}
+/*.classify-list .active-classify + ul {*/
+/*display: block;*/
+/*}*/
+.icon-folder-open,
+.icon-file-empty,
+.icon-cross {
+    line-height: 2;
+}
+
+.icon-folder-open:before {
+    content: "\e930";
+
+    position: absolute;
+    left: 20px;
+
+    font-size: 14px;
+}
+
+.icon-cross:before {
+    content: "\ea0f";
+
+    position: absolute;
+    left: 200px;
+
+    font-size: 14px;
+}
+
+.icon-cross {
+    display: none;
+}
+
+.classify-list h2:hover {
+    cursor: pointer;
+}
+
+.classify-list ul {
+    display: none;
+}
+
+.classify-list li:hover .icon-cross,
+.classify-list h2:hover .icon-cross {
+    display: inline;
+
+    cursor: pointer;
+}
+
+.icon-file-empty:before {
+    content: "\e924";
+
+    position: absolute;
+    left: 40px;
+
+    font-size: 14px;
+}
+
+.add:hover {
+    cursor: pointer;
+}
+
+.icon-plus:before {
+    content: "\ea0a";
+
+    position: absolute;
+    left: 17px;
+
+    font-size: 14px;
+    line-height: 40px;
+}
+
+/*.task-container*/
+.task-classify {
+    height: 40px;
+    padding-left: 10px;
+    border-bottom: 1px solid #ccc;
+
+    line-height: 40px;
+
+    background-color: #eee;
+}
+
+.task-classify li {
+    display: inline-block;
+
+    padding: 2px 8px;
+    border: 1px solid transparent;
+}
+
+.task-classify li.active-state {
+    border: 1px solid #ccc;
+
+    background-color: #fff;
+}
+
+.task-panel {
+    overflow: auto;
+}
+
+.task-panel li {
+    position: relative;
+}
+
+.task-panel li:hover .icon-cross {
+    display: inline;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.task-date {
+    height: 27px;
+    padding-left: 17px;
+
+    font-size: 12px;
+    line-height: 27px;
+
+    background-color: #fafaee;
+}
+
+.task-title {
+    height: 27px;
+    padding-left: 32px;
+
+    line-height: 27px;
+}
+
+.task-title.visit {
+    background-color: #f0f0f0;
+}
+
+.had-done {
+    color: #008d00;
+}
+
+/*.task*/
+.show-task {
+    display: none;
+}
+
+.show-task.active {
+    display: block;
+}
+
+.task .title {
+    position: relative;
+
+    height: 60px;
+    padding-left: 15px;
+    border-bottom: 1px solid #ccc;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+
+    background-color: #eee;
+}
+
+.icon-pencil2:before {
+    content: "\e906";
+
+    position: absolute;
+    right: 20px;
+
+    font-size: 25px;
+    line-height: 60px;
+
+    cursor: pointer;
+}
+
+.icon-checkmark:before {
+    content: "\ea10";
+
+    position: absolute;
+    right: 70px;
+
+    font-size: 25px;
+    line-height: 60px;
+
+    cursor: pointer;
+}
+
+.task .date {
+    height: 52px;
+    padding-left: 15px;
+    border-bottom: 1px solid #ccc;
+
+    line-height: 52px;
+
+    background-color: #fafaee;
+}
+
+.task .content {
+    padding: 15px;
+
+    word-wrap: break-word;
+}
+
+.edit-task {
+    display: none;
+}
+
+.edit-task.active {
+    display: block;
+}
+
+.edit-container {
+    /*text-align: center;*/
+}
+
+.edit-title,
+.edit-date {
+    width: 200px;
+    height: 24px;
+    padding-left: 20px;
+
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.edit-content {
+    width: 700px;
+    height: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+
+    font-size: 12px;
+    line-height: 1.5;
+    vertical-align: top;
+}
+
+.button-set {
+    width: 820px;
+    padding-top: 20px;
+    padding-left: 15px;
+
+    text-align: center;
+}
+
+.button-set button {
+    margin-right: 20px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+
+    background-color: #fff;
+}
+
+.button-set button:hover {
+    background-color: #eee;
+}
