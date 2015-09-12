@@ -152,15 +152,15 @@
 	NOTICE: 2015-09-02 13:45:08 at recordLog (fileXXX:110:11) logid logmsgXXX
 
 ###4.6.2 日志文件###
->日志文件统一打到log目录下
+- 日志文件统一打到log目录下
 
->node.log 服务级别日志，记录服务的启停，相关错误等
+- node.log 服务级别日志，记录服务的启停，相关错误等
 
->tiancai.log 一般请求的日志(notice)
+- tiancai.log 一般请求的日志(notice)
 
->tiancai.log.wf 错误类日志(warn、fatal)
+- tiancai.log.wf 错误类日志(warn、fatal)
 
->tiancai.log.dev 调试类日志(debug、trace)
+- tiancai.log.dev 调试类日志(debug、trace)
 
 ###4.6.3 日志分级###
 	'debug' : 1,
@@ -189,9 +189,77 @@
 >为了便于调试和定位，系统的console.log 被重写debug日志方法，写入到tiancai.log.dev
 
 ##4.7 browser端##
+###架构描述###
+- 配合浏览器端ejs的同步输出，以多页面形态呈现，同步为主、异步为辅样的思想
+- 交互开发上主要以jq为core面向dom编程，以事件绑定为驱动，不用做到组件化编程
+- 样式和js采用层次层叠的方式，即由site->page这样的层次，其中抽象的UI部分也在site的范畴，在页面中只是实例化为page内的具体业务功能。
 
-##4.8 注意事项##
+###Site Level JS###
+- 包含内容：jq、jqui、zeus(page、utils)
+- page部分在下节介绍，utils提供公共方法如cookie、localstorage等，可以由大家继续扩充
 
+###Page Level JS###
+- 对于page提供一个zeus.page()方法，内置initDatas(datas)、initParts(parts)、bindEvent供统一开发风格。
+- initData用于统一初始化页面内状态数据、其他地方不再用var页面级别变量
+- initParts用于统一缓存化页面中需要交互的jq对象，供后面的逻辑使用，其他地方不再用$直接获取，但可以用find方法寻找下一级dom。
+- bindEvent用于统一事件绑定,绑定到对应的业务函数入口。
+- $.ready之后会自动调用page的init的方法，完成initDatas(datas)、initParts(parts)、bindEvent
+- 其他逻辑封装成其他函数挂在zeus.page()的设置对象中，函数不允许堆砌，以独立的逻辑为单位，过长的函数需进一步拆分
+- 示例：
+
+
+	
+		zeus.page({
+			//初始化数据
+			initDatas： function() {
+				var time = new Date();
+				this.data = {
+					time: time,
+					timeHasShow: false,
+					timeMultiplier: 3
+				}
+			},
+			//初始化部件
+			initParts: function() {
+				this.parts = {
+					$timeContent: $('.time-content'),
+					$showTimeBtn: $('.time-btn')
+				}
+			},
+			//绑定事件
+			bindEvent: function() {
+				var this = me;
+				var parts = me.parts;
+				parts.$showTimeBtn.on('click', function() {
+					me.showTime();
+				})
+			},
+			//业务函数
+			showTime: function() {
+				var data = this.data;
+				if(!data.timeHasShow){
+					var timeText = data.time * data.timeMultiplier;
+				    this.parts.$timeContent.html(timeText);
+					data.timeHasShow = true;
+				}
+			},
+			//业务函数
+			...
+			//业务函数
+			...
+			
+		})
+
+###Site Level CSS###
+- 包含bootstrap、jqui css、global、jqui custom
+- global是根据整体UI风格对bootstrap的补充和覆盖
+- jqui custome 是根据整体UI风格对jq ui样式的覆盖
+
+###Page Level CSS###
+主要用于页面级别的样式微调，根据规范（见8章）照写即可。
+
+###打包###
+site Level的js和css打成一个包，page的不需要打包，跟页面走即可
 
 #5 H5架构设计#
 ##5.1 概况##
