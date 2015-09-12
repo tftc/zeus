@@ -42,7 +42,7 @@
 #4 PC架构设计#
 ##4.1 概况##
 
-##4.2 架构##
+##4.2 架构图##
 
 ##4.3 目录结构##
 
@@ -186,7 +186,7 @@
     }
 
 ###4.6.7 其他###
->为了便于调试和定位，系统的console.log 被重写debug日志方法，写入到tiancai.log.dev
+为了便于调试和定位，系统的console.log 被重写debug日志方法，写入到tiancai.log.dev
 
 ##4.7 browser端##
 ###架构描述###
@@ -262,30 +262,42 @@
 site Level的js和css打成一个包，page的不需要打包，跟页面走即可
 
 #5 H5架构设计#
-##5.1 概况##
+##5.1 概述##
+- H5采用单页模式开发（SPA），对于规模较大的app，可以进一步拆分，拆分成多个spa组合。
+- 该模式下，browser端采用reflux的架构，server端架构和PC几乎保持一致，唯一区别在于使用上的角色差异。
+- PC的server端扮演了较多的业务逻辑和模板渲染的角色，而H5的server端更多的扮演数据接口、首页渲染的角色。
 
-##5.2 架构##
+##5.2 架构图##
 
 ##5.3 目录结构##
 
 ##5.4 server端##
+与pc端架构一致，参考4.4章节
 
 ##5.5 browser端##
 
-##5.6 注意事项##
-
 #6 APP架构设计#
 ##6.1 概况###
+由于APP采用的是native用webview嵌入H5的思路，APP的整体架构和H5保持一致，server端和browser端均一致，差异在于具体开发业务时，可能根据实际的需要，Native shell会和H5进行数据交互，这里只约定数据交互的规范，其他在具体的开发过程中，由开发双方根据场景确定。
 
 ##6.2 架构###
+参考H5部分（5章节）
 
-##6.3 目录结构###
+##6.3 native分工###
+native负责主要的外部逻辑，转场动画等
+H5仅仅作为展示的内部区块，以webview方式提供页面，区块的划分由native来划分，并最终提需求到H5这边提供对应的页面
 
-##6.4 server端###
+##6.3 native数据交互约定###
+- native获取H5数据：在页面中定义一段script，用于专门包装给native
+	
+		<script id="toNative">
+			window.PageData = {
+				...
+			}
+		<script>
 
-##6.5 browser端###
-
-##6.6 注意事项###
+- H5获取native数据：native包装成统一的方法供JS调用，获取数据均以getXXX的方式获取
+- 两者各自处理各自的逻辑
 
 #工程化设计#
 ##初始化##
@@ -308,104 +320,61 @@ node 0.12.3中harmony的支持情况
 harmony 开启方式：node --harmony app.js
 
 ###Generator###
-阮一峰写的一篇介绍文章，个人认为写的比较容易理解
-	
-	http://es6.ruanyifeng.com/#docs/generator
+>介绍文章 http://es6.ruanyifeng.com/#docs/generator
 
 ###koajs###
-项目地址：
-	
-	https://github.com/koajs/koa
+>项目地址 https://github.com/koajs/koa
 
 ###koa-static###
-项目地址：
-
-	https://github.com/koajs/koa
+>项目地址 https://github.com/koajs/koa
 
 ###koa-router###
-项目地址：
-		
-	https://github.com/alexmingoia/koa-router
+>项目地址 https://github.com/alexmingoia/koa-router
 
 ###co###
-项目地址：
-	
-	https://github.com/tj/co	
+>项目地址 https://github.com/tj/co	
 	
 ###ejs###
-项目地址
-
-	https://github.com/tj/ejs
+>项目地址 https://github.com/tj/ejs
 	
 ###supervisor###
-项目地址
-
-	https://github.com/petruisfan/node-supervisor
+>项目地址 https://github.com/petruisfan/node-supervisor
 ###live-reload###
-项目地址
-	
-	https://github.com/intesso/connect-livereload
+>项目地址 https://github.com/intesso/connect-livereload
 ###gulp###
-项目地址
-
-	https://github.com/gulpjs/gulp
+>项目地址 https://github.com/gulpjs/gulp
 
 ###mocha###
-项目地址
-
-	https://github.com/mochajs/mocha
+>项目地址 https://github.com/mochajs/mocha
 
 ###shouldjs###
-项目地址
-	
-	https://github.com/tj/should.js
+>项目地址 https://github.com/tj/should.js
 
 ###fecs###
-项目地址
-
-	https://github.com/ecomfe/fecs
+>项目地址 https://github.com/ecomfe/fecs
 
 ###pm2###
-项目地址
-
-	https://github.com/Unitech/PM2
+>项目地址 https://github.com/Unitech/PM2
 ###pm2-web###
-项目地址
-
-	https://github.com/achingbrain/pm2-web
+>项目地址 https://github.com/achingbrain/pm2-web
 ###less###
-项目地址
-
-	https://github.com/less/less.js
+>项目地址 https://github.com/less/less.js
 
 ###bootstrap###
-项目地址
-
-	http://v3.bootcss.com/
+>项目地址 http://v3.bootcss.com/
 
 ###browserify###
--项目地址
-	
-	https://github.com/substack/node-browserify
+>项目地址 https://github.com/substack/node-browserify
 	
 ###reactjs###
-项目地址
-	
-	https://github.com/facebook/react
-学习资料
-	
-	http://www.ruanyifeng.com/blog/2015/03/react.html?utm_source=tuicool
+>项目地址 https://github.com/facebook/react
+
+>学习资料 http://www.ruanyifeng.com/blog/2015/03/react.html?utm_source=tuicool
 
 ###reactify###
-项目地址
-
-	https://github.com/andreypopp/reactify
+>项目地址 https://github.com/andreypopp/reactify
 
 ###reflux###
-项目地址
+>项目地址 https://github.com/reflux/refluxjs
 
-	https://github.com/reflux/refluxjs
-
-学习资料
-	
-	http://segmentfault.com/a/1190000002793786?utm_source=tuicool
+>学习资料 http://segmentfault.com/a/1190000002793786?utm_source=tuicool
