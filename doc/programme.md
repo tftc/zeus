@@ -481,6 +481,7 @@ H5仅仅作为展示的内部区块，以webview方式提供页面，区块的�
 
 ###harmony###
 node 0.12.3中harmony的支持情况
+
 ![harmony](harmony.png)
 
 harmony 开启方式：node --harmony app.js
