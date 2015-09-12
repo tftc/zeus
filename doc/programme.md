@@ -362,9 +362,11 @@ FaceBook最初提出的FLUX模式较为复杂，为了不造成大家的困惑�
 ###action###
 - 使用Reflux.createActions创建，支持同时创建多个action
 - 创建单个action：
+
 		var statusUpdate = Reflux.createAction(options);
 		
 - 创建多个action：
+
 		var TodoActions = Reflux.createActions([
 			'addItem'
 		]);
