@@ -1,0 +1,2236 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   'gulp-nodemon' ]
+2 info using npm@2.9.1
+3 info using node@v0.12.3
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose install initial load of D:\ct\zeus\package.json
+6 warn package.json zeus@0.1.0 No bin file found at index.js
+7 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\co\package.json
+8 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\extend\package.json
+9 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\fecs\package.json
+10 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\fecs-gulp\package.json
+11 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\gulp\package.json
+12 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\gulp-connect\package.json
+13 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\gulp-livereload\package.json
+14 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\index.js\package.json
+15 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\jshint\package.json
+16 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\koa\package.json
+17 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\koa-ejs\package.json
+18 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\koa-router\package.json
+19 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\koa-static\package.json
+20 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\koa.res.api\package.json
+21 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\mocha\package.json
+22 verbose installManyTop reading scoped package data from D:\ct\zeus\node_modules\should\package.json
+23 verbose readDependencies loading dependencies from D:\ct\zeus\package.json
+24 silly cache add args [ 'gulp-nodemon', null ]
+25 verbose cache add spec gulp-nodemon
+26 silly cache add parsed spec { raw: 'gulp-nodemon',
+26 silly cache add   scope: null,
+26 silly cache add   name: 'gulp-nodemon',
+26 silly cache add   rawSpec: '',
+26 silly cache add   spec: '*',
+26 silly cache add   type: 'range' }
+27 silly addNamed gulp-nodemon@*
+28 verbose addNamed "*" is a valid semver range for gulp-nodemon
+29 silly addNameRange { name: 'gulp-nodemon', range: '*', hasData: false }
+30 silly mapToRegistry name gulp-nodemon
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry http://registry.cnpmjs.org/
+33 silly mapToRegistry uri http://registry.cnpmjs.org/gulp-nodemon
+34 verbose addNameRange registry:http://registry.cnpmjs.org/gulp-nodemon not in flight; fetching
+35 verbose request uri http://registry.cnpmjs.org/gulp-nodemon
+36 verbose request no auth needed
+37 info attempt registry request try #1 at 12:31:07
+38 verbose request id 306c3b7f62c38ba4
+39 http request GET http://registry.cnpmjs.org/gulp-nodemon
+40 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+41 info attempt registry request try #2 at 12:31:38
+42 http request GET http://registry.cnpmjs.org/gulp-nodemon
+43 http 200 http://registry.cnpmjs.org/gulp-nodemon
+44 silly get cb [ 200,
+44 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+44 silly get     date: 'Fri, 25 Sep 2015 04:31:41 GMT',
+44 silly get     'content-type': 'application/json; charset=utf-8',
+44 silly get     'transfer-encoding': 'chunked',
+44 silly get     connection: 'keep-alive',
+44 silly get     'x-readtime': '15',
+44 silly get     'content-encoding': 'gzip' } ]
+45 verbose get saving gulp-nodemon to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\gulp-nodemon\.cache.json
+46 silly addNameRange number 2 { name: 'gulp-nodemon', range: '*', hasData: true }
+47 silly addNameRange versions [ 'gulp-nodemon',
+47 silly addNameRange   [ '2.0.4',
+47 silly addNameRange     '2.0.3',
+47 silly addNameRange     '2.0.2',
+47 silly addNameRange     '2.0.1',
+47 silly addNameRange     '2.0.0',
+47 silly addNameRange     '1.0.5',
+47 silly addNameRange     '1.0.4',
+47 silly addNameRange     '1.0.3',
+47 silly addNameRange     '1.0.2',
+47 silly addNameRange     '1.0.1',
+47 silly addNameRange     '1.0.0',
+47 silly addNameRange     '0.1.2',
+47 silly addNameRange     '0.1.1',
+47 silly addNameRange     '0.1.0',
+47 silly addNameRange     '0.0.3',
+47 silly addNameRange     '0.0.2',
+47 silly addNameRange     '0.0.1' ] ]
+48 silly addNamed gulp-nodemon@2.0.4
+49 verbose addNamed "2.0.4" is a plain semver version for gulp-nodemon
+50 silly cache afterAdd gulp-nodemon@2.0.4
+51 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\gulp-nodemon\2.0.4\package\package.json not in flight; writing
+52 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\gulp-nodemon\2.0.4\package\package.json written
+53 silly install resolved [ { name: 'gulp-nodemon',
+53 silly install resolved     version: '2.0.4',
+53 silly install resolved     description: 'it\'s gulp + nodemon + convenience',
+53 silly install resolved     main: 'index.js',
+53 silly install resolved     scripts: { test: 'gulp test' },
+53 silly install resolved     repository:
+53 silly install resolved      { type: 'git',
+53 silly install resolved        url: 'git+https://github.com/JacksonGariety/gulp-nodemon.git' },
+53 silly install resolved     keywords:
+53 silly install resolved      [ 'gulp',
+53 silly install resolved        'nodemon',
+53 silly install resolved        'develop',
+53 silly install resolved        'server',
+53 silly install resolved        'restart',
+53 silly install resolved        'automatically',
+53 silly install resolved        'watch',
+53 silly install resolved        'gulpfriendly' ],
+53 silly install resolved     author: { name: 'Jackson Gariety' },
+53 silly install resolved     license: 'BSD-2-Clause',
+53 silly install resolved     bugs: { url: 'https://github.com/JacksonGariety/gulp-nodemon/issues' },
+53 silly install resolved     homepage: 'https://github.com/JacksonGariety/gulp-nodemon',
+53 silly install resolved     dependencies:
+53 silly install resolved      { gulp: '^3.8.11',
+53 silly install resolved        nodemon: '^1.4.1',
+53 silly install resolved        'event-stream': '^3.2.1',
+53 silly install resolved        colors: '^1.0.3' },
+53 silly install resolved     devDependencies:
+53 silly install resolved      { should: '^4.0.0',
+53 silly install resolved        'gulp-jshint': '^1.6.1',
+53 silly install resolved        'gulp-mocha': '^0.2.0',
+53 silly install resolved        'is-running': '^1.0.3',
+53 silly install resolved        'coffee-script': '^1.7.1' },
+53 silly install resolved     directories: { test: 'test' },
+53 silly install resolved     _id: 'gulp-nodemon@2.0.4',
+53 silly install resolved     dist:
+53 silly install resolved      { shasum: '30b318b24ebc52b6d880c13977aca5068560603b',
+53 silly install resolved        size: 3148,
+53 silly install resolved        noattachment: false,
+53 silly install resolved        tarball: 'http://registry.cnpmjs.org/gulp-nodemon/download/gulp-nodemon-2.0.4.tgz' },
+53 silly install resolved     _from: 'gulp-nodemon@*',
+53 silly install resolved     _npmVersion: '1.4.3',
+53 silly install resolved     _npmUser: { name: 'jacksongariety', email: 'jackson@gariety.xxx' },
+53 silly install resolved     maintainers: [ [Object] ],
+53 silly install resolved     publish_time: 1440177562458,
+53 silly install resolved     _cnpm_publish_time: 1440177562458,
+53 silly install resolved     _shasum: '30b318b24ebc52b6d880c13977aca5068560603b',
+53 silly install resolved     _resolved: 'http://registry.cnpmjs.org/gulp-nodemon/download/gulp-nodemon-2.0.4.tgz',
+53 silly install resolved     readme: 'ERROR: No README data found!' } ]
+54 info install gulp-nodemon@2.0.4 into D:\ct\zeus
+55 info installOne gulp-nodemon@2.0.4
+56 verbose installOne of gulp-nodemon to D:\ct\zeus not in flight; installing
+57 verbose lock using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\gulp-nodemon-a71a0cb5cd8b95f4.lock for D:\ct\zeus\node_modules\gulp-nodemon
+58 silly install write writing gulp-nodemon 2.0.4 to D:\ct\zeus\node_modules\gulp-nodemon
+59 verbose unbuild node_modules\gulp-nodemon
+60 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon is being purged from base D:\ct\zeus
+61 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon
+62 verbose tar unpack C:\Users\xiaoguang01\AppData\Roaming\npm-cache\gulp-nodemon\2.0.4\package.tgz
+63 verbose tar unpacking to D:\ct\zeus\node_modules\gulp-nodemon
+64 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon is being purged
+65 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon
+66 silly gunzTarPerm modes [ '777', '666' ]
+67 silly gunzTarPerm extractEntry package.json
+68 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+69 silly gunzTarPerm extractEntry .npmignore
+70 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+71 silly gunzTarPerm extractEntry README.md
+72 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+73 silly gunzTarPerm extractEntry gulpfile.js
+74 silly gunzTarPerm modified mode [ 'gulpfile.js', 420, 438 ]
+75 silly gunzTarPerm extractEntry index.js
+76 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+77 silly gunzTarPerm extractEntry test/server.js
+78 silly gunzTarPerm modified mode [ 'test/server.js', 420, 438 ]
+79 silly gunzTarPerm extractEntry test/server.coffee
+80 silly gunzTarPerm modified mode [ 'test/server.coffee', 420, 438 ]
+81 verbose write writing to D:\ct\zeus\node_modules\gulp-nodemon\package.json
+82 info preinstall gulp-nodemon@2.0.4
+83 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\package.json
+84 silly prepareForInstallMany adding nodemon@^1.4.1 from gulp-nodemon dependencies
+85 silly prepareForInstallMany adding event-stream@^3.2.1 from gulp-nodemon dependencies
+86 silly prepareForInstallMany adding colors@^1.0.3 from gulp-nodemon dependencies
+87 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\package.json
+88 silly cache add args [ 'nodemon@^1.4.1', null ]
+89 verbose cache add spec nodemon@^1.4.1
+90 silly cache add args [ 'event-stream@^3.2.1', null ]
+91 verbose cache add spec event-stream@^3.2.1
+92 silly cache add parsed spec { raw: 'nodemon@^1.4.1',
+92 silly cache add   scope: null,
+92 silly cache add   name: 'nodemon',
+92 silly cache add   rawSpec: '^1.4.1',
+92 silly cache add   spec: '>=1.4.1 <2.0.0',
+92 silly cache add   type: 'range' }
+93 silly addNamed nodemon@>=1.4.1 <2.0.0
+94 verbose addNamed ">=1.4.1 <2.0.0" is a valid semver range for nodemon
+95 silly addNameRange { name: 'nodemon', range: '>=1.4.1 <2.0.0', hasData: false }
+96 silly mapToRegistry name nodemon
+97 silly mapToRegistry using default registry
+98 silly mapToRegistry registry http://registry.cnpmjs.org/
+99 silly mapToRegistry uri http://registry.cnpmjs.org/nodemon
+100 verbose addNameRange registry:http://registry.cnpmjs.org/nodemon not in flight; fetching
+101 silly cache add parsed spec { raw: 'event-stream@^3.2.1',
+101 silly cache add   scope: null,
+101 silly cache add   name: 'event-stream',
+101 silly cache add   rawSpec: '^3.2.1',
+101 silly cache add   spec: '>=3.2.1 <4.0.0',
+101 silly cache add   type: 'range' }
+102 silly addNamed event-stream@>=3.2.1 <4.0.0
+103 verbose addNamed ">=3.2.1 <4.0.0" is a valid semver range for event-stream
+104 silly addNameRange { name: 'event-stream', range: '>=3.2.1 <4.0.0', hasData: false }
+105 silly mapToRegistry name event-stream
+106 silly mapToRegistry using default registry
+107 silly mapToRegistry registry http://registry.cnpmjs.org/
+108 silly mapToRegistry uri http://registry.cnpmjs.org/event-stream
+109 verbose addNameRange registry:http://registry.cnpmjs.org/event-stream not in flight; fetching
+110 silly cache add args [ 'colors@^1.0.3', null ]
+111 verbose cache add spec colors@^1.0.3
+112 silly cache add parsed spec { raw: 'colors@^1.0.3',
+112 silly cache add   scope: null,
+112 silly cache add   name: 'colors',
+112 silly cache add   rawSpec: '^1.0.3',
+112 silly cache add   spec: '>=1.0.3 <2.0.0',
+112 silly cache add   type: 'range' }
+113 silly addNamed colors@>=1.0.3 <2.0.0
+114 verbose addNamed ">=1.0.3 <2.0.0" is a valid semver range for colors
+115 silly addNameRange { name: 'colors', range: '>=1.0.3 <2.0.0', hasData: false }
+116 silly mapToRegistry name colors
+117 silly mapToRegistry using default registry
+118 silly mapToRegistry registry http://registry.cnpmjs.org/
+119 silly mapToRegistry uri http://registry.cnpmjs.org/colors
+120 verbose addNameRange registry:http://registry.cnpmjs.org/colors not in flight; fetching
+121 verbose request uri http://registry.cnpmjs.org/event-stream
+122 verbose request no auth needed
+123 info attempt registry request try #1 at 12:31:41
+124 http request GET http://registry.cnpmjs.org/event-stream
+125 verbose request uri http://registry.cnpmjs.org/colors
+126 verbose request no auth needed
+127 info attempt registry request try #1 at 12:31:41
+128 http request GET http://registry.cnpmjs.org/colors
+129 verbose request uri http://registry.cnpmjs.org/nodemon
+130 verbose request no auth needed
+131 info attempt registry request try #1 at 12:31:41
+132 http request GET http://registry.cnpmjs.org/nodemon
+133 http 200 http://registry.cnpmjs.org/event-stream
+134 silly get cb [ 200,
+134 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+134 silly get     date: 'Fri, 25 Sep 2015 04:31:41 GMT',
+134 silly get     'content-type': 'application/json; charset=utf-8',
+134 silly get     'transfer-encoding': 'chunked',
+134 silly get     connection: 'keep-alive',
+134 silly get     'x-readtime': '55',
+134 silly get     'content-encoding': 'gzip' } ]
+135 verbose get saving event-stream to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\event-stream\.cache.json
+136 silly addNameRange number 2 { name: 'event-stream', range: '>=3.2.1 <4.0.0', hasData: true }
+137 silly addNameRange versions [ 'event-stream',
+137 silly addNameRange   [ '3.3.1',
+137 silly addNameRange     '3.3.0',
+137 silly addNameRange     '3.2.2',
+137 silly addNameRange     '3.2.1',
+137 silly addNameRange     '3.2.0',
+137 silly addNameRange     '3.1.7',
+137 silly addNameRange     '3.1.5',
+137 silly addNameRange     '3.1.4',
+137 silly addNameRange     '3.1.2',
+137 silly addNameRange     '3.1.1',
+137 silly addNameRange     '3.1.0',
+137 silly addNameRange     '3.0.20',
+137 silly addNameRange     '3.0.18',
+137 silly addNameRange     '3.0.17',
+137 silly addNameRange     '3.0.16',
+137 silly addNameRange     '3.0.15',
+137 silly addNameRange     '3.0.14',
+137 silly addNameRange     '3.0.13',
+137 silly addNameRange     '3.0.12',
+137 silly addNameRange     '3.0.11',
+137 silly addNameRange     '3.0.10',
+137 silly addNameRange     '3.0.9',
+137 silly addNameRange     '3.0.8',
+137 silly addNameRange     '3.0.7',
+137 silly addNameRange     '3.0.6',
+137 silly addNameRange     '3.0.5',
+137 silly addNameRange     '3.0.4',
+137 silly addNameRange     '3.0.3',
+137 silly addNameRange     '3.0.2',
+137 silly addNameRange     '3.0.1',
+137 silly addNameRange     '3.0.0',
+137 silly addNameRange     '2.2.3',
+137 silly addNameRange     '2.2.2',
+137 silly addNameRange     '2.2.1',
+137 silly addNameRange     '2.2.0',
+137 silly addNameRange     '2.1.9',
+137 silly addNameRange     '2.1.8',
+137 silly addNameRange     '2.1.7',
+137 silly addNameRange     '2.1.5',
+137 silly addNameRange     '2.1.4',
+137 silly addNameRange     '2.1.3',
+137 silly addNameRange     '2.1.2',
+137 silly addNameRange     '2.1.0',
+137 silly addNameRange     '2.0.10',
+137 silly addNameRange     '2.0.9',
+137 silly addNameRange     '2.0.4',
+137 silly addNameRange     '2.0.3',
+137 silly addNameRange     '2.0.2',
+137 silly addNameRange     '2.0.1',
+137 silly addNameRange     '2.0.0',
+137 silly addNameRange     '1.3.1',
+137 silly addNameRange     '1.3.0',
+137 silly addNameRange     '1.2.0',
+137 silly addNameRange     '1.1.0',
+137 silly addNameRange     '1.0.0',
+137 silly addNameRange     '0.10.0',
+137 silly addNameRange     '0.9.8',
+137 silly addNameRange     '0.9.7',
+137 silly addNameRange     '0.9.6',
+137 silly addNameRange     '0.9.4',
+137 silly addNameRange     '0.9.3',
+137 silly addNameRange     '0.9.2',
+137 silly addNameRange     '0.9.0',
+137 silly addNameRange     '0.8.2',
+137 silly addNameRange     '0.8.1',
+137 silly addNameRange     '0.8.0',
+137 silly addNameRange     '0.2.1',
+137 silly addNameRange     '0.7.0',
+137 silly addNameRange     '0.4.0',
+137 silly addNameRange     '0.3.0',
+137 silly addNameRange     '0.2.0',
+137 silly addNameRange     '0.5.1',
+137 silly addNameRange     '0.5.0',
+137 silly addNameRange     '0.1.0',
+137 silly addNameRange     '0.6.0',
+137 silly addNameRange     '0.5.3',
+137 silly addNameRange     '0.5.2' ] ]
+138 silly addNamed event-stream@3.3.1
+139 verbose addNamed "3.3.1" is a plain semver version for event-stream
+140 silly cache afterAdd event-stream@3.3.1
+141 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\event-stream\3.3.1\package\package.json not in flight; writing
+142 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\event-stream\3.3.1\package\package.json written
+143 http 200 http://registry.cnpmjs.org/nodemon
+144 silly get cb [ 200,
+144 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+144 silly get     date: 'Fri, 25 Sep 2015 04:31:42 GMT',
+144 silly get     'content-type': 'application/json; charset=utf-8',
+144 silly get     'transfer-encoding': 'chunked',
+144 silly get     connection: 'keep-alive',
+144 silly get     'x-readtime': '68',
+144 silly get     'content-encoding': 'gzip' } ]
+145 verbose get saving nodemon to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\nodemon\.cache.json
+146 silly addNameRange number 2 { name: 'nodemon', range: '>=1.4.1 <2.0.0', hasData: true }
+147 silly addNameRange versions [ 'nodemon',
+147 silly addNameRange   [ '1.7.0',
+147 silly addNameRange     '1.6.1',
+147 silly addNameRange     '1.6.0',
+147 silly addNameRange     '1.5.1',
+147 silly addNameRange     '1.5.0',
+147 silly addNameRange     '1.4.2',
+147 silly addNameRange     '1.5.0-alpha4',
+147 silly addNameRange     '1.5.0-alpha3',
+147 silly addNameRange     '1.5.0-alpha2',
+147 silly addNameRange     '1.5.0-alpha1',
+147 silly addNameRange     '1.4.1',
+147 silly addNameRange     '1.4.0',
+147 silly addNameRange     '1.3.8',
+147 silly addNameRange     '1.3.7',
+147 silly addNameRange     '1.3.6',
+147 silly addNameRange     '1.3.5',
+147 silly addNameRange     '1.3.3',
+147 silly addNameRange     '1.3.2',
+147 silly addNameRange     '1.3.1',
+147 silly addNameRange     '1.3.0',
+147 silly addNameRange     '1.3.0-7',
+147 silly addNameRange     '1.3.0-6',
+147 silly addNameRange     '1.3.0-5',
+147 silly addNameRange     '1.3.0-4',
+147 silly addNameRange     '1.3.0-3',
+147 silly addNameRange     '1.3.0-2',
+147 silly addNameRange     '1.3.0-1',
+147 silly addNameRange     '1.3.0-0',
+147 silly addNameRange     '1.2.1',
+147 silly addNameRange     '1.2.0',
+147 silly addNameRange     '1.1.1',
+147 silly addNameRange     '1.1.0',
+147 silly addNameRange     '1.1.0-alpha',
+147 silly addNameRange     '1.0.20',
+147 silly addNameRange     '1.0.19',
+147 silly addNameRange     '1.0.18',
+147 silly addNameRange     '1.0.17',
+147 silly addNameRange     '1.0.17-rc2',
+147 silly addNameRange     '1.0.17-rc1',
+147 silly addNameRange     '1.0.16',
+147 silly addNameRange     '1.0.15',
+147 silly addNameRange     '1.0.14',
+147 silly addNameRange     '1.0.13',
+147 silly addNameRange     '1.0.12',
+147 silly addNameRange     '1.0.11',
+147 silly addNameRange     '1.0.10',
+147 silly addNameRange     '1.0.9',
+147 silly addNameRange     '1.0.8',
+147 silly addNameRange     '1.0.7',
+147 silly addNameRange     '1.0.6',
+147 silly addNameRange     '1.0.5',
+147 silly addNameRange     '1.0.4',
+147 silly addNameRange     '1.0.3',
+147 silly addNameRange     '1.0.2-rc4',
+147 silly addNameRange     '1.0.2-rc3',
+147 silly addNameRange     '1.0.2-rc',
+147 silly addNameRange     '1.0.2',
+147 silly addNameRange     '1.0.1',
+147 silly addNameRange     '1.0.0',
+147 silly addNameRange     '0.9.17',
+147 silly addNameRange     '0.9.16',
+147 silly addNameRange     '0.9.14',
+147 silly addNameRange     '0.9.12',
+147 silly addNameRange     '0.9.11',
+147 silly addNameRange     '0.9.10',
+147 silly addNameRange     '0.9.7',
+147 silly addNameRange     '0.9.6',
+147 silly addNameRange     '0.9.5',
+147 silly addNameRange     '0.9.3',
+147 silly addNameRange     '0.9.2',
+147 silly addNameRange     '0.9.1',
+147 silly addNameRange     '0.9.0',
+147 silly addNameRange     '0.7.10',
+147 silly addNameRange     '0.7.8',
+147 silly addNameRange     '0.7.7',
+147 silly addNameRange     '0.7.6',
+147 silly addNameRange     '0.7.5',
+147 silly addNameRange     '0.7.4',
+147 silly addNameRange     '0.7.3',
+147 silly addNameRange     '0.7.2',
+147 silly addNameRange     '0.7.1',
+147 silly addNameRange     '0.7.0',
+147 silly addNameRange     '0.6.23',
+147 silly addNameRange     '0.6.22',
+147 silly addNameRange     '0.6.21',
+147 silly addNameRange     '0.6.20',
+147 silly addNameRange     '0.6.19',
+147 silly addNameRange     '0.6.18',
+147 silly addNameRange     '0.6.17',
+147 silly addNameRange     '0.6.16',
+147 silly addNameRange     '0.6.15',
+147 silly addNameRange     '0.6.14',
+147 silly addNameRange     '0.6.13',
+147 silly addNameRange     '0.6.12',
+147 silly addNameRange     '0.6.11',
+147 silly addNameRange     '0.6.10-a',
+147 silly addNameRange     '0.6.10',
+147 silly addNameRange     '0.6.9',
+147 silly addNameRange     '0.6.8',
+147 silly addNameRange     '0.6.7',
+147 silly addNameRange     '0.6.6',
+147 silly addNameRange     '0.6.5',
+147 silly addNameRange     '0.6.4',
+147 silly addNameRange     '0.6.3',
+147 silly addNameRange     '0.6.2',
+147 silly addNameRange     '0.6.1',
+147 silly addNameRange     '0.6.0',
+147 silly addNameRange     '0.5.7',
+147 silly addNameRange     '0.5.6',
+147 silly addNameRange     '0.5.5',
+147 silly addNameRange     '0.5.4',
+147 silly addNameRange     '0.5.3',
+147 silly addNameRange     '0.5.2',
+147 silly addNameRange     '0.5.1',
+147 silly addNameRange     '0.5.0',
+147 silly addNameRange     '0.4.1',
+147 silly addNameRange     '0.4.0',
+147 silly addNameRange     '0.3.2',
+147 silly addNameRange     '0.3.1',
+147 silly addNameRange     '0.3.0',
+147 silly addNameRange     '0.2.2',
+147 silly addNameRange     '0.2.1',
+147 silly addNameRange     '0.1.6',
+147 silly addNameRange     '0.2.0',
+147 silly addNameRange     '0.1.8',
+147 silly addNameRange     '0.1.7',
+147 silly addNameRange     '0.1.5',
+147 silly addNameRange     '0.1.4' ] ]
+148 silly addNamed nodemon@1.7.0
+149 verbose addNamed "1.7.0" is a plain semver version for nodemon
+150 silly mapToRegistry name nodemon
+151 silly mapToRegistry using default registry
+152 silly mapToRegistry registry http://registry.cnpmjs.org/
+153 silly mapToRegistry uri http://registry.cnpmjs.org/nodemon
+154 verbose addRemoteTarball http://registry.cnpmjs.org/nodemon/download/nodemon-1.7.0.tgz not in flight; adding
+155 verbose addRemoteTarball [ 'http://registry.cnpmjs.org/nodemon/download/nodemon-1.7.0.tgz',
+155 verbose addRemoteTarball   '7c691e2b8e62f351c447e05d07b529f304dab044' ]
+156 info retry fetch attempt 1 at 12:31:42
+157 info attempt registry request try #1 at 12:31:42
+158 http fetch GET http://registry.cnpmjs.org/nodemon/download/nodemon-1.7.0.tgz
+159 http fetch 200 http://registry.cnpmjs.org/nodemon/download/nodemon-1.7.0.tgz
+160 silly fetchAndShaCheck shasum 7c691e2b8e62f351c447e05d07b529f304dab044
+161 verbose addTmpTarball C:\Users\xiaoguang01\AppData\Local\Temp\npm-7636-2efe8ab6\registry.cnpmjs.org\nodemon\download\nodemon-1.7.0.tgz not in flight; adding
+162 verbose addTmpTarball already have metadata; skipping unpack for nodemon@1.7.0
+163 silly cache afterAdd nodemon@1.7.0
+164 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\nodemon\1.7.0\package\package.json not in flight; writing
+165 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\nodemon\1.7.0\package\package.json written
+166 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+167 info attempt registry request try #2 at 12:32:12
+168 http request GET http://registry.cnpmjs.org/colors
+169 http 200 http://registry.cnpmjs.org/colors
+170 silly get cb [ 200,
+170 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+170 silly get     date: 'Fri, 25 Sep 2015 04:32:12 GMT',
+170 silly get     'content-type': 'application/json; charset=utf-8',
+170 silly get     'transfer-encoding': 'chunked',
+170 silly get     connection: 'keep-alive',
+170 silly get     'x-readtime': '21',
+170 silly get     'content-encoding': 'gzip' } ]
+171 verbose get saving colors to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\colors\.cache.json
+172 silly addNameRange number 2 { name: 'colors', range: '>=1.0.3 <2.0.0', hasData: true }
+173 silly addNameRange versions [ 'colors',
+173 silly addNameRange   [ '1.1.2',
+173 silly addNameRange     '1.1.1',
+173 silly addNameRange     '1.1.0',
+173 silly addNameRange     '1.0.3',
+173 silly addNameRange     '1.0.2',
+173 silly addNameRange     '1.0.1',
+173 silly addNameRange     '1.0.0',
+173 silly addNameRange     '0.6.2',
+173 silly addNameRange     '0.6.1',
+173 silly addNameRange     '0.6.0-1',
+173 silly addNameRange     '0.6.0',
+173 silly addNameRange     '0.5.1',
+173 silly addNameRange     '0.5.0',
+173 silly addNameRange     '0.3.0' ] ]
+174 silly addNamed colors@1.1.2
+175 verbose addNamed "1.1.2" is a plain semver version for colors
+176 silly cache afterAdd colors@1.1.2
+177 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\colors\1.1.2\package\package.json not in flight; writing
+178 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\colors\1.1.2\package\package.json written
+179 silly install resolved [ { name: 'event-stream',
+179 silly install resolved     version: '3.3.1',
+179 silly install resolved     description: 'construct pipes of streams of events',
+179 silly install resolved     homepage: 'http://github.com/dominictarr/event-stream',
+179 silly install resolved     repository:
+179 silly install resolved      { type: 'git',
+179 silly install resolved        url: 'git://github.com/dominictarr/event-stream.git' },
+179 silly install resolved     dependencies:
+179 silly install resolved      { through: '~2.3.1',
+179 silly install resolved        duplexer: '~0.1.1',
+179 silly install resolved        from: '~0',
+179 silly install resolved        'map-stream': '~0.1.0',
+179 silly install resolved        'pause-stream': '0.0.11',
+179 silly install resolved        split: '0.3',
+179 silly install resolved        'stream-combiner': '~0.0.4' },
+179 silly install resolved     devDependencies:
+179 silly install resolved      { asynct: '*',
+179 silly install resolved        'it-is': '1',
+179 silly install resolved        ubelt: '~3.2.2',
+179 silly install resolved        'stream-spec': '~0.3.5',
+179 silly install resolved        tape: '~2.3.0' },
+179 silly install resolved     scripts:
+179 silly install resolved      { prepublish: 'npm ls && npm test',
+179 silly install resolved        test: 'asynct test/',
+179 silly install resolved        test_tap: 'set -e; for t in test/*.js; do node $t; done' },
+179 silly install resolved     testling: { files: 'test/*.js', browsers: [Object] },
+179 silly install resolved     author:
+179 silly install resolved      { name: 'Dominic Tarr',
+179 silly install resolved        email: 'dominic.tarr@gmail.com',
+179 silly install resolved        url: 'http://bit.ly/dominictarr' },
+179 silly install resolved     gitHead: 'd32723482dc2db8085a7457552232e01ff11bda6',
+179 silly install resolved     bugs: { url: 'https://github.com/dominictarr/event-stream/issues' },
+179 silly install resolved     _id: 'event-stream@3.3.1',
+179 silly install resolved     _shasum: 'b8cf6c00119181e688f335363daa7915ce890bdb',
+179 silly install resolved     _from: 'event-stream@>=3.2.1 <4.0.0',
+179 silly install resolved     _npmVersion: '2.4.1',
+179 silly install resolved     _nodeVersion: '0.10.35',
+179 silly install resolved     _npmUser: { name: 'dominictarr', email: 'dominic.tarr@gmail.com' },
+179 silly install resolved     maintainers: [ [Object] ],
+179 silly install resolved     dist:
+179 silly install resolved      { shasum: 'b8cf6c00119181e688f335363daa7915ce890bdb',
+179 silly install resolved        size: 13474,
+179 silly install resolved        noattachment: false,
+179 silly install resolved        tarball: 'http://registry.cnpmjs.org/event-stream/download/event-stream-3.3.1.tgz' },
+179 silly install resolved     directories: {},
+179 silly install resolved     publish_time: 1430881148992,
+179 silly install resolved     _cnpm_publish_time: 1430881148992,
+179 silly install resolved     _resolved: 'http://registry.cnpmjs.org/event-stream/download/event-stream-3.3.1.tgz',
+179 silly install resolved     readme: 'ERROR: No README data found!' },
+179 silly install resolved   { name: 'nodemon',
+179 silly install resolved     homepage: 'http://nodemon.io',
+179 silly install resolved     author: { name: 'Remy Sharp', url: 'http://github.com/remy' },
+179 silly install resolved     bin: { nodemon: './bin/nodemon.js' },
+179 silly install resolved     engines: { node: '>=0.8' },
+179 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/remy/nodemon.git' },
+179 silly install resolved     description: 'Simple monitor script for use during development of a node.js app.',
+179 silly install resolved     keywords:
+179 silly install resolved      [ 'monitor',
+179 silly install resolved        'development',
+179 silly install resolved        'restart',
+179 silly install resolved        'autoload',
+179 silly install resolved        'reload',
+179 silly install resolved        'terminal' ],
+179 silly install resolved     preferGlobal: 'true',
+179 silly install resolved     license: 'MIT',
+179 silly install resolved     main: './lib/nodemon',
+179 silly install resolved     scripts:
+179 silly install resolved      { coverage: 'istanbul cover _mocha -- --timeout 30000 --ui bdd --reporter list test/**/*.test.js',
+179 silly install resolved        lint: 'jscs lib/**/*.js -v',
+179 silly install resolved        ':spec': 'mocha --timeout 30000 --ui bdd test/**/*.test.js',
+179 silly install resolved        test: 'npm run lint && npm run spec',
+179 silly install resolved        spec: 'for FILE in test/**/*.test.js; do echo $FILE; ./node_modules/.bin/mocha --timeout 30000 $FILE; if [ $? -ne 0 ]; then exit 1; fi; sleep 1; done',
+179 silly install resolved        web: 'node web',
+179 silly install resolved        'semantic-release': 'semantic-release pre && npm publish && semantic-release post' },
+179 silly install resolved     devDependencies:
+179 silly install resolved      { async: '^1.4.2',
+179 silly install resolved        'coffee-script': '~1.7.1',
+179 silly install resolved        connect: '~2.19.1',
+179 silly install resolved        istanbul: '~0.2.10',
+179 silly install resolved        jscs: '^2.1.1',
+179 silly install resolved        mocha: '^2.0.1',
+179 silly install resolved        should: '~4.0.0',
+179 silly install resolved        'semantic-release': '^4.3.4' },
+179 silly install resolved     dependencies:
+179 silly install resolved      { chokidar: '^1.0.5',
+179 silly install resolved        debug: '^2.2.0',
+179 silly install resolved        'es6-promise': '^3.0.2',
+179 silly install resolved        'lodash.defaults': '^3.1.2',
+179 silly install resolved        minimatch: '~0.3.0',
+179 silly install resolved        'ps-tree': '~0.0.3',
+179 silly install resolved        touch: '~1.0.0',
+179 silly install resolved        undefsafe: '0.0.3',
+179 silly install resolved        'update-notifier': '^0.5.0' },
+179 silly install resolved     version: '1.7.0',
+179 silly install resolved     gitHead: 'cd4201afa6910363c3051514b1a24a6dce3e9c36',
+179 silly install resolved     bugs: { url: 'https://github.com/remy/nodemon/issues' },
+179 silly install resolved     _id: 'nodemon@1.7.0',
+179 silly install resolved     _shasum: '7c691e2b8e62f351c447e05d07b529f304dab044',
+179 silly install resolved     _from: 'nodemon@>=1.4.1 <2.0.0',
+179 silly install resolved     _npmVersion: '2.14.5',
+179 silly install resolved     _nodeVersion: '4.1.0',
+179 silly install resolved     _npmUser: { name: 'remy', email: 'remy@leftlogic.com' },
+179 silly install resolved     dist:
+179 silly install resolved      { shasum: '7c691e2b8e62f351c447e05d07b529f304dab044',
+179 silly install resolved        size: 37691,
+179 silly install resolved        noattachment: false,
+179 silly install resolved        tarball: 'http://registry.cnpmjs.org/nodemon/download/nodemon-1.7.0.tgz' },
+179 silly install resolved     maintainers: [ [Object] ],
+179 silly install resolved     directories: {},
+179 silly install resolved     publish_time: 1442831348433,
+179 silly install resolved     _cnpm_publish_time: 1442831348433,
+179 silly install resolved     _resolved: 'http://registry.cnpmjs.org/nodemon/download/nodemon-1.7.0.tgz' },
+179 silly install resolved   { name: 'colors',
+179 silly install resolved     description: 'get colors in your node.js console',
+179 silly install resolved     version: '1.1.2',
+179 silly install resolved     author: { name: 'Marak Squires' },
+179 silly install resolved     homepage: 'https://github.com/Marak/colors.js',
+179 silly install resolved     bugs: { url: 'https://github.com/Marak/colors.js/issues' },
+179 silly install resolved     keywords: [ 'ansi', 'terminal', 'colors' ],
+179 silly install resolved     repository:
+179 silly install resolved      { type: 'git',
+179 silly install resolved        url: 'git+ssh://git@github.com/Marak/colors.js.git' },
+179 silly install resolved     license: 'MIT',
+179 silly install resolved     scripts: { test: 'node tests/basic-test.js && node tests/safe-test.js' },
+179 silly install resolved     engines: { node: '>=0.1.90' },
+179 silly install resolved     main: 'lib',
+179 silly install resolved     files: [ 'examples', 'lib', 'LICENSE', 'safe.js', 'themes' ],
+179 silly install resolved     gitHead: '8bf2ad9fa695dcb30b7e9fd83691b139fd6655c4',
+179 silly install resolved     _id: 'colors@1.1.2',
+179 silly install resolved     _shasum: '168a4701756b6a7f51a12ce0c97bfa28c084ed63',
+179 silly install resolved     _from: 'colors@>=1.0.3 <2.0.0',
+179 silly install resolved     _npmVersion: '2.1.8',
+179 silly install resolved     _nodeVersion: '0.11.13',
+179 silly install resolved     _npmUser: { name: 'marak', email: 'marak.squires@gmail.com' },
+179 silly install resolved     maintainers: [ [Object] ],
+179 silly install resolved     dist:
+179 silly install resolved      { shasum: '168a4701756b6a7f51a12ce0c97bfa28c084ed63',
+179 silly install resolved        size: 8212,
+179 silly install resolved        noattachment: false,
+179 silly install resolved        tarball: 'http://registry.cnpmjs.org/colors/download/colors-1.1.2.tgz' },
+179 silly install resolved     directories: {},
+179 silly install resolved     publish_time: 1434546180583,
+179 silly install resolved     _cnpm_publish_time: 1434546180583,
+179 silly install resolved     _resolved: 'http://registry.cnpmjs.org/colors/download/colors-1.1.2.tgz',
+179 silly install resolved     readme: 'ERROR: No README data found!' } ]
+180 info install event-stream@3.3.1 into D:\ct\zeus\node_modules\gulp-nodemon
+181 info install nodemon@1.7.0 into D:\ct\zeus\node_modules\gulp-nodemon
+182 info install colors@1.1.2 into D:\ct\zeus\node_modules\gulp-nodemon
+183 info installOne event-stream@3.3.1
+184 verbose installOne of event-stream to D:\ct\zeus\node_modules\gulp-nodemon not in flight; installing
+185 info installOne nodemon@1.7.0
+186 verbose installOne of nodemon to D:\ct\zeus\node_modules\gulp-nodemon not in flight; installing
+187 info installOne colors@1.1.2
+188 verbose installOne of colors to D:\ct\zeus\node_modules\gulp-nodemon not in flight; installing
+189 verbose lock using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\colors-7a953bf77aaa75b8.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors
+190 silly install write writing colors 1.1.2 to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors
+191 verbose lock using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\nodemon-e45dc0abd9592646.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\nodemon
+192 silly install write writing nodemon 1.7.0 to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\nodemon
+193 verbose unbuild node_modules\gulp-nodemon\node_modules\colors
+194 verbose lock using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\event-stream-929cc8443477b2e5.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+195 silly install write writing event-stream 3.3.1 to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+196 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors is being purged from base D:\ct\zeus
+197 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors
+198 verbose tar unpack C:\Users\xiaoguang01\AppData\Roaming\npm-cache\colors\1.1.2\package.tgz
+199 verbose tar unpacking to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors
+200 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors is being purged
+201 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors
+202 silly gunzTarPerm modes [ '777', '666' ]
+203 verbose unbuild node_modules\gulp-nodemon\node_modules\nodemon
+204 verbose unbuild node_modules\gulp-nodemon\node_modules\event-stream
+205 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\nodemon is being purged from base D:\ct\zeus
+206 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\nodemon
+207 verbose tar unpack C:\Users\xiaoguang01\AppData\Roaming\npm-cache\nodemon\1.7.0\package.tgz
+208 verbose tar unpacking to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\nodemon
+209 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\nodemon is being purged
+210 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\nodemon
+211 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream is being purged from base D:\ct\zeus
+212 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+213 silly gunzTarPerm modes [ '777', '666' ]
+214 silly gunzTarPerm extractEntry package.json
+215 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+216 verbose tar unpack C:\Users\xiaoguang01\AppData\Roaming\npm-cache\event-stream\3.3.1\package.tgz
+217 verbose tar unpacking to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+218 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream is being purged
+219 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+220 silly gunzTarPerm modes [ '777', '666' ]
+221 silly gunzTarPerm extractEntry LICENSE
+222 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+223 silly gunzTarPerm extractEntry safe.js
+224 silly gunzTarPerm modified mode [ 'safe.js', 420, 438 ]
+225 silly gunzTarPerm extractEntry package.json
+226 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+227 silly gunzTarPerm extractEntry package.json
+228 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+229 silly gunzTarPerm extractEntry .npmignore
+230 silly gunzTarPerm modified mode [ '.npmignore', 436, 438 ]
+231 silly gunzTarPerm extractEntry README.md
+232 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+233 silly gunzTarPerm extractEntry ReadMe.md
+234 silly gunzTarPerm modified mode [ 'ReadMe.md', 420, 438 ]
+235 silly gunzTarPerm extractEntry examples/normal-usage.js
+236 silly gunzTarPerm modified mode [ 'examples/normal-usage.js', 420, 438 ]
+237 silly gunzTarPerm extractEntry .npmignore
+238 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+239 silly gunzTarPerm extractEntry LICENCE
+240 silly gunzTarPerm modified mode [ 'LICENCE', 420, 438 ]
+241 silly gunzTarPerm extractEntry .travis.yml
+242 silly gunzTarPerm modified mode [ '.travis.yml', 436, 438 ]
+243 silly gunzTarPerm extractEntry examples/safe-string.js
+244 silly gunzTarPerm modified mode [ 'examples/safe-string.js', 420, 438 ]
+245 silly gunzTarPerm extractEntry lib/colors.js
+246 silly gunzTarPerm modified mode [ 'lib/colors.js', 420, 438 ]
+247 silly gunzTarPerm extractEntry index.js
+248 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+249 silly gunzTarPerm extractEntry .travis.yml
+250 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+251 silly gunzTarPerm extractEntry CODE_OF_CONDUCT.md
+252 silly gunzTarPerm modified mode [ 'CODE_OF_CONDUCT.md', 436, 438 ]
+253 silly gunzTarPerm extractEntry CONTRIBUTING.md
+254 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 436, 438 ]
+255 silly gunzTarPerm extractEntry lib/extendStringPrototype.js
+256 silly gunzTarPerm modified mode [ 'lib/extendStringPrototype.js', 420, 438 ]
+257 silly gunzTarPerm extractEntry examples/pretty.js
+258 silly gunzTarPerm modified mode [ 'examples/pretty.js', 420, 438 ]
+259 silly gunzTarPerm extractEntry readme.markdown
+260 silly gunzTarPerm modified mode [ 'readme.markdown', 420, 438 ]
+261 silly gunzTarPerm extractEntry lib/index.js
+262 silly gunzTarPerm modified mode [ 'lib/index.js', 420, 438 ]
+263 silly gunzTarPerm extractEntry lib/styles.js
+264 silly gunzTarPerm modified mode [ 'lib/styles.js', 420, 438 ]
+265 silly gunzTarPerm extractEntry test/connect.asynct.js
+266 silly gunzTarPerm modified mode [ 'test/connect.asynct.js', 420, 438 ]
+267 silly gunzTarPerm extractEntry Dockerfile
+268 silly gunzTarPerm modified mode [ 'Dockerfile', 436, 438 ]
+269 silly gunzTarPerm extractEntry .jscsrc
+270 silly gunzTarPerm modified mode [ '.jscsrc', 436, 438 ]
+271 silly gunzTarPerm extractEntry lib/custom/trap.js
+272 silly gunzTarPerm modified mode [ 'lib/custom/trap.js', 420, 438 ]
+273 silly gunzTarPerm extractEntry lib/custom/zalgo.js
+274 silly gunzTarPerm modified mode [ 'lib/custom/zalgo.js', 420, 438 ]
+275 silly gunzTarPerm extractEntry bin/nodemon.js
+276 silly gunzTarPerm modified mode [ 'bin/nodemon.js', 509, 511 ]
+277 silly gunzTarPerm extractEntry doc/arch.md
+278 silly gunzTarPerm modified mode [ 'doc/arch.md', 436, 438 ]
+279 silly gunzTarPerm extractEntry lib/maps/america.js
+280 silly gunzTarPerm modified mode [ 'lib/maps/america.js', 420, 438 ]
+281 silly gunzTarPerm extractEntry lib/maps/rainbow.js
+282 silly gunzTarPerm modified mode [ 'lib/maps/rainbow.js', 420, 438 ]
+283 silly gunzTarPerm extractEntry test/parse.asynct.js
+284 silly gunzTarPerm modified mode [ 'test/parse.asynct.js', 420, 438 ]
+285 silly gunzTarPerm extractEntry test/pause.asynct.js
+286 silly gunzTarPerm modified mode [ 'test/pause.asynct.js', 420, 438 ]
+287 silly gunzTarPerm extractEntry test/pipeline.asynct.js
+288 silly gunzTarPerm modified mode [ 'test/pipeline.asynct.js', 420, 438 ]
+289 silly gunzTarPerm extractEntry test/merge.asynct.js
+290 silly gunzTarPerm modified mode [ 'test/merge.asynct.js', 420, 438 ]
+291 silly gunzTarPerm extractEntry doc/cli/authors.txt
+292 silly gunzTarPerm modified mode [ 'doc/cli/authors.txt', 436, 438 ]
+293 silly gunzTarPerm extractEntry doc/cli/config.txt
+294 silly gunzTarPerm modified mode [ 'doc/cli/config.txt', 436, 438 ]
+295 silly gunzTarPerm extractEntry lib/maps/random.js
+296 silly gunzTarPerm modified mode [ 'lib/maps/random.js', 420, 438 ]
+297 silly gunzTarPerm extractEntry lib/maps/zebra.js
+298 silly gunzTarPerm modified mode [ 'lib/maps/zebra.js', 420, 438 ]
+299 silly gunzTarPerm extractEntry test/stringify.js
+300 silly gunzTarPerm modified mode [ 'test/stringify.js', 420, 438 ]
+301 silly gunzTarPerm extractEntry test/replace.asynct.js
+302 silly gunzTarPerm modified mode [ 'test/replace.asynct.js', 420, 438 ]
+303 silly gunzTarPerm extractEntry doc/cli/help.txt
+304 silly gunzTarPerm modified mode [ 'doc/cli/help.txt', 436, 438 ]
+305 silly gunzTarPerm extractEntry doc/cli/logo.txt
+306 silly gunzTarPerm modified mode [ 'doc/cli/logo.txt', 436, 438 ]
+307 silly gunzTarPerm extractEntry lib/system/supports-colors.js
+308 silly gunzTarPerm modified mode [ 'lib/system/supports-colors.js', 420, 438 ]
+309 silly gunzTarPerm extractEntry themes/generic-logging.js
+310 silly gunzTarPerm modified mode [ 'themes/generic-logging.js', 420, 438 ]
+311 silly gunzTarPerm extractEntry doc/cli/topics.txt
+312 silly gunzTarPerm modified mode [ 'doc/cli/topics.txt', 436, 438 ]
+313 silly gunzTarPerm extractEntry doc/cli/usage.txt
+314 silly gunzTarPerm modified mode [ 'doc/cli/usage.txt', 436, 438 ]
+315 silly gunzTarPerm extractEntry doc/cli/whoami.txt
+316 silly gunzTarPerm modified mode [ 'doc/cli/whoami.txt', 436, 438 ]
+317 silly gunzTarPerm extractEntry doc/events.md
+318 silly gunzTarPerm modified mode [ 'doc/events.md', 436, 438 ]
+319 silly gunzTarPerm extractEntry test/simple-map.asynct.js
+320 silly gunzTarPerm modified mode [ 'test/simple-map.asynct.js', 420, 438 ]
+321 silly gunzTarPerm extractEntry test/spec.asynct.js
+322 silly gunzTarPerm modified mode [ 'test/spec.asynct.js', 420, 438 ]
+323 silly gunzTarPerm extractEntry doc/option-parsing-logic.md
+324 silly gunzTarPerm modified mode [ 'doc/option-parsing-logic.md', 436, 438 ]
+325 silly gunzTarPerm extractEntry doc/requireable.md
+326 silly gunzTarPerm modified mode [ 'doc/requireable.md', 436, 438 ]
+327 silly gunzTarPerm extractEntry test/split.asynct.js
+328 silly gunzTarPerm modified mode [ 'test/split.asynct.js', 420, 438 ]
+329 silly gunzTarPerm extractEntry test/readArray.asynct.js
+330 silly gunzTarPerm modified mode [ 'test/readArray.asynct.js', 420, 438 ]
+331 silly gunzTarPerm extractEntry doc/rules.md
+332 silly gunzTarPerm modified mode [ 'doc/rules.md', 436, 438 ]
+333 silly gunzTarPerm extractEntry doc/sample-nodemon.md
+334 silly gunzTarPerm modified mode [ 'doc/sample-nodemon.md', 436, 438 ]
+335 silly gunzTarPerm extractEntry test/writeArray.asynct.js
+336 silly gunzTarPerm modified mode [ 'test/writeArray.asynct.js', 420, 438 ]
+337 silly gunzTarPerm extractEntry test/readable.asynct.js
+338 silly gunzTarPerm modified mode [ 'test/readable.asynct.js', 420, 438 ]
+339 silly gunzTarPerm extractEntry faq.md
+340 silly gunzTarPerm modified mode [ 'faq.md', 436, 438 ]
+341 silly gunzTarPerm extractEntry lib/index.js
+342 silly gunzTarPerm modified mode [ 'lib/index.js', 436, 438 ]
+343 silly gunzTarPerm extractEntry test/helper/index.js
+344 silly gunzTarPerm modified mode [ 'test/helper/index.js', 420, 438 ]
+345 silly gunzTarPerm extractEntry lib/nodemon.js
+346 silly gunzTarPerm modified mode [ 'lib/nodemon.js', 436, 438 ]
+347 silly gunzTarPerm extractEntry lib/spawn.js
+348 silly gunzTarPerm modified mode [ 'lib/spawn.js', 436, 438 ]
+349 silly gunzTarPerm extractEntry lib/version.js
+350 silly gunzTarPerm modified mode [ 'lib/version.js', 436, 438 ]
+351 silly gunzTarPerm extractEntry lib/cli/index.js
+352 silly gunzTarPerm modified mode [ 'lib/cli/index.js', 436, 438 ]
+353 silly gunzTarPerm extractEntry lib/cli/parse.js
+354 silly gunzTarPerm modified mode [ 'lib/cli/parse.js', 436, 438 ]
+355 silly gunzTarPerm extractEntry lib/config/command.js
+356 silly gunzTarPerm modified mode [ 'lib/config/command.js', 436, 438 ]
+357 silly gunzTarPerm extractEntry lib/config/defaults.js
+358 silly gunzTarPerm modified mode [ 'lib/config/defaults.js', 436, 438 ]
+359 silly gunzTarPerm extractEntry lib/config/exec.js
+360 silly gunzTarPerm modified mode [ 'lib/config/exec.js', 436, 438 ]
+361 silly gunzTarPerm extractEntry lib/config/index.js
+362 silly gunzTarPerm modified mode [ 'lib/config/index.js', 436, 438 ]
+363 silly gunzTarPerm extractEntry lib/config/load.js
+364 silly gunzTarPerm modified mode [ 'lib/config/load.js', 436, 438 ]
+365 verbose write writing to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors\package.json
+366 silly gunzTarPerm extractEntry lib/help/index.js
+367 silly gunzTarPerm modified mode [ 'lib/help/index.js', 436, 438 ]
+368 silly gunzTarPerm extractEntry lib/monitor/index.js
+369 silly gunzTarPerm modified mode [ 'lib/monitor/index.js', 436, 438 ]
+370 info preinstall colors@1.1.2
+371 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors\package.json
+372 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors\package.json
+373 silly gunzTarPerm extractEntry lib/monitor/match.js
+374 silly gunzTarPerm modified mode [ 'lib/monitor/match.js', 436, 438 ]
+375 silly gunzTarPerm extractEntry lib/monitor/run.js
+376 silly gunzTarPerm modified mode [ 'lib/monitor/run.js', 436, 438 ]
+377 silly install resolved []
+378 verbose about to build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors
+379 info build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors
+380 info linkStuff colors@1.1.2
+381 silly linkStuff colors@1.1.2 has D:\ct\zeus\node_modules\gulp-nodemon\node_modules as its parent node_modules
+382 silly gunzTarPerm extractEntry lib/monitor/watch.js
+383 silly gunzTarPerm modified mode [ 'lib/monitor/watch.js', 436, 438 ]
+384 silly gunzTarPerm extractEntry lib/rules/add.js
+385 silly gunzTarPerm modified mode [ 'lib/rules/add.js', 436, 438 ]
+386 silly gunzTarPerm extractEntry lib/rules/index.js
+387 silly gunzTarPerm modified mode [ 'lib/rules/index.js', 436, 438 ]
+388 silly gunzTarPerm extractEntry lib/rules/parse.js
+389 silly gunzTarPerm modified mode [ 'lib/rules/parse.js', 436, 438 ]
+390 verbose linkBins colors@1.1.2
+391 verbose linkMans colors@1.1.2
+392 verbose rebuildBundles colors@1.1.2
+393 info install colors@1.1.2
+394 info postinstall colors@1.1.2
+395 verbose unlock done using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\colors-7a953bf77aaa75b8.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\colors
+396 silly gunzTarPerm extractEntry lib/utils/bus.js
+397 silly gunzTarPerm modified mode [ 'lib/utils/bus.js', 436, 438 ]
+398 silly gunzTarPerm extractEntry lib/utils/clone.js
+399 silly gunzTarPerm modified mode [ 'lib/utils/clone.js', 436, 438 ]
+400 silly gunzTarPerm extractEntry lib/utils/colour.js
+401 silly gunzTarPerm modified mode [ 'lib/utils/colour.js', 436, 438 ]
+402 silly gunzTarPerm extractEntry lib/utils/index.js
+403 silly gunzTarPerm modified mode [ 'lib/utils/index.js', 436, 438 ]
+404 verbose write writing to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\package.json
+405 info preinstall event-stream@3.3.1
+406 silly gunzTarPerm extractEntry lib/utils/log.js
+407 silly gunzTarPerm modified mode [ 'lib/utils/log.js', 436, 438 ]
+408 silly gunzTarPerm extractEntry lib/utils/merge.js
+409 silly gunzTarPerm modified mode [ 'lib/utils/merge.js', 436, 438 ]
+410 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\package.json
+411 silly prepareForInstallMany adding through@~2.3.1 from event-stream dependencies
+412 silly prepareForInstallMany adding duplexer@~0.1.1 from event-stream dependencies
+413 silly prepareForInstallMany adding from@~0 from event-stream dependencies
+414 silly prepareForInstallMany adding map-stream@~0.1.0 from event-stream dependencies
+415 silly prepareForInstallMany adding pause-stream@0.0.11 from event-stream dependencies
+416 silly prepareForInstallMany adding split@0.3 from event-stream dependencies
+417 silly prepareForInstallMany adding stream-combiner@~0.0.4 from event-stream dependencies
+418 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\package.json
+419 silly gunzTarPerm extractEntry .jshintrc
+420 silly gunzTarPerm modified mode [ '.jshintrc', 436, 438 ]
+421 silly gunzTarPerm extractEntry web/index.js
+422 silly gunzTarPerm modified mode [ 'web/index.js', 436, 438 ]
+423 silly cache add args [ 'from@~0', null ]
+424 verbose cache add spec from@~0
+425 silly cache add parsed spec { raw: 'from@~0',
+425 silly cache add   scope: null,
+425 silly cache add   name: 'from',
+425 silly cache add   rawSpec: '~0',
+425 silly cache add   spec: '>=0.0.0 <1.0.0',
+425 silly cache add   type: 'range' }
+426 silly addNamed from@>=0.0.0 <1.0.0
+427 verbose addNamed ">=0.0.0 <1.0.0" is a valid semver range for from
+428 silly addNameRange { name: 'from', range: '>=0.0.0 <1.0.0', hasData: false }
+429 silly mapToRegistry name from
+430 silly mapToRegistry using default registry
+431 silly mapToRegistry registry http://registry.cnpmjs.org/
+432 silly mapToRegistry uri http://registry.cnpmjs.org/from
+433 verbose addNameRange registry:http://registry.cnpmjs.org/from not in flight; fetching
+434 silly cache add args [ 'map-stream@~0.1.0', null ]
+435 verbose cache add spec map-stream@~0.1.0
+436 silly cache add parsed spec { raw: 'map-stream@~0.1.0',
+436 silly cache add   scope: null,
+436 silly cache add   name: 'map-stream',
+436 silly cache add   rawSpec: '~0.1.0',
+436 silly cache add   spec: '>=0.1.0 <0.2.0',
+436 silly cache add   type: 'range' }
+437 silly addNamed map-stream@>=0.1.0 <0.2.0
+438 verbose addNamed ">=0.1.0 <0.2.0" is a valid semver range for map-stream
+439 silly addNameRange { name: 'map-stream', range: '>=0.1.0 <0.2.0', hasData: false }
+440 silly mapToRegistry name map-stream
+441 silly mapToRegistry using default registry
+442 silly mapToRegistry registry http://registry.cnpmjs.org/
+443 silly mapToRegistry uri http://registry.cnpmjs.org/map-stream
+444 verbose addNameRange registry:http://registry.cnpmjs.org/map-stream not in flight; fetching
+445 silly cache add args [ 'pause-stream@0.0.11', null ]
+446 verbose cache add spec pause-stream@0.0.11
+447 silly cache add parsed spec { raw: 'pause-stream@0.0.11',
+447 silly cache add   scope: null,
+447 silly cache add   name: 'pause-stream',
+447 silly cache add   rawSpec: '0.0.11',
+447 silly cache add   spec: '0.0.11',
+447 silly cache add   type: 'version' }
+448 silly addNamed pause-stream@0.0.11
+449 verbose addNamed "0.0.11" is a plain semver version for pause-stream
+450 silly mapToRegistry name pause-stream
+451 silly mapToRegistry using default registry
+452 silly mapToRegistry registry http://registry.cnpmjs.org/
+453 silly mapToRegistry uri http://registry.cnpmjs.org/pause-stream
+454 verbose addNameVersion registry:http://registry.cnpmjs.org/pause-stream not in flight; fetching
+455 silly cache add args [ 'split@0.3', null ]
+456 verbose cache add spec split@0.3
+457 silly cache add parsed spec { raw: 'split@0.3',
+457 silly cache add   scope: null,
+457 silly cache add   name: 'split',
+457 silly cache add   rawSpec: '0.3',
+457 silly cache add   spec: '>=0.3.0 <0.4.0',
+457 silly cache add   type: 'range' }
+458 silly addNamed split@>=0.3.0 <0.4.0
+459 verbose addNamed ">=0.3.0 <0.4.0" is a valid semver range for split
+460 silly addNameRange { name: 'split', range: '>=0.3.0 <0.4.0', hasData: false }
+461 silly mapToRegistry name split
+462 silly mapToRegistry using default registry
+463 silly mapToRegistry registry http://registry.cnpmjs.org/
+464 silly mapToRegistry uri http://registry.cnpmjs.org/split
+465 verbose addNameRange registry:http://registry.cnpmjs.org/split not in flight; fetching
+466 silly cache add args [ 'stream-combiner@~0.0.4', null ]
+467 verbose cache add spec stream-combiner@~0.0.4
+468 silly cache add parsed spec { raw: 'stream-combiner@~0.0.4',
+468 silly cache add   scope: null,
+468 silly cache add   name: 'stream-combiner',
+468 silly cache add   rawSpec: '~0.0.4',
+468 silly cache add   spec: '>=0.0.4 <0.1.0',
+468 silly cache add   type: 'range' }
+469 silly addNamed stream-combiner@>=0.0.4 <0.1.0
+470 verbose addNamed ">=0.0.4 <0.1.0" is a valid semver range for stream-combiner
+471 silly addNameRange { name: 'stream-combiner',
+471 silly addNameRange   range: '>=0.0.4 <0.1.0',
+471 silly addNameRange   hasData: false }
+472 silly mapToRegistry name stream-combiner
+473 silly mapToRegistry using default registry
+474 silly mapToRegistry registry http://registry.cnpmjs.org/
+475 silly mapToRegistry uri http://registry.cnpmjs.org/stream-combiner
+476 verbose addNameRange registry:http://registry.cnpmjs.org/stream-combiner not in flight; fetching
+477 silly cache add args [ 'through@~2.3.1', null ]
+478 verbose cache add spec through@~2.3.1
+479 silly cache add parsed spec { raw: 'through@~2.3.1',
+479 silly cache add   scope: null,
+479 silly cache add   name: 'through',
+479 silly cache add   rawSpec: '~2.3.1',
+479 silly cache add   spec: '>=2.3.1 <2.4.0',
+479 silly cache add   type: 'range' }
+480 silly addNamed through@>=2.3.1 <2.4.0
+481 verbose addNamed ">=2.3.1 <2.4.0" is a valid semver range for through
+482 silly addNameRange { name: 'through', range: '>=2.3.1 <2.4.0', hasData: false }
+483 silly mapToRegistry name through
+484 silly mapToRegistry using default registry
+485 silly mapToRegistry registry http://registry.cnpmjs.org/
+486 silly mapToRegistry uri http://registry.cnpmjs.org/through
+487 verbose addNameRange registry:http://registry.cnpmjs.org/through not in flight; fetching
+488 silly cache add args [ 'duplexer@~0.1.1', null ]
+489 verbose cache add spec duplexer@~0.1.1
+490 silly cache add parsed spec { raw: 'duplexer@~0.1.1',
+490 silly cache add   scope: null,
+490 silly cache add   name: 'duplexer',
+490 silly cache add   rawSpec: '~0.1.1',
+490 silly cache add   spec: '>=0.1.1 <0.2.0',
+490 silly cache add   type: 'range' }
+491 silly addNamed duplexer@>=0.1.1 <0.2.0
+492 verbose addNamed ">=0.1.1 <0.2.0" is a valid semver range for duplexer
+493 silly addNameRange { name: 'duplexer', range: '>=0.1.1 <0.2.0', hasData: false }
+494 silly mapToRegistry name duplexer
+495 silly mapToRegistry using default registry
+496 silly mapToRegistry registry http://registry.cnpmjs.org/
+497 silly mapToRegistry uri http://registry.cnpmjs.org/duplexer
+498 verbose addNameRange registry:http://registry.cnpmjs.org/duplexer not in flight; fetching
+499 silly gunzTarPerm extractEntry web/index.html
+500 silly gunzTarPerm modified mode [ 'web/index.html', 436, 438 ]
+501 silly gunzTarPerm extractEntry web/nodemon.svg
+502 silly gunzTarPerm modified mode [ 'web/nodemon.svg', 436, 438 ]
+503 verbose request uri http://registry.cnpmjs.org/from
+504 verbose request no auth needed
+505 info attempt registry request try #1 at 12:32:14
+506 http request GET http://registry.cnpmjs.org/from
+507 verbose request uri http://registry.cnpmjs.org/map-stream
+508 verbose request no auth needed
+509 info attempt registry request try #1 at 12:32:14
+510 http request GET http://registry.cnpmjs.org/map-stream
+511 verbose request uri http://registry.cnpmjs.org/pause-stream
+512 verbose request no auth needed
+513 info attempt registry request try #1 at 12:32:14
+514 http request GET http://registry.cnpmjs.org/pause-stream
+515 verbose request uri http://registry.cnpmjs.org/split
+516 verbose request no auth needed
+517 info attempt registry request try #1 at 12:32:14
+518 http request GET http://registry.cnpmjs.org/split
+519 verbose request uri http://registry.cnpmjs.org/stream-combiner
+520 verbose request no auth needed
+521 info attempt registry request try #1 at 12:32:14
+522 http request GET http://registry.cnpmjs.org/stream-combiner
+523 verbose request uri http://registry.cnpmjs.org/through
+524 verbose request no auth needed
+525 info attempt registry request try #1 at 12:32:14
+526 http request GET http://registry.cnpmjs.org/through
+527 verbose request uri http://registry.cnpmjs.org/duplexer
+528 verbose request no auth needed
+529 info attempt registry request try #1 at 12:32:14
+530 http request GET http://registry.cnpmjs.org/duplexer
+531 verbose write writing to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\nodemon\package.json
+532 info preinstall nodemon@1.7.0
+533 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\nodemon\package.json
+534 silly prepareForInstallMany adding chokidar@^1.0.5 from nodemon dependencies
+535 silly prepareForInstallMany adding debug@^2.2.0 from nodemon dependencies
+536 silly prepareForInstallMany adding es6-promise@^3.0.2 from nodemon dependencies
+537 silly prepareForInstallMany adding lodash.defaults@^3.1.2 from nodemon dependencies
+538 silly prepareForInstallMany adding minimatch@~0.3.0 from nodemon dependencies
+539 silly prepareForInstallMany adding ps-tree@~0.0.3 from nodemon dependencies
+540 silly prepareForInstallMany adding touch@~1.0.0 from nodemon dependencies
+541 silly prepareForInstallMany adding undefsafe@0.0.3 from nodemon dependencies
+542 silly prepareForInstallMany adding update-notifier@^0.5.0 from nodemon dependencies
+543 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\nodemon\package.json
+544 silly cache add args [ 'es6-promise@^3.0.2', null ]
+545 verbose cache add spec es6-promise@^3.0.2
+546 silly cache add parsed spec { raw: 'es6-promise@^3.0.2',
+546 silly cache add   scope: null,
+546 silly cache add   name: 'es6-promise',
+546 silly cache add   rawSpec: '^3.0.2',
+546 silly cache add   spec: '>=3.0.2 <4.0.0',
+546 silly cache add   type: 'range' }
+547 silly addNamed es6-promise@>=3.0.2 <4.0.0
+548 verbose addNamed ">=3.0.2 <4.0.0" is a valid semver range for es6-promise
+549 silly addNameRange { name: 'es6-promise', range: '>=3.0.2 <4.0.0', hasData: false }
+550 silly mapToRegistry name es6-promise
+551 silly mapToRegistry using default registry
+552 silly mapToRegistry registry http://registry.cnpmjs.org/
+553 silly mapToRegistry uri http://registry.cnpmjs.org/es6-promise
+554 verbose addNameRange registry:http://registry.cnpmjs.org/es6-promise not in flight; fetching
+555 silly cache add args [ 'lodash.defaults@^3.1.2', null ]
+556 verbose cache add spec lodash.defaults@^3.1.2
+557 silly cache add parsed spec { raw: 'lodash.defaults@^3.1.2',
+557 silly cache add   scope: null,
+557 silly cache add   name: 'lodash.defaults',
+557 silly cache add   rawSpec: '^3.1.2',
+557 silly cache add   spec: '>=3.1.2 <4.0.0',
+557 silly cache add   type: 'range' }
+558 silly addNamed lodash.defaults@>=3.1.2 <4.0.0
+559 verbose addNamed ">=3.1.2 <4.0.0" is a valid semver range for lodash.defaults
+560 silly addNameRange { name: 'lodash.defaults',
+560 silly addNameRange   range: '>=3.1.2 <4.0.0',
+560 silly addNameRange   hasData: false }
+561 silly mapToRegistry name lodash.defaults
+562 silly mapToRegistry using default registry
+563 silly mapToRegistry registry http://registry.cnpmjs.org/
+564 silly mapToRegistry uri http://registry.cnpmjs.org/lodash.defaults
+565 verbose addNameRange registry:http://registry.cnpmjs.org/lodash.defaults not in flight; fetching
+566 silly cache add args [ 'minimatch@~0.3.0', null ]
+567 verbose cache add spec minimatch@~0.3.0
+568 silly cache add parsed spec { raw: 'minimatch@~0.3.0',
+568 silly cache add   scope: null,
+568 silly cache add   name: 'minimatch',
+568 silly cache add   rawSpec: '~0.3.0',
+568 silly cache add   spec: '>=0.3.0 <0.4.0',
+568 silly cache add   type: 'range' }
+569 silly addNamed minimatch@>=0.3.0 <0.4.0
+570 verbose addNamed ">=0.3.0 <0.4.0" is a valid semver range for minimatch
+571 silly addNameRange { name: 'minimatch', range: '>=0.3.0 <0.4.0', hasData: false }
+572 silly mapToRegistry name minimatch
+573 silly mapToRegistry using default registry
+574 silly mapToRegistry registry http://registry.cnpmjs.org/
+575 silly mapToRegistry uri http://registry.cnpmjs.org/minimatch
+576 verbose addNameRange registry:http://registry.cnpmjs.org/minimatch not in flight; fetching
+577 silly cache add args [ 'ps-tree@~0.0.3', null ]
+578 verbose cache add spec ps-tree@~0.0.3
+579 silly cache add parsed spec { raw: 'ps-tree@~0.0.3',
+579 silly cache add   scope: null,
+579 silly cache add   name: 'ps-tree',
+579 silly cache add   rawSpec: '~0.0.3',
+579 silly cache add   spec: '>=0.0.3 <0.1.0',
+579 silly cache add   type: 'range' }
+580 silly addNamed ps-tree@>=0.0.3 <0.1.0
+581 verbose addNamed ">=0.0.3 <0.1.0" is a valid semver range for ps-tree
+582 silly addNameRange { name: 'ps-tree', range: '>=0.0.3 <0.1.0', hasData: false }
+583 silly mapToRegistry name ps-tree
+584 silly mapToRegistry using default registry
+585 silly mapToRegistry registry http://registry.cnpmjs.org/
+586 silly mapToRegistry uri http://registry.cnpmjs.org/ps-tree
+587 verbose addNameRange registry:http://registry.cnpmjs.org/ps-tree not in flight; fetching
+588 silly cache add args [ 'touch@~1.0.0', null ]
+589 verbose cache add spec touch@~1.0.0
+590 silly cache add parsed spec { raw: 'touch@~1.0.0',
+590 silly cache add   scope: null,
+590 silly cache add   name: 'touch',
+590 silly cache add   rawSpec: '~1.0.0',
+590 silly cache add   spec: '>=1.0.0 <1.1.0',
+590 silly cache add   type: 'range' }
+591 silly addNamed touch@>=1.0.0 <1.1.0
+592 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for touch
+593 silly addNameRange { name: 'touch', range: '>=1.0.0 <1.1.0', hasData: false }
+594 silly mapToRegistry name touch
+595 silly mapToRegistry using default registry
+596 silly mapToRegistry registry http://registry.cnpmjs.org/
+597 silly mapToRegistry uri http://registry.cnpmjs.org/touch
+598 verbose addNameRange registry:http://registry.cnpmjs.org/touch not in flight; fetching
+599 silly cache add args [ 'undefsafe@0.0.3', null ]
+600 verbose cache add spec undefsafe@0.0.3
+601 silly cache add parsed spec { raw: 'undefsafe@0.0.3',
+601 silly cache add   scope: null,
+601 silly cache add   name: 'undefsafe',
+601 silly cache add   rawSpec: '0.0.3',
+601 silly cache add   spec: '0.0.3',
+601 silly cache add   type: 'version' }
+602 silly addNamed undefsafe@0.0.3
+603 verbose addNamed "0.0.3" is a plain semver version for undefsafe
+604 silly mapToRegistry name undefsafe
+605 silly mapToRegistry using default registry
+606 silly mapToRegistry registry http://registry.cnpmjs.org/
+607 silly mapToRegistry uri http://registry.cnpmjs.org/undefsafe
+608 verbose addNameVersion registry:http://registry.cnpmjs.org/undefsafe not in flight; fetching
+609 silly cache add args [ 'update-notifier@^0.5.0', null ]
+610 verbose cache add spec update-notifier@^0.5.0
+611 silly cache add parsed spec { raw: 'update-notifier@^0.5.0',
+611 silly cache add   scope: null,
+611 silly cache add   name: 'update-notifier',
+611 silly cache add   rawSpec: '^0.5.0',
+611 silly cache add   spec: '>=0.5.0 <0.6.0',
+611 silly cache add   type: 'range' }
+612 silly addNamed update-notifier@>=0.5.0 <0.6.0
+613 verbose addNamed ">=0.5.0 <0.6.0" is a valid semver range for update-notifier
+614 silly addNameRange { name: 'update-notifier',
+614 silly addNameRange   range: '>=0.5.0 <0.6.0',
+614 silly addNameRange   hasData: false }
+615 silly mapToRegistry name update-notifier
+616 silly mapToRegistry using default registry
+617 silly mapToRegistry registry http://registry.cnpmjs.org/
+618 silly mapToRegistry uri http://registry.cnpmjs.org/update-notifier
+619 verbose addNameRange registry:http://registry.cnpmjs.org/update-notifier not in flight; fetching
+620 silly cache add args [ 'chokidar@^1.0.5', null ]
+621 verbose cache add spec chokidar@^1.0.5
+622 silly cache add parsed spec { raw: 'chokidar@^1.0.5',
+622 silly cache add   scope: null,
+622 silly cache add   name: 'chokidar',
+622 silly cache add   rawSpec: '^1.0.5',
+622 silly cache add   spec: '>=1.0.5 <2.0.0',
+622 silly cache add   type: 'range' }
+623 silly addNamed chokidar@>=1.0.5 <2.0.0
+624 verbose addNamed ">=1.0.5 <2.0.0" is a valid semver range for chokidar
+625 silly addNameRange { name: 'chokidar', range: '>=1.0.5 <2.0.0', hasData: false }
+626 silly mapToRegistry name chokidar
+627 silly mapToRegistry using default registry
+628 silly mapToRegistry registry http://registry.cnpmjs.org/
+629 silly mapToRegistry uri http://registry.cnpmjs.org/chokidar
+630 verbose addNameRange registry:http://registry.cnpmjs.org/chokidar not in flight; fetching
+631 silly cache add args [ 'debug@^2.2.0', null ]
+632 verbose cache add spec debug@^2.2.0
+633 silly cache add parsed spec { raw: 'debug@^2.2.0',
+633 silly cache add   scope: null,
+633 silly cache add   name: 'debug',
+633 silly cache add   rawSpec: '^2.2.0',
+633 silly cache add   spec: '>=2.2.0 <3.0.0',
+633 silly cache add   type: 'range' }
+634 silly addNamed debug@>=2.2.0 <3.0.0
+635 verbose addNamed ">=2.2.0 <3.0.0" is a valid semver range for debug
+636 silly addNameRange { name: 'debug', range: '>=2.2.0 <3.0.0', hasData: false }
+637 silly mapToRegistry name debug
+638 silly mapToRegistry using default registry
+639 silly mapToRegistry registry http://registry.cnpmjs.org/
+640 silly mapToRegistry uri http://registry.cnpmjs.org/debug
+641 verbose addNameRange registry:http://registry.cnpmjs.org/debug not in flight; fetching
+642 verbose request uri http://registry.cnpmjs.org/minimatch
+643 verbose request no auth needed
+644 info attempt registry request try #1 at 12:32:14
+645 http request GET http://registry.cnpmjs.org/minimatch
+646 verbose request uri http://registry.cnpmjs.org/lodash.defaults
+647 verbose request no auth needed
+648 info attempt registry request try #1 at 12:32:14
+649 http request GET http://registry.cnpmjs.org/lodash.defaults
+650 verbose request uri http://registry.cnpmjs.org/es6-promise
+651 verbose request no auth needed
+652 info attempt registry request try #1 at 12:32:14
+653 http request GET http://registry.cnpmjs.org/es6-promise
+654 verbose request uri http://registry.cnpmjs.org/touch
+655 verbose request no auth needed
+656 info attempt registry request try #1 at 12:32:14
+657 http request GET http://registry.cnpmjs.org/touch
+658 verbose request uri http://registry.cnpmjs.org/ps-tree
+659 verbose request no auth needed
+660 info attempt registry request try #1 at 12:32:14
+661 http request GET http://registry.cnpmjs.org/ps-tree
+662 verbose request uri http://registry.cnpmjs.org/undefsafe
+663 verbose request no auth needed
+664 info attempt registry request try #1 at 12:32:14
+665 http request GET http://registry.cnpmjs.org/undefsafe
+666 verbose request uri http://registry.cnpmjs.org/debug
+667 verbose request no auth needed
+668 info attempt registry request try #1 at 12:32:14
+669 http request GET http://registry.cnpmjs.org/debug
+670 verbose request uri http://registry.cnpmjs.org/chokidar
+671 verbose request no auth needed
+672 info attempt registry request try #1 at 12:32:14
+673 http request GET http://registry.cnpmjs.org/chokidar
+674 verbose request uri http://registry.cnpmjs.org/update-notifier
+675 verbose request no auth needed
+676 info attempt registry request try #1 at 12:32:14
+677 http request GET http://registry.cnpmjs.org/update-notifier
+678 http 200 http://registry.cnpmjs.org/from
+679 silly get cb [ 200,
+679 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+679 silly get     date: 'Fri, 25 Sep 2015 04:32:14 GMT',
+679 silly get     'content-type': 'application/json; charset=utf-8',
+679 silly get     'transfer-encoding': 'chunked',
+679 silly get     connection: 'keep-alive',
+679 silly get     'x-readtime': '9',
+679 silly get     'content-encoding': 'gzip' } ]
+680 verbose get saving from to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\from\.cache.json
+681 silly addNameRange number 2 { name: 'from', range: '>=0.0.0 <1.0.0', hasData: true }
+682 silly addNameRange versions [ 'from',
+682 silly addNameRange   [ '0.1.3', '0.1.2', '0.1.1', '0.0.2', '0.0.1', '0.0.0' ] ]
+683 silly addNamed from@0.1.3
+684 verbose addNamed "0.1.3" is a plain semver version for from
+685 silly cache afterAdd from@0.1.3
+686 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\from\0.1.3\package\package.json not in flight; writing
+687 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\from\0.1.3\package\package.json written
+688 http 200 http://registry.cnpmjs.org/stream-combiner
+689 silly get cb [ 200,
+689 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+689 silly get     date: 'Fri, 25 Sep 2015 04:32:14 GMT',
+689 silly get     'content-type': 'application/json; charset=utf-8',
+689 silly get     'transfer-encoding': 'chunked',
+689 silly get     connection: 'keep-alive',
+689 silly get     'x-readtime': '12',
+689 silly get     'content-encoding': 'gzip' } ]
+690 verbose get saving stream-combiner to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\stream-combiner\.cache.json
+691 silly addNameRange number 2 { name: 'stream-combiner',
+691 silly addNameRange   range: '>=0.0.4 <0.1.0',
+691 silly addNameRange   hasData: true }
+692 silly addNameRange versions [ 'stream-combiner',
+692 silly addNameRange   [ '0.2.2',
+692 silly addNameRange     '0.2.1',
+692 silly addNameRange     '0.2.0',
+692 silly addNameRange     '0.1.0',
+692 silly addNameRange     '0.0.4',
+692 silly addNameRange     '0.0.2',
+692 silly addNameRange     '0.0.1',
+692 silly addNameRange     '0.0.0' ] ]
+693 silly addNamed stream-combiner@0.0.4
+694 verbose addNamed "0.0.4" is a plain semver version for stream-combiner
+695 silly cache afterAdd stream-combiner@0.0.4
+696 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\stream-combiner\0.0.4\package\package.json not in flight; writing
+697 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\stream-combiner\0.0.4\package\package.json written
+698 http 200 http://registry.cnpmjs.org/map-stream
+699 silly get cb [ 200,
+699 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+699 silly get     date: 'Fri, 25 Sep 2015 04:32:15 GMT',
+699 silly get     'content-type': 'application/json; charset=utf-8',
+699 silly get     'transfer-encoding': 'chunked',
+699 silly get     connection: 'keep-alive',
+699 silly get     'x-readtime': '10',
+699 silly get     'content-encoding': 'gzip' } ]
+700 verbose get saving map-stream to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\map-stream\.cache.json
+701 silly addNameRange number 2 { name: 'map-stream', range: '>=0.1.0 <0.2.0', hasData: true }
+702 silly addNameRange versions [ 'map-stream',
+702 silly addNameRange   [ '0.0.6', '0.0.5', '0.1.0', '0.0.4', '0.0.3', '0.0.2', '0.0.1' ] ]
+703 silly addNamed map-stream@0.1.0
+704 verbose addNamed "0.1.0" is a plain semver version for map-stream
+705 silly cache afterAdd map-stream@0.1.0
+706 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\map-stream\0.1.0\package\package.json not in flight; writing
+707 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\map-stream\0.1.0\package\package.json written
+708 http 200 http://registry.cnpmjs.org/pause-stream
+709 silly get cb [ 200,
+709 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+709 silly get     date: 'Fri, 25 Sep 2015 04:32:15 GMT',
+709 silly get     'content-type': 'application/json; charset=utf-8',
+709 silly get     'transfer-encoding': 'chunked',
+709 silly get     connection: 'keep-alive',
+709 silly get     'x-readtime': '11',
+709 silly get     'content-encoding': 'gzip' } ]
+710 verbose get saving pause-stream to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\pause-stream\.cache.json
+711 silly mapToRegistry name pause-stream
+712 silly mapToRegistry using default registry
+713 silly mapToRegistry registry http://registry.cnpmjs.org/
+714 silly mapToRegistry uri http://registry.cnpmjs.org/pause-stream
+715 verbose addRemoteTarball http://registry.cnpmjs.org/pause-stream/download/pause-stream-0.0.11.tgz not in flight; adding
+716 verbose addRemoteTarball [ 'http://registry.cnpmjs.org/pause-stream/download/pause-stream-0.0.11.tgz',
+716 verbose addRemoteTarball   'fe5a34b0cbce12b5aa6a2b403ee2e73b602f1445' ]
+717 info retry fetch attempt 1 at 12:32:15
+718 info attempt registry request try #1 at 12:32:15
+719 http fetch GET http://registry.cnpmjs.org/pause-stream/download/pause-stream-0.0.11.tgz
+720 http fetch 200 http://registry.cnpmjs.org/pause-stream/download/pause-stream-0.0.11.tgz
+721 silly fetchAndShaCheck shasum fe5a34b0cbce12b5aa6a2b403ee2e73b602f1445
+722 verbose addTmpTarball C:\Users\xiaoguang01\AppData\Local\Temp\npm-7636-2efe8ab6\registry.cnpmjs.org\pause-stream\download\pause-stream-0.0.11.tgz not in flight; adding
+723 verbose addTmpTarball already have metadata; skipping unpack for pause-stream@0.0.11
+724 silly cache afterAdd pause-stream@0.0.11
+725 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\pause-stream\0.0.11\package\package.json not in flight; writing
+726 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\pause-stream\0.0.11\package\package.json written
+727 http 200 http://registry.cnpmjs.org/duplexer
+728 silly get cb [ 200,
+728 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+728 silly get     date: 'Fri, 25 Sep 2015 04:32:17 GMT',
+728 silly get     'content-type': 'application/json; charset=utf-8',
+728 silly get     'transfer-encoding': 'chunked',
+728 silly get     connection: 'keep-alive',
+728 silly get     'x-readtime': '18',
+728 silly get     'content-encoding': 'gzip' } ]
+729 verbose get saving duplexer to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\duplexer\.cache.json
+730 http 200 http://registry.cnpmjs.org/split
+731 silly get cb [ 200,
+731 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+731 silly get     date: 'Fri, 25 Sep 2015 04:32:17 GMT',
+731 silly get     'content-type': 'application/json; charset=utf-8',
+731 silly get     'transfer-encoding': 'chunked',
+731 silly get     connection: 'keep-alive',
+731 silly get     'x-readtime': '26',
+731 silly get     'content-encoding': 'gzip' } ]
+732 verbose get saving split to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\split\.cache.json
+733 http 200 http://registry.cnpmjs.org/through
+734 silly get cb [ 200,
+734 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+734 silly get     date: 'Fri, 25 Sep 2015 04:32:17 GMT',
+734 silly get     'content-type': 'application/json; charset=utf-8',
+734 silly get     'transfer-encoding': 'chunked',
+734 silly get     connection: 'keep-alive',
+734 silly get     'x-readtime': '24',
+734 silly get     'content-encoding': 'gzip' } ]
+735 verbose get saving through to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\through\.cache.json
+736 silly addNameRange number 2 { name: 'duplexer', range: '>=0.1.1 <0.2.0', hasData: true }
+737 silly addNameRange versions [ 'duplexer',
+737 silly addNameRange   [ '0.1.1', '0.1.0', '0.0.4', '0.0.3', '0.0.2', '0.0.1' ] ]
+738 silly addNamed duplexer@0.1.1
+739 verbose addNamed "0.1.1" is a plain semver version for duplexer
+740 silly addNameRange number 2 { name: 'split', range: '>=0.3.0 <0.4.0', hasData: true }
+741 silly addNameRange versions [ 'split',
+741 silly addNameRange   [ '1.0.0',
+741 silly addNameRange     '0.3.3',
+741 silly addNameRange     '0.3.2',
+741 silly addNameRange     '0.3.1',
+741 silly addNameRange     '0.3.0',
+741 silly addNameRange     '0.2.10',
+741 silly addNameRange     '0.2.9',
+741 silly addNameRange     '0.2.8',
+741 silly addNameRange     '0.2.7',
+741 silly addNameRange     '0.2.6',
+741 silly addNameRange     '0.2.5',
+741 silly addNameRange     '0.2.4',
+741 silly addNameRange     '0.2.3',
+741 silly addNameRange     '0.2.1',
+741 silly addNameRange     '0.2.0',
+741 silly addNameRange     '0.1.2',
+741 silly addNameRange     '0.1.1',
+741 silly addNameRange     '0.1.0',
+741 silly addNameRange     '0.0.0' ] ]
+742 silly addNamed split@0.3.3
+743 verbose addNamed "0.3.3" is a plain semver version for split
+744 silly addNameRange number 2 { name: 'through', range: '>=2.3.1 <2.4.0', hasData: true }
+745 silly addNameRange versions [ 'through',
+745 silly addNameRange   [ '2.3.8',
+745 silly addNameRange     '2.3.7',
+745 silly addNameRange     '2.3.6',
+745 silly addNameRange     '2.3.4',
+745 silly addNameRange     '2.3.3',
+745 silly addNameRange     '2.3.2',
+745 silly addNameRange     '2.3.1',
+745 silly addNameRange     '2.2.7',
+745 silly addNameRange     '2.2.6',
+745 silly addNameRange     '2.2.5',
+745 silly addNameRange     '2.2.4',
+745 silly addNameRange     '2.2.2',
+745 silly addNameRange     '2.2.1',
+745 silly addNameRange     '2.2.0',
+745 silly addNameRange     '2.1.0',
+745 silly addNameRange     '2.0.0',
+745 silly addNameRange     '1.1.2',
+745 silly addNameRange     '1.1.1',
+745 silly addNameRange     '1.1.0',
+745 silly addNameRange     '1.0.0',
+745 silly addNameRange     '0.1.4',
+745 silly addNameRange     '0.1.3',
+745 silly addNameRange     '0.1.2',
+745 silly addNameRange     '0.1.1',
+745 silly addNameRange     '0.1.0',
+745 silly addNameRange     '0.0.4',
+745 silly addNameRange     '0.0.3',
+745 silly addNameRange     '0.0.2',
+745 silly addNameRange     '0.0.1' ] ]
+746 silly addNamed through@2.3.8
+747 verbose addNamed "2.3.8" is a plain semver version for through
+748 silly cache afterAdd duplexer@0.1.1
+749 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\duplexer\0.1.1\package\package.json not in flight; writing
+750 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\duplexer\0.1.1\package\package.json written
+751 silly cache afterAdd through@2.3.8
+752 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\through\2.3.8\package\package.json not in flight; writing
+753 silly cache afterAdd split@0.3.3
+754 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\split\0.3.3\package\package.json not in flight; writing
+755 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\through\2.3.8\package\package.json written
+756 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\split\0.3.3\package\package.json written
+757 silly install resolved [ { name: 'from',
+757 silly install resolved     version: '0.1.3',
+757 silly install resolved     description: 'Easy way to make a Readable Stream',
+757 silly install resolved     main: 'index.js',
+757 silly install resolved     scripts: { test: 'asynct test/*.js' },
+757 silly install resolved     repository: { type: 'git', url: 'git://github.com/dominictarr/from.git' },
+757 silly install resolved     keywords: [ 'stream', 'streams', 'readable', 'easy' ],
+757 silly install resolved     devDependencies: { asynct: '1', 'stream-spec': '0', assertions: '~2.3.0' },
+757 silly install resolved     author:
+757 silly install resolved      { name: 'Dominic Tarr',
+757 silly install resolved        email: 'dominic.tarr@gmail.com',
+757 silly install resolved        url: 'dominictarr.com' },
+757 silly install resolved     license: 'MIT',
+757 silly install resolved     readmeFilename: 'readme.markdown',
+757 silly install resolved     _id: 'from@0.1.3',
+757 silly install resolved     dist:
+757 silly install resolved      { tarball: 'http://registry.cnpmjs.org/from/download/from-0.1.3.tgz',
+757 silly install resolved        shasum: 'ef63ac2062ac32acf7862e0d40b44b896f22f3bc',
+757 silly install resolved        size: 3016,
+757 silly install resolved        noattachment: false },
+757 silly install resolved     _from: 'from@>=0.0.0 <1.0.0',
+757 silly install resolved     _npmVersion: '1.2.3',
+757 silly install resolved     _npmUser: { name: 'dominictarr', email: 'dominic.tarr@gmail.com' },
+757 silly install resolved     maintainers: [ [Object] ],
+757 silly install resolved     directories: {},
+757 silly install resolved     publish_time: 1363507219431,
+757 silly install resolved     _cnpm_publish_time: 1363507219431,
+757 silly install resolved     _shasum: 'ef63ac2062ac32acf7862e0d40b44b896f22f3bc',
+757 silly install resolved     _resolved: 'http://registry.cnpmjs.org/from/download/from-0.1.3.tgz',
+757 silly install resolved     bugs: { url: 'https://github.com/dominictarr/from/issues' },
+757 silly install resolved     readme: 'ERROR: No README data found!',
+757 silly install resolved     homepage: 'https://github.com/dominictarr/from#readme' },
+757 silly install resolved   { name: 'stream-combiner',
+757 silly install resolved     version: '0.0.4',
+757 silly install resolved     homepage: 'https://github.com/dominictarr/stream-combiner',
+757 silly install resolved     repository:
+757 silly install resolved      { type: 'git',
+757 silly install resolved        url: 'git://github.com/dominictarr/stream-combiner.git' },
+757 silly install resolved     dependencies: { duplexer: '~0.1.1' },
+757 silly install resolved     devDependencies: { tape: '~2.3.0', 'event-stream': '~3.0.7' },
+757 silly install resolved     scripts: { test: 'set -e; for t in test/*.js; do node $t; done' },
+757 silly install resolved     author:
+757 silly install resolved      { name: '\'Dominic Tarr\'',
+757 silly install resolved        email: 'dominic.tarr@gmail.com',
+757 silly install resolved        url: 'http://dominictarr.com' },
+757 silly install resolved     license: 'MIT',
+757 silly install resolved     readmeFilename: 'README.md',
+757 silly install resolved     description: '<img src=https://secure.travis-ci.org/dominictarr/stream-combiner.png?branch=master>',
+757 silly install resolved     bugs: { url: 'https://github.com/dominictarr/stream-combiner/issues' },
+757 silly install resolved     _id: 'stream-combiner@0.0.4',
+757 silly install resolved     dist:
+757 silly install resolved      { tarball: 'http://registry.cnpmjs.org/stream-combiner/download/stream-combiner-0.0.4.tgz',
+757 silly install resolved        shasum: '4d5e433c185261dde623ca3f44c586bcf5c4ad14',
+757 silly install resolved        size: 2262,
+757 silly install resolved        noattachment: false },
+757 silly install resolved     _from: 'stream-combiner@>=0.0.4 <0.1.0',
+757 silly install resolved     _npmVersion: '1.3.11',
+757 silly install resolved     _npmUser: { name: 'dominictarr', email: 'dominic.tarr@gmail.com' },
+757 silly install resolved     maintainers: [ [Object] ],
+757 silly install resolved     directories: {},
+757 silly install resolved     publish_time: 1386781281554,
+757 silly install resolved     _cnpm_publish_time: 1386781281554,
+757 silly install resolved     _shasum: '4d5e433c185261dde623ca3f44c586bcf5c4ad14',
+757 silly install resolved     _resolved: 'http://registry.cnpmjs.org/stream-combiner/download/stream-combiner-0.0.4.tgz',
+757 silly install resolved     readme: 'ERROR: No README data found!' },
+757 silly install resolved   { name: 'map-stream',
+757 silly install resolved     version: '0.1.0',
+757 silly install resolved     description: 'construct pipes of streams of events',
+757 silly install resolved     homepage: 'http://github.com/dominictarr/map-stream',
+757 silly install resolved     repository:
+757 silly install resolved      { type: 'git',
+757 silly install resolved        url: 'git://github.com/dominictarr/map-stream.git' },
+757 silly install resolved     dependencies: {},
+757 silly install resolved     devDependencies:
+757 silly install resolved      { asynct: '*',
+757 silly install resolved        'it-is': '1',
+757 silly install resolved        ubelt: '~2.9',
+757 silly install resolved        'stream-spec': '~0.2',
+757 silly install resolved        'event-stream': '~2.1',
+757 silly install resolved        from: '0.0.2' },
+757 silly install resolved     scripts: { test: 'asynct test/' },
+757 silly install resolved     author:
+757 silly install resolved      { name: 'Dominic Tarr',
+757 silly install resolved        email: 'dominic.tarr@gmail.com',
+757 silly install resolved        url: 'http://dominictarr.com' },
+757 silly install resolved     readmeFilename: 'readme.markdown',
+757 silly install resolved     bugs: { url: 'https://github.com/dominictarr/map-stream/issues' },
+757 silly install resolved     _id: 'map-stream@0.1.0',
+757 silly install resolved     dist:
+757 silly install resolved      { tarball: 'http://registry.cnpmjs.org/map-stream/download/map-stream-0.1.0.tgz',
+757 silly install resolved        shasum: 'e56aa94c4c8055a16404a0674b78f215f7c8e194',
+757 silly install resolved        size: 5052,
+757 silly install resolved        noattachment: false },
+757 silly install resolved     _from: 'map-stream@>=0.1.0 <0.2.0',
+757 silly install resolved     _npmVersion: '1.3.21',
+757 silly install resolved     _npmUser: { name: 'dominictarr', email: 'dominic.tarr@gmail.com' },
+757 silly install resolved     maintainers: [ [Object] ],
+757 silly install resolved     directories: {},
+757 silly install resolved     publish_time: 1389251735544,
+757 silly install resolved     _cnpm_publish_time: 1389251735544,
+757 silly install resolved     _shasum: 'e56aa94c4c8055a16404a0674b78f215f7c8e194',
+757 silly install resolved     _resolved: 'http://registry.cnpmjs.org/map-stream/download/map-stream-0.1.0.tgz',
+757 silly install resolved     readme: 'ERROR: No README data found!' },
+757 silly install resolved   { name: 'pause-stream',
+757 silly install resolved     version: '0.0.11',
+757 silly install resolved     description: 'a ThroughStream that strictly buffers all readable events when paused.',
+757 silly install resolved     main: 'index.js',
+757 silly install resolved     directories: { test: 'test' },
+757 silly install resolved     devDependencies: { 'stream-tester': '0.0.2', 'stream-spec': '~0.2.0' },
+757 silly install resolved     scripts: { test: 'node test/index.js && node test/pause-end.js' },
+757 silly install resolved     repository:
+757 silly install resolved      { type: 'git',
+757 silly install resolved        url: 'git://github.com/dominictarr/pause-stream.git' },
+757 silly install resolved     keywords: [ 'stream', 'pipe', 'pause', 'drain', 'buffer' ],
+757 silly install resolved     author:
+757 silly install resolved      { name: 'Dominic Tarr',
+757 silly install resolved        email: 'dominic.tarr@gmail.com',
+757 silly install resolved        url: 'dominictarr.com' },
+757 silly install resolved     license: [ 'MIT', 'Apache2' ],
+757 silly install resolved     dependencies: { through: '~2.3' },
+757 silly install resolved     readmeFilename: 'readme.markdown',
+757 silly install resolved     bugs: { url: 'https://github.com/dominictarr/pause-stream/issues' },
+757 silly install resolved     _id: 'pause-stream@0.0.11',
+757 silly install resolved     dist:
+757 silly install resolved      { tarball: 'http://registry.cnpmjs.org/pause-stream/download/pause-stream-0.0.11.tgz',
+757 silly install resolved        shasum: 'fe5a34b0cbce12b5aa6a2b403ee2e73b602f1445',
+757 silly install resolved        size: 5843,
+757 silly install resolved        noattachment: false },
+757 silly install resolved     _from: 'pause-stream@0.0.11',
+757 silly install resolved     _npmVersion: '1.3.6',
+757 silly install resolved     _npmUser: { name: 'dominictarr', email: 'dominic.tarr@gmail.com' },
+757 silly install resolved     maintainers: [ [Object] ],
+757 silly install resolved     publish_time: 1379715111558,
+757 silly install resolved     _cnpm_publish_time: 1379715111558,
+757 silly install resolved     _shasum: 'fe5a34b0cbce12b5aa6a2b403ee2e73b602f1445',
+757 silly install resolved     _resolved: 'http://registry.cnpmjs.org/pause-stream/download/pause-stream-0.0.11.tgz' },
+757 silly install resolved   { name: 'duplexer',
+757 silly install resolved     version: '0.1.1',
+757 silly install resolved     description: 'Creates a duplex stream',
+757 silly install resolved     keywords: [],
+757 silly install resolved     author: { name: 'Raynos', email: 'raynos2@gmail.com' },
+757 silly install resolved     repository: { type: 'git', url: 'git://github.com/Raynos/duplexer.git' },
+757 silly install resolved     main: 'index',
+757 silly install resolved     homepage: 'https://github.com/Raynos/duplexer',
+757 silly install resolved     contributors: [ [Object] ],
+757 silly install resolved     bugs:
+757 silly install resolved      { url: 'https://github.com/Raynos/duplexer/issues',
+757 silly install resolved        email: 'raynos2@gmail.com' },
+757 silly install resolved     devDependencies: { tape: '0.3.3', through: '~0.1.4' },
+757 silly install resolved     licenses: [ [Object] ],
+757 silly install resolved     scripts: { test: 'node test' },
+757 silly install resolved     testling: { files: 'test/index.js', browsers: [Object] },
+757 silly install resolved     readme: '# duplexer\n\n[![build status][1]][2] [![dependency status][3]][4]\n\n[![browser support][5]][6]\n\nCreates a duplex stream\n\nTaken from [event-stream][7]\n\n## duplex (writeStream, readStream)\n\nTakes a writable stream and a readable stream and makes them appear as a readable writable stream.\n\nIt is assumed that the two streams are connected to each other in some way.\n\n## Example\n\n```js\nvar grep = cp.exec(\'grep Stream\')\n\nduplex(grep.stdin, grep.stdout)\n```\n\n## Installation\n\n`npm install duplexer`\n\n## Tests\n\n`npm test`\n\n## Contributors\n\n - Dominictarr\n - Raynos\n - samccone\n\n## MIT Licenced\n\n  [1]: https://secure.travis-ci.org/Raynos/duplexer.png\n  [2]: https://travis-ci.org/Raynos/duplexer\n  [3]: https://david-dm.org/Raynos/duplexer.png\n  [4]: https://david-dm.org/Raynos/duplexer\n  [5]: https://ci.testling.com/Raynos/duplexer.png\n  [6]: https://ci.testling.com/Raynos/duplexer\n  [7]: https://github.com/dominictarr/event-stream#duplex-writestream-readstream\n',
+757 silly install resolved     readmeFilename: 'README.md',
+757 silly install resolved     _id: 'duplexer@0.1.1',
+757 silly install resolved     _shasum: 'ace6ff808c1ce66b57d1ebf97977acb02334cfc1',
+757 silly install resolved     _from: 'duplexer@>=0.1.1 <0.2.0',
+757 silly install resolved     _resolved: 'https://registry.npmjs.org/duplexer/-/duplexer-0.1.1.tgz' },
+757 silly install resolved   { name: 'through',
+757 silly install resolved     version: '2.3.8',
+757 silly install resolved     description: 'simplified stream construction',
+757 silly install resolved     main: 'index.js',
+757 silly install resolved     scripts: { test: 'set -e; for t in test/*.js; do node $t; done' },
+757 silly install resolved     devDependencies: { 'stream-spec': '~0.3.5', tape: '~2.3.2', from: '~0.1.3' },
+757 silly install resolved     keywords: [ 'stream', 'streams', 'user-streams', 'pipe' ],
+757 silly install resolved     author:
+757 silly install resolved      { name: 'Dominic Tarr',
+757 silly install resolved        email: 'dominic.tarr@gmail.com',
+757 silly install resolved        url: 'dominictarr.com' },
+757 silly install resolved     license: 'MIT',
+757 silly install resolved     repository:
+757 silly install resolved      { type: 'git',
+757 silly install resolved        url: 'git+https://github.com/dominictarr/through.git' },
+757 silly install resolved     homepage: 'https://github.com/dominictarr/through',
+757 silly install resolved     testling: { browsers: [Object], files: 'test/*.js' },
+757 silly install resolved     gitHead: '2c5a6f9a0cc54da759b6e10964f2081c358e49dc',
+757 silly install resolved     bugs: { url: 'https://github.com/dominictarr/through/issues' },
+757 silly install resolved     _id: 'through@2.3.8',
+757 silly install resolved     _shasum: '0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5',
+757 silly install resolved     _from: 'through@>=2.3.1 <2.4.0',
+757 silly install resolved     _npmVersion: '2.12.0',
+757 silly install resolved     _nodeVersion: '2.3.1',
+757 silly install resolved     _npmUser: { name: 'dominictarr', email: 'dominic.tarr@gmail.com' },
+757 silly install resolved     maintainers: [ [Object] ],
+757 silly install resolved     dist:
+757 silly install resolved      { shasum: '0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5',
+757 silly install resolved        tarball: 'http://registry.npmjs.org/through/-/through-2.3.8.tgz' },
+757 silly install resolved     directories: {},
+757 silly install resolved     _resolved: 'https://registry.npmjs.org/through/-/through-2.3.8.tgz',
+757 silly install resolved     readme: 'ERROR: No README data found!' },
+757 silly install resolved   { name: 'split',
+757 silly install resolved     version: '0.3.3',
+757 silly install resolved     license: 'MIT',
+757 silly install resolved     description: 'split a Text Stream into a Line Stream',
+757 silly install resolved     homepage: 'http://github.com/dominictarr/split',
+757 silly install resolved     repository: { type: 'git', url: 'git://github.com/dominictarr/split.git' },
+757 silly install resolved     dependencies: { through: '2' },
+757 silly install resolved     devDependencies:
+757 silly install resolved      { asynct: '*',
+757 silly install resolved        'event-stream': '~3.0.2',
+757 silly install resolved        'it-is': '1',
+757 silly install resolved        'stream-spec': '~0.2',
+757 silly install resolved        ubelt: '~2.9',
+757 silly install resolved        'string-to-stream': '~1.0.0' },
+757 silly install resolved     scripts: { test: 'asynct test/' },
+757 silly install resolved     author:
+757 silly install resolved      { name: 'Dominic Tarr',
+757 silly install resolved        email: 'dominic.tarr@gmail.com',
+757 silly install resolved        url: 'http://bit.ly/dominictarr' },
+757 silly install resolved     optionalDependencies: {},
+757 silly install resolved     engines: { node: '*' },
+757 silly install resolved     gitHead: '3fe392ef2aabce9db7abe8185ec48389ae224883',
+757 silly install resolved     bugs: { url: 'https://github.com/dominictarr/split/issues' },
+757 silly install resolved     _id: 'split@0.3.3',
+757 silly install resolved     _shasum: 'cd0eea5e63a211dfff7eb0f091c4133e2d0dd28f',
+757 silly install resolved     _from: 'split@>=0.3.0 <0.4.0',
+757 silly install resolved     _npmVersion: '2.2.0',
+757 silly install resolved     _nodeVersion: '0.10.35',
+757 silly install resolved     _npmUser: { name: 'dominictarr', email: 'dominic.tarr@gmail.com' },
+757 silly install resolved     maintainers: [ [Object] ],
+757 silly install resolved     dist:
+757 silly install resolved      { shasum: 'cd0eea5e63a211dfff7eb0f091c4133e2d0dd28f',
+757 silly install resolved        size: 4383,
+757 silly install resolved        noattachment: false,
+757 silly install resolved        tarball: 'http://registry.cnpmjs.org/split/download/split-0.3.3.tgz' },
+757 silly install resolved     directories: {},
+757 silly install resolved     publish_time: 1422871713385,
+757 silly install resolved     _cnpm_publish_time: 1422871713385,
+757 silly install resolved     _resolved: 'http://registry.cnpmjs.org/split/download/split-0.3.3.tgz',
+757 silly install resolved     readme: 'ERROR: No README data found!' } ]
+758 info install from@0.1.3 into D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+759 info install stream-combiner@0.0.4 into D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+760 info install map-stream@0.1.0 into D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+761 info install pause-stream@0.0.11 into D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+762 info install duplexer@0.1.1 into D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+763 info install through@2.3.8 into D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+764 info install split@0.3.3 into D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+765 info installOne from@0.1.3
+766 verbose installOne of from to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream not in flight; installing
+767 info installOne stream-combiner@0.0.4
+768 verbose installOne of stream-combiner to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream not in flight; installing
+769 info installOne map-stream@0.1.0
+770 verbose installOne of map-stream to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream not in flight; installing
+771 info installOne pause-stream@0.0.11
+772 verbose installOne of pause-stream to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream not in flight; installing
+773 info installOne duplexer@0.1.1
+774 verbose installOne of duplexer to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream not in flight; installing
+775 info installOne through@2.3.8
+776 verbose installOne of through to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream not in flight; installing
+777 info installOne split@0.3.3
+778 verbose installOne of split to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream not in flight; installing
+779 verbose lock using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\map-stream-ec7e84d97372e89d.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream
+780 verbose lock using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\pause-stream-81e96e2fefbbd2de.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream
+781 verbose lock using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\from-3dea1cb3fc363bc8.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from
+782 verbose lock using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\stream-combiner-528fe722872d4059.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner
+783 silly install write writing map-stream 0.1.0 to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream
+784 silly install write writing pause-stream 0.0.11 to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream
+785 silly install write writing from 0.1.3 to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from
+786 silly install write writing stream-combiner 0.0.4 to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner
+787 verbose unbuild node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream
+788 verbose unbuild node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream
+789 verbose unbuild node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from
+790 verbose unbuild node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner
+791 verbose lock using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\through-9e86f0207ccd5c8b.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through
+792 verbose lock using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\split-7f665180a1718568.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split
+793 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream is being purged from base D:\ct\zeus
+794 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream
+795 silly install write writing through 2.3.8 to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through
+796 silly install write writing split 0.3.3 to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split
+797 verbose lock using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\duplexer-f6752873e20139aa.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer
+798 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream is being purged from base D:\ct\zeus
+799 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream
+800 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from is being purged from base D:\ct\zeus
+801 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from
+802 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner is being purged from base D:\ct\zeus
+803 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner
+804 verbose tar unpack C:\Users\xiaoguang01\AppData\Roaming\npm-cache\map-stream\0.1.0\package.tgz
+805 verbose tar unpacking to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream
+806 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream is being purged
+807 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream
+808 silly install write writing duplexer 0.1.1 to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer
+809 verbose tar unpack C:\Users\xiaoguang01\AppData\Roaming\npm-cache\pause-stream\0.0.11\package.tgz
+810 verbose tar unpacking to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream
+811 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream is being purged
+812 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream
+813 verbose tar unpack C:\Users\xiaoguang01\AppData\Roaming\npm-cache\from\0.1.3\package.tgz
+814 verbose tar unpacking to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from
+815 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from is being purged
+816 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from
+817 verbose tar unpack C:\Users\xiaoguang01\AppData\Roaming\npm-cache\stream-combiner\0.0.4\package.tgz
+818 verbose tar unpacking to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner
+819 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner is being purged
+820 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner
+821 silly gunzTarPerm modes [ '777', '666' ]
+822 silly gunzTarPerm modes [ '777', '666' ]
+823 silly gunzTarPerm modes [ '777', '666' ]
+824 silly gunzTarPerm modes [ '777', '666' ]
+825 verbose unbuild node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through
+826 verbose unbuild node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split
+827 verbose unbuild node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer
+828 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through is being purged from base D:\ct\zeus
+829 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through
+830 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split is being purged from base D:\ct\zeus
+831 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split
+832 verbose tar unpack C:\Users\xiaoguang01\AppData\Roaming\npm-cache\through\2.3.8\package.tgz
+833 verbose tar unpacking to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through
+834 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through is being purged
+835 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through
+836 silly gunzTarPerm extractEntry package.json
+837 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+838 verbose tar unpack C:\Users\xiaoguang01\AppData\Roaming\npm-cache\split\0.3.3\package.tgz
+839 verbose tar unpacking to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split
+840 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split is being purged
+841 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split
+842 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer is being purged from base D:\ct\zeus
+843 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer
+844 silly gunzTarPerm modes [ '777', '666' ]
+845 silly gunzTarPerm modes [ '777', '666' ]
+846 verbose tar unpack C:\Users\xiaoguang01\AppData\Roaming\npm-cache\duplexer\0.1.1\package.tgz
+847 verbose tar unpacking to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer
+848 silly gentlyRm D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer is being purged
+849 verbose gentlyRm don't care about contents; nuking D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer
+850 silly gunzTarPerm extractEntry package.json
+851 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+852 silly gunzTarPerm extractEntry package.json
+853 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+854 silly gunzTarPerm modes [ '777', '666' ]
+855 silly gunzTarPerm extractEntry package.json
+856 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+857 silly gunzTarPerm extractEntry .npmignore
+858 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+859 silly gunzTarPerm extractEntry LICENSE
+860 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+861 silly gunzTarPerm extractEntry .npmignore
+862 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+863 silly gunzTarPerm extractEntry LICENCE
+864 silly gunzTarPerm modified mode [ 'LICENCE', 420, 438 ]
+865 silly gunzTarPerm extractEntry .npmignore
+866 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+867 silly gunzTarPerm extractEntry README.md
+868 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+869 silly gunzTarPerm extractEntry .npmignore
+870 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+871 silly gunzTarPerm extractEntry index.js
+872 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+873 silly gunzTarPerm extractEntry package.json
+874 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+875 silly gunzTarPerm extractEntry package.json
+876 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+877 silly gunzTarPerm extractEntry package.json
+878 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+879 silly gunzTarPerm extractEntry index.js
+880 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+881 silly gunzTarPerm extractEntry readme.markdown
+882 silly gunzTarPerm modified mode [ 'readme.markdown', 420, 438 ]
+883 silly gunzTarPerm extractEntry test/index.js
+884 silly gunzTarPerm modified mode [ 'test/index.js', 420, 438 ]
+885 silly gunzTarPerm extractEntry test/pause-end.js
+886 silly gunzTarPerm modified mode [ 'test/pause-end.js', 420, 438 ]
+887 silly gunzTarPerm extractEntry index.js
+888 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+889 silly gunzTarPerm extractEntry .travis.yml
+890 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+891 silly gunzTarPerm extractEntry index.js
+892 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+893 silly gunzTarPerm extractEntry .travis.yml
+894 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+895 silly gunzTarPerm extractEntry LICENSE.APACHE2
+896 silly gunzTarPerm modified mode [ 'LICENSE.APACHE2', 420, 438 ]
+897 silly gunzTarPerm extractEntry LICENSE.MIT
+898 silly gunzTarPerm modified mode [ 'LICENSE.MIT', 420, 438 ]
+899 silly gunzTarPerm extractEntry .npmignore
+900 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+901 silly gunzTarPerm extractEntry README.md
+902 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+903 silly gunzTarPerm extractEntry LICENSE
+904 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+905 silly gunzTarPerm extractEntry index.js
+906 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+907 silly gunzTarPerm extractEntry .npmignore
+908 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+909 silly gunzTarPerm extractEntry LICENCE
+910 silly gunzTarPerm modified mode [ 'LICENCE', 420, 438 ]
+911 silly gunzTarPerm extractEntry examples/pretty.js
+912 silly gunzTarPerm modified mode [ 'examples/pretty.js', 420, 438 ]
+913 silly gunzTarPerm extractEntry readme.markdown
+914 silly gunzTarPerm modified mode [ 'readme.markdown', 420, 438 ]
+915 silly gunzTarPerm extractEntry LICENSE.APACHE2
+916 silly gunzTarPerm modified mode [ 'LICENSE.APACHE2', 420, 438 ]
+917 silly gunzTarPerm extractEntry LICENSE.MIT
+918 silly gunzTarPerm modified mode [ 'LICENSE.MIT', 420, 438 ]
+919 silly gunzTarPerm extractEntry readme.markdown
+920 silly gunzTarPerm modified mode [ 'readme.markdown', 420, 438 ]
+921 silly gunzTarPerm extractEntry test/index.js
+922 silly gunzTarPerm modified mode [ 'test/index.js', 420, 438 ]
+923 silly gunzTarPerm extractEntry LICENCE
+924 silly gunzTarPerm modified mode [ 'LICENCE', 420, 438 ]
+925 silly gunzTarPerm extractEntry index.js
+926 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+927 silly gunzTarPerm extractEntry .travis.yml
+928 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+929 silly gunzTarPerm extractEntry test/index.js
+930 silly gunzTarPerm modified mode [ 'test/index.js', 420, 438 ]
+931 silly gunzTarPerm extractEntry index.js
+932 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+933 silly gunzTarPerm extractEntry .travis.yml
+934 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+935 silly gunzTarPerm extractEntry test/simple-map.asynct.js
+936 silly gunzTarPerm modified mode [ 'test/simple-map.asynct.js', 420, 438 ]
+937 silly gunzTarPerm extractEntry test/index.js
+938 silly gunzTarPerm modified mode [ 'test/index.js', 420, 438 ]
+939 silly gunzTarPerm extractEntry .travis.yml
+940 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+941 silly gunzTarPerm extractEntry examples/pretty.js
+942 silly gunzTarPerm modified mode [ 'examples/pretty.js', 420, 438 ]
+943 silly gunzTarPerm extractEntry readme.markdown
+944 silly gunzTarPerm modified mode [ 'readme.markdown', 420, 438 ]
+945 silly gunzTarPerm extractEntry readme.markdown
+946 silly gunzTarPerm modified mode [ 'readme.markdown', 420, 438 ]
+947 silly gunzTarPerm extractEntry test/async.js
+948 silly gunzTarPerm modified mode [ 'test/async.js', 420, 438 ]
+949 silly gunzTarPerm extractEntry test/auto-destroy.js
+950 silly gunzTarPerm modified mode [ 'test/auto-destroy.js', 420, 438 ]
+951 silly gunzTarPerm extractEntry test/buffering.js
+952 silly gunzTarPerm modified mode [ 'test/buffering.js', 420, 438 ]
+953 silly gunzTarPerm extractEntry test/options.asynct.js
+954 silly gunzTarPerm modified mode [ 'test/options.asynct.js', 420, 438 ]
+955 silly gunzTarPerm extractEntry test/partitioned_unicode.js
+956 silly gunzTarPerm modified mode [ 'test/partitioned_unicode.js', 420, 438 ]
+957 silly gunzTarPerm extractEntry test/end.js
+958 silly gunzTarPerm modified mode [ 'test/end.js', 420, 438 ]
+959 silly gunzTarPerm extractEntry test/split.asynct.js
+960 silly gunzTarPerm modified mode [ 'test/split.asynct.js', 420, 438 ]
+961 silly gunzTarPerm extractEntry test/try_catch.asynct.js
+962 silly gunzTarPerm modified mode [ 'test/try_catch.asynct.js', 420, 438 ]
+963 http 200 http://registry.cnpmjs.org/minimatch
+964 silly get cb [ 200,
+964 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+964 silly get     date: 'Fri, 25 Sep 2015 04:32:17 GMT',
+964 silly get     'content-type': 'application/json; charset=utf-8',
+964 silly get     'transfer-encoding': 'chunked',
+964 silly get     connection: 'keep-alive',
+964 silly get     'x-readtime': '28',
+964 silly get     'content-encoding': 'gzip' } ]
+965 verbose get saving minimatch to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\minimatch\.cache.json
+966 http 200 http://registry.cnpmjs.org/lodash.defaults
+967 silly get cb [ 200,
+967 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+967 silly get     date: 'Fri, 25 Sep 2015 04:32:17 GMT',
+967 silly get     'content-type': 'application/json; charset=utf-8',
+967 silly get     'transfer-encoding': 'chunked',
+967 silly get     connection: 'keep-alive',
+967 silly get     'x-readtime': '18',
+967 silly get     'content-encoding': 'gzip' } ]
+968 verbose get saving lodash.defaults to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\lodash.defaults\.cache.json
+969 http 200 http://registry.cnpmjs.org/touch
+970 silly get cb [ 200,
+970 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+970 silly get     date: 'Fri, 25 Sep 2015 04:32:17 GMT',
+970 silly get     'content-type': 'application/json; charset=utf-8',
+970 silly get     'transfer-encoding': 'chunked',
+970 silly get     connection: 'keep-alive',
+970 silly get     'x-readtime': '10',
+970 silly get     'content-encoding': 'gzip' } ]
+971 verbose get saving touch to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\touch\.cache.json
+972 silly gunzTarPerm extractEntry test/index.js
+973 silly gunzTarPerm modified mode [ 'test/index.js', 420, 438 ]
+974 http 200 http://registry.cnpmjs.org/es6-promise
+975 silly get cb [ 200,
+975 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+975 silly get     date: 'Fri, 25 Sep 2015 04:32:17 GMT',
+975 silly get     'content-type': 'application/json; charset=utf-8',
+975 silly get     'transfer-encoding': 'chunked',
+975 silly get     connection: 'keep-alive',
+975 silly get     'x-readtime': '23',
+975 silly get     'content-encoding': 'gzip' } ]
+976 verbose get saving es6-promise to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\es6-promise\.cache.json
+977 http 200 http://registry.cnpmjs.org/undefsafe
+978 silly get cb [ 200,
+978 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+978 silly get     date: 'Fri, 25 Sep 2015 04:32:17 GMT',
+978 silly get     'content-type': 'application/json; charset=utf-8',
+978 silly get     'transfer-encoding': 'chunked',
+978 silly get     connection: 'keep-alive',
+978 silly get     'x-readtime': '10',
+978 silly get     'content-encoding': 'gzip' } ]
+979 verbose get saving undefsafe to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\undefsafe\.cache.json
+980 silly addNameRange number 2 { name: 'minimatch', range: '>=0.3.0 <0.4.0', hasData: true }
+981 silly addNameRange versions [ 'minimatch',
+981 silly addNameRange   [ '2.0.10',
+981 silly addNameRange     '2.0.9',
+981 silly addNameRange     '2.0.8',
+981 silly addNameRange     '2.0.7',
+981 silly addNameRange     '2.0.6',
+981 silly addNameRange     '2.0.5',
+981 silly addNameRange     '2.0.4',
+981 silly addNameRange     '2.0.3',
+981 silly addNameRange     '2.0.2',
+981 silly addNameRange     '2.0.1',
+981 silly addNameRange     '2.0.0',
+981 silly addNameRange     '1.0.0',
+981 silly addNameRange     '0.4.0',
+981 silly addNameRange     '0.3.0',
+981 silly addNameRange     '0.2.14',
+981 silly addNameRange     '0.2.13',
+981 silly addNameRange     '0.2.12',
+981 silly addNameRange     '0.2.11',
+981 silly addNameRange     '0.2.10',
+981 silly addNameRange     '0.2.9',
+981 silly addNameRange     '0.2.8',
+981 silly addNameRange     '0.2.7',
+981 silly addNameRange     '0.2.6',
+981 silly addNameRange     '0.2.5',
+981 silly addNameRange     '0.2.4',
+981 silly addNameRange     '0.2.3',
+981 silly addNameRange     '0.2.2',
+981 silly addNameRange     '0.2.0',
+981 silly addNameRange     '0.1.5',
+981 silly addNameRange     '0.1.4',
+981 silly addNameRange     '0.1.3',
+981 silly addNameRange     '0.1.2',
+981 silly addNameRange     '0.1.1',
+981 silly addNameRange     '0.0.5',
+981 silly addNameRange     '0.0.4',
+981 silly addNameRange     '0.0.2',
+981 silly addNameRange     '0.0.1' ] ]
+982 silly addNamed minimatch@0.3.0
+983 verbose addNamed "0.3.0" is a plain semver version for minimatch
+984 silly addNameRange number 2 { name: 'lodash.defaults',
+984 silly addNameRange   range: '>=3.1.2 <4.0.0',
+984 silly addNameRange   hasData: true }
+985 silly addNameRange versions [ 'lodash.defaults',
+985 silly addNameRange   [ '3.1.2',
+985 silly addNameRange     '3.1.1',
+985 silly addNameRange     '3.1.0',
+985 silly addNameRange     '3.0.0',
+985 silly addNameRange     '2.4.1',
+985 silly addNameRange     '2.4.0',
+985 silly addNameRange     '2.3.0',
+985 silly addNameRange     '2.2.1',
+985 silly addNameRange     '2.2.0',
+985 silly addNameRange     '2.1.0',
+985 silly addNameRange     '2.0.0' ] ]
+986 silly addNamed lodash.defaults@3.1.2
+987 verbose addNamed "3.1.2" is a plain semver version for lodash.defaults
+988 silly addNameRange number 2 { name: 'touch', range: '>=1.0.0 <1.1.0', hasData: true }
+989 silly addNameRange versions [ 'touch', [ '1.0.0', '0.0.4', '0.0.3', '0.0.2', '0.0.1' ] ]
+990 silly addNamed touch@1.0.0
+991 verbose addNamed "1.0.0" is a plain semver version for touch
+992 http 200 http://registry.cnpmjs.org/debug
+993 silly get cb [ 200,
+993 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+993 silly get     date: 'Fri, 25 Sep 2015 04:32:17 GMT',
+993 silly get     'content-type': 'application/json; charset=utf-8',
+993 silly get     'transfer-encoding': 'chunked',
+993 silly get     connection: 'keep-alive',
+993 silly get     'x-readtime': '35',
+993 silly get     'content-encoding': 'gzip' } ]
+994 verbose get saving debug to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\debug\.cache.json
+995 silly addNameRange number 2 { name: 'es6-promise', range: '>=3.0.2 <4.0.0', hasData: true }
+996 silly addNameRange versions [ 'es6-promise',
+996 silly addNameRange   [ '3.0.2',
+996 silly addNameRange     '3.0.1',
+996 silly addNameRange     '3.0.0',
+996 silly addNameRange     '2.3.0',
+996 silly addNameRange     '2.2.0',
+996 silly addNameRange     '2.1.1',
+996 silly addNameRange     '2.1.0',
+996 silly addNameRange     '2.0.1',
+996 silly addNameRange     '2.0.0',
+996 silly addNameRange     '1.0.0',
+996 silly addNameRange     '0.1.2',
+996 silly addNameRange     '0.1.1',
+996 silly addNameRange     '0.1.0' ] ]
+997 silly addNamed es6-promise@3.0.2
+998 verbose addNamed "3.0.2" is a plain semver version for es6-promise
+999 silly mapToRegistry name undefsafe
+1000 silly mapToRegistry using default registry
+1001 silly mapToRegistry registry http://registry.cnpmjs.org/
+1002 silly mapToRegistry uri http://registry.cnpmjs.org/undefsafe
+1003 verbose addRemoteTarball http://registry.cnpmjs.org/undefsafe/download/undefsafe-0.0.3.tgz not in flight; adding
+1004 verbose addRemoteTarball [ 'http://registry.cnpmjs.org/undefsafe/download/undefsafe-0.0.3.tgz',
+1004 verbose addRemoteTarball   'ecca3a03e56b9af17385baac812ac83b994a962f' ]
+1005 silly cache afterAdd minimatch@0.3.0
+1006 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\minimatch\0.3.0\package\package.json not in flight; writing
+1007 silly cache afterAdd lodash.defaults@3.1.2
+1008 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\lodash.defaults\3.1.2\package\package.json not in flight; writing
+1009 verbose write writing to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner\package.json
+1010 info retry fetch attempt 1 at 12:32:18
+1011 info attempt registry request try #1 at 12:32:18
+1012 http fetch GET http://registry.cnpmjs.org/undefsafe/download/undefsafe-0.0.3.tgz
+1013 silly cache afterAdd touch@1.0.0
+1014 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\touch\1.0.0\package\package.json not in flight; writing
+1015 silly addNameRange number 2 { name: 'debug', range: '>=2.2.0 <3.0.0', hasData: true }
+1016 silly addNameRange versions [ 'debug',
+1016 silly addNameRange   [ '2.2.0',
+1016 silly addNameRange     '2.1.3',
+1016 silly addNameRange     '2.1.2',
+1016 silly addNameRange     '2.1.1',
+1016 silly addNameRange     '2.1.0',
+1016 silly addNameRange     '2.0.0',
+1016 silly addNameRange     '1.0.4',
+1016 silly addNameRange     '1.0.3',
+1016 silly addNameRange     '1.0.2',
+1016 silly addNameRange     '1.0.1',
+1016 silly addNameRange     '1.0.0',
+1016 silly addNameRange     '0.8.1',
+1016 silly addNameRange     '0.8.0',
+1016 silly addNameRange     '0.7.4',
+1016 silly addNameRange     '0.7.3',
+1016 silly addNameRange     '0.7.2',
+1016 silly addNameRange     '0.7.1',
+1016 silly addNameRange     '0.7.0',
+1016 silly addNameRange     '0.6.0',
+1016 silly addNameRange     '0.5.0',
+1016 silly addNameRange     '0.4.1',
+1016 silly addNameRange     '0.4.0',
+1016 silly addNameRange     '0.3.0',
+1016 silly addNameRange     '0.2.0',
+1016 silly addNameRange     '0.1.0',
+1016 silly addNameRange     '0.0.1' ] ]
+1017 silly addNamed debug@2.2.0
+1018 verbose addNamed "2.2.0" is a plain semver version for debug
+1019 verbose write writing to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from\package.json
+1020 silly cache afterAdd es6-promise@3.0.2
+1021 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\es6-promise\3.0.2\package\package.json not in flight; writing
+1022 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\minimatch\0.3.0\package\package.json written
+1023 info preinstall stream-combiner@0.0.4
+1024 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\lodash.defaults\3.1.2\package\package.json written
+1025 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner\package.json
+1026 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\touch\1.0.0\package\package.json written
+1027 verbose write writing to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer\package.json
+1028 info preinstall from@0.1.3
+1029 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\es6-promise\3.0.2\package\package.json written
+1030 silly cache afterAdd debug@2.2.0
+1031 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\debug\2.2.0\package\package.json not in flight; writing
+1032 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from\package.json
+1033 verbose write writing to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream\package.json
+1034 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner\package.json
+1035 info preinstall duplexer@0.1.1
+1036 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer\package.json
+1037 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\debug\2.2.0\package\package.json written
+1038 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from\package.json
+1039 info preinstall pause-stream@0.0.11
+1040 silly install resolved []
+1041 verbose about to build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner
+1042 info build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner
+1043 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream\package.json
+1044 verbose write writing to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream\package.json
+1045 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer\package.json
+1046 silly install resolved []
+1047 verbose about to build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from
+1048 info build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from
+1049 info linkStuff stream-combiner@0.0.4
+1050 silly linkStuff stream-combiner@0.0.4 has D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules as its parent node_modules
+1051 info preinstall map-stream@0.1.0
+1052 silly install resolved []
+1053 verbose about to build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer
+1054 info build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer
+1055 info linkStuff from@0.1.3
+1056 silly linkStuff from@0.1.3 has D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules as its parent node_modules
+1057 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream\package.json
+1058 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream\package.json
+1059 info linkStuff duplexer@0.1.1
+1060 silly linkStuff duplexer@0.1.1 has D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules as its parent node_modules
+1061 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream\package.json
+1062 verbose linkBins stream-combiner@0.0.4
+1063 verbose linkMans stream-combiner@0.0.4
+1064 verbose rebuildBundles stream-combiner@0.0.4
+1065 info install stream-combiner@0.0.4
+1066 info postinstall stream-combiner@0.0.4
+1067 silly install resolved []
+1068 verbose about to build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream
+1069 info build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream
+1070 verbose linkBins from@0.1.3
+1071 verbose linkMans from@0.1.3
+1072 verbose rebuildBundles from@0.1.3
+1073 silly install resolved []
+1074 verbose about to build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream
+1075 info build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream
+1076 info install from@0.1.3
+1077 verbose unlock done using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\stream-combiner-528fe722872d4059.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\stream-combiner
+1078 info postinstall from@0.1.3
+1079 info linkStuff map-stream@0.1.0
+1080 silly linkStuff map-stream@0.1.0 has D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules as its parent node_modules
+1081 verbose linkBins duplexer@0.1.1
+1082 verbose linkMans duplexer@0.1.1
+1083 verbose rebuildBundles duplexer@0.1.1
+1084 info install duplexer@0.1.1
+1085 verbose unlock done using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\from-3dea1cb3fc363bc8.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\from
+1086 info postinstall duplexer@0.1.1
+1087 verbose write writing to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through\package.json
+1088 verbose write writing to D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split\package.json
+1089 info linkStuff pause-stream@0.0.11
+1090 silly linkStuff pause-stream@0.0.11 has D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules as its parent node_modules
+1091 verbose unlock done using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\duplexer-f6752873e20139aa.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\duplexer
+1092 info preinstall split@0.3.3
+1093 info preinstall through@2.3.8
+1094 verbose linkBins map-stream@0.1.0
+1095 verbose linkMans map-stream@0.1.0
+1096 verbose rebuildBundles map-stream@0.1.0
+1097 info install map-stream@0.1.0
+1098 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split\package.json
+1099 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through\package.json
+1100 info postinstall map-stream@0.1.0
+1101 verbose linkBins pause-stream@0.0.11
+1102 verbose linkMans pause-stream@0.0.11
+1103 verbose rebuildBundles pause-stream@0.0.11
+1104 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split\package.json
+1105 verbose readDependencies loading dependencies from D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through\package.json
+1106 info install pause-stream@0.0.11
+1107 verbose unlock done using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\map-stream-ec7e84d97372e89d.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\map-stream
+1108 info postinstall pause-stream@0.0.11
+1109 silly install resolved []
+1110 verbose about to build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through
+1111 info build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through
+1112 silly install resolved []
+1113 verbose about to build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split
+1114 info build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split
+1115 verbose unlock done using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\pause-stream-81e96e2fefbbd2de.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\pause-stream
+1116 info linkStuff through@2.3.8
+1117 silly linkStuff through@2.3.8 has D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules as its parent node_modules
+1118 info linkStuff split@0.3.3
+1119 silly linkStuff split@0.3.3 has D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules as its parent node_modules
+1120 verbose linkBins through@2.3.8
+1121 verbose linkMans through@2.3.8
+1122 verbose rebuildBundles through@2.3.8
+1123 verbose linkBins split@0.3.3
+1124 verbose linkMans split@0.3.3
+1125 verbose rebuildBundles split@0.3.3
+1126 info install through@2.3.8
+1127 info install split@0.3.3
+1128 info postinstall through@2.3.8
+1129 info postinstall split@0.3.3
+1130 verbose unlock done using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\through-9e86f0207ccd5c8b.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\through
+1131 verbose unlock done using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\split-7f665180a1718568.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream\node_modules\split
+1132 verbose about to build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+1133 info build D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+1134 info linkStuff event-stream@3.3.1
+1135 silly linkStuff event-stream@3.3.1 has D:\ct\zeus\node_modules\gulp-nodemon\node_modules as its parent node_modules
+1136 verbose linkBins event-stream@3.3.1
+1137 verbose linkMans event-stream@3.3.1
+1138 verbose rebuildBundles event-stream@3.3.1
+1139 verbose rebuildBundles [ 'duplexer',
+1139 verbose rebuildBundles   'from',
+1139 verbose rebuildBundles   'map-stream',
+1139 verbose rebuildBundles   'pause-stream',
+1139 verbose rebuildBundles   'split',
+1139 verbose rebuildBundles   'stream-combiner',
+1139 verbose rebuildBundles   'through' ]
+1140 info install event-stream@3.3.1
+1141 info postinstall event-stream@3.3.1
+1142 verbose unlock done using C:\Users\xiaoguang01\AppData\Roaming\npm-cache\_locks\event-stream-929cc8443477b2e5.lock for D:\ct\zeus\node_modules\gulp-nodemon\node_modules\event-stream
+1143 http fetch 200 http://registry.cnpmjs.org/undefsafe/download/undefsafe-0.0.3.tgz
+1144 silly fetchAndShaCheck shasum ecca3a03e56b9af17385baac812ac83b994a962f
+1145 verbose addTmpTarball C:\Users\xiaoguang01\AppData\Local\Temp\npm-7636-2efe8ab6\registry.cnpmjs.org\undefsafe\download\undefsafe-0.0.3.tgz not in flight; adding
+1146 verbose addTmpTarball already have metadata; skipping unpack for undefsafe@0.0.3
+1147 silly cache afterAdd undefsafe@0.0.3
+1148 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\undefsafe\0.0.3\package\package.json not in flight; writing
+1149 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\undefsafe\0.0.3\package\package.json written
+1150 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+1151 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+1152 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+1153 info attempt registry request try #2 at 12:32:45
+1154 http request GET http://registry.cnpmjs.org/ps-tree
+1155 info attempt registry request try #2 at 12:32:45
+1156 http request GET http://registry.cnpmjs.org/chokidar
+1157 info attempt registry request try #2 at 12:32:45
+1158 http request GET http://registry.cnpmjs.org/update-notifier
+1159 http 200 http://registry.cnpmjs.org/ps-tree
+1160 silly get cb [ 200,
+1160 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+1160 silly get     date: 'Fri, 25 Sep 2015 04:32:45 GMT',
+1160 silly get     'content-type': 'application/json; charset=utf-8',
+1160 silly get     'transfer-encoding': 'chunked',
+1160 silly get     connection: 'keep-alive',
+1160 silly get     'x-readtime': '11',
+1160 silly get     'content-encoding': 'gzip' } ]
+1161 verbose get saving ps-tree to C:\Users\xiaoguang01\AppData\Roaming\npm-cache\registry.cnpmjs.org\ps-tree\.cache.json
+1162 silly addNameRange number 2 { name: 'ps-tree', range: '>=0.0.3 <0.1.0', hasData: true }
+1163 silly addNameRange versions [ 'ps-tree',
+1163 silly addNameRange   [ '1.0.1', '1.0.0', '0.0.3', '0.0.2', '0.0.1', '0.0.0' ] ]
+1164 silly addNamed ps-tree@0.0.3
+1165 verbose addNamed "0.0.3" is a plain semver version for ps-tree
+1166 silly cache afterAdd ps-tree@0.0.3
+1167 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\ps-tree\0.0.3\package\package.json not in flight; writing
+1168 verbose afterAdd C:\Users\xiaoguang01\AppData\Roaming\npm-cache\ps-tree\0.0.3\package\package.json written
+1169 verbose stack TypeError: Cannot read property 'emit' of null
+1169 verbose stack     at Socket.connectionErrorHandler (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:207:24)
+1169 verbose stack     at Socket.g (events.js:199:16)
+1169 verbose stack     at Socket.emit (events.js:129:20)
+1169 verbose stack     at net.js:459:14
+1169 verbose stack     at process._tickCallback (node.js:355:11)
+1170 verbose cwd D:\ct\zeus
+1171 error Windows_NT 6.1.7601
+1172 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--save-dev" "gulp-nodemon"
+1173 error node v0.12.3
+1174 error npm  v2.9.1
+1175 error Cannot read property 'emit' of null
+1176 error If you need help, you may report this error at:
+1176 error     <https://github.com/npm/npm/issues>
+1177 verbose exit [ 1, true ]
