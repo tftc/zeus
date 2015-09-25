@@ -1,38 +1,36 @@
+/**
+ * @file gulpfile.js
+ * @desc 自动化脚本
+ * @author xiaoguang01
+ * @date 2015/9/25
+ */
 var gulp = require('gulp');
-var fecs = require('fecs-gulp');
+var nodemon = require('gulp-nodemon');
+var livereload = require('gulp-livereload');
 var connect = require('gulp-connect');
 
-gulp.task('test', function () {
-    return gulp.src(['./test/css/*', './test/html/*', './test/js/*'])
-        .pipe(fecs.check())
-        .pipe(
-            fecs.reporter('baidu', {
-                color: true,
-                rule: true,
-                sort: true
-            })
-        )
-        .pipe(fecs.format())
-        .pipe(gulp.dest('./test/output'));
-});
-
-//创建watch任务去检测html文件,其定义了当html改动之后，去调用一个Gulp的Task
+// 监听静态文件修改
 gulp.task('watch', function () {
-    gulp.watch(['./www/*.html'], ['html']);
+    livereload.listen();
+    gulp.watch(['./pid','./app/template/**/*.*'], ['reload']);
+
 });
 
-//使用connect启动一个Web服务器
-gulp.task('connect', function () {
-    connect.server({
-        root: 'www',
-        livereload: true
+// nodemon
+gulp.task('start', function () {
+    nodemon({
+        script: './app/bootSrtap.js',
+        ext: 'js',
+        execMap: {
+            js: 'node --harmony'
+        }
     });
 });
 
-gulp.task('html', function () {
-    gulp.src('./www/*.html')
-        .pipe(connect.reload());
+// livereload
+gulp.task('reload', function () {
+    gulp.src('').pipe(livereload());
 });
 
-//运行Gulp时，默认的Task
-gulp.task('default', ['connect', 'watch']);
+// 运行Gulp时，默认的Task
+gulp.task('dev', ['watch', 'start']);

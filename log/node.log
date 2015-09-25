@@ -1,0 +1,16 @@
+
+Running node-supervisor with
+  program '--harmony ./app/bootSrtap.js'
+  --watch '.'
+  --extensions 'node,js'
+  --exec 'node'
+
+Starting child process with 'node --harmony ./app/bootSrtap.js'
+Watching directory 'D:\ct\zeus' for changes.
+服务启动：http://127.0.0.1:8888
+crashing child
+Starting child process with 'node --harmony ./app/bootSrtap.js'
+服务启动：http://127.0.0.1:8888
+crashing child
+Starting child process with 'node --harmony ./app/bootSrtap.js'
+服务启动：http://127.0.0.1:8888
