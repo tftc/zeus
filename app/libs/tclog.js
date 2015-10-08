@@ -165,7 +165,7 @@ tclog.log = function (stream, method, loginfos) {
     }
 };
 
-tclog.prepare = function(method, logInfos){
+tclog.prepare = function (method, logInfos) {
 
     var now = new Date();
     var month = now.getMonth() + 1;
@@ -183,6 +183,7 @@ tclog.prepare = function(method, logInfos){
     var errPos = (new Error()).stack.split('\n').slice(4)[0];
     var messages = [];
     messages.push(errPos);
+    console.log(logInfos);
     for (var i in logInfos) {
         if (typeof logInfos[i] === 'object') {
             var inspectStr = inspect(logInfos[i], false, 1);

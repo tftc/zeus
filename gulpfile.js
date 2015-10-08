@@ -7,12 +7,11 @@
 var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 var livereload = require('gulp-livereload');
-var connect = require('gulp-connect');
 
 // 监听静态文件修改
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch(['./pid','./app/template/**/*.*'], ['reload']);
+    gulp.watch(['./pid', './app/template/**/*.*'], ['reload']);
 
 });
 
@@ -26,7 +25,7 @@ gulp.task('start', function () {
         execMap: {
             js: 'node --harmony'
         }
-    })
+    });
 
 });
 
