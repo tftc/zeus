@@ -8,20 +8,13 @@ var config = require('../conf');
 var koa = require('koa');
 var view = require('koa-ejs');
 var router = require('./router');
-var path = require('path');
 var app = koa();
 var fs = require('fs');
 var runEnv = config.runEnv;
-
+var tclog = require('./libs/tclog.js');
 
 // 设置模板
-view(app, {
-    root: path.join(__dirname, 'template'),
-    layout: 'layout',
-    viewExt: 'html',
-    cache: false,
-    debug: true
-});
+view(app, config.view);
 
 // live-reload代理中间件
 if (runEnv === 'dev') {
@@ -41,6 +34,10 @@ app.use(function *error(next) {
         yield next;
     }
 });
+
+tclog.init();
+
+tclog.notice('sssss');
 
 app.listen(8000);
 console.log('UI Server已经启动：http://127.0.0.1:8000');

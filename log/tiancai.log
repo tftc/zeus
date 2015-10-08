@@ -1,0 +1,6 @@
+NOTICE: pid::8348 2015-10-08 17:19:55     at Object.tclog.init (D:\ct\zeus\app\libs\tclog.js:53:17) 9999
+NOTICE: pid::8348 2015-10-08 17:19:55     at Object.<anonymous> (D:\ct\zeus\app\bootSrtap.js:40:7) sssss
+NOTICE: pid::8348 2015-10-08 17:19:55     at Object.<anonymous> (D:\ct\zeus\app\bootSrtap.js:43:9) UI Server已经启动：http://127.0.0.1:8000
+NOTICE: pid::6800 2015-10-08 17:21:01     at Object.tclog.init (D:\ct\zeus\app\libs\tclog.js:53:17) 9999
+NOTICE: pid::6800 2015-10-08 17:21:01     at Object.<anonymous> (D:\ct\zeus\app\bootSrtap.js:40:7) sssss
+NOTICE: pid::6800 2015-10-08 17:21:01     at Object.<anonymous> (D:\ct\zeus\app\bootSrtap.js:43:9) UI Server已经启动：http://127.0.0.1:8000

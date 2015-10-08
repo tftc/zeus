@@ -18,13 +18,16 @@ gulp.task('watch', function () {
 
 // nodemon
 gulp.task('start', function () {
+    gulp.src('conf/dev/index.js')
+        .pipe(gulp.dest('conf'));
     nodemon({
         script: './app/bootSrtap.js',
         ext: 'js',
         execMap: {
             js: 'node --harmony'
         }
-    });
+    })
+
 });
 
 // livereload

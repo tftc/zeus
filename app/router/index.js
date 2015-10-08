@@ -33,4 +33,4 @@ function setMap(ctrs) {
     router.get('/index', ctrs.index.test);
 }
 
-module.exports = set
+module.exports = set;

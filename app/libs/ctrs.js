@@ -22,6 +22,6 @@ function getCtrs(app) {
 }
 
 module.exports = {
-    getCtrs : getCtrs
+    getCtrs: getCtrs
 
 };

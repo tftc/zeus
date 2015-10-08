@@ -8,7 +8,7 @@ module.exports = {
     test: function *() {
         yield this.render('user', {
             users: [
-                {name: 'xiaoguang'}
+                {name: 'xiaoguangxiaoguan'}
             ]
         });
     }
