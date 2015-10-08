@@ -16,8 +16,6 @@ var inspect = require('util').inspect;
 
 tclog.logTemplate = '%s: pid::%s %d-%d-%d %d:%d:%d %s\n';
 
-tclog.rigLogTemplate = '%s %d-%d-%d %d:%d:%d %s\n';
-
 tclog.conf = logConf;
 
 tclog.prefix = {
@@ -48,10 +46,9 @@ tclog.init = function () {
     tclog._watch = [];
     openLogStream(tclog.loginfo);
     openLogStream(tclog.wfloginfo);
-    if (redictConsole) {
-        redictConsole();
-        console.log(9999);
-    }
+    //if (redictConsole) {
+    //    redictConsole();
+    //}
 };
 
 
@@ -85,7 +82,7 @@ function openLogStream(loginfo) {
 function watchLogFile(loginfo){
     return function () {
         fs.stat(loginfo.path, function (err, stat) {
-            if ((err != null && err.code=='ENOENT') || (err == null && stat.ino != loginfo.logIno)) {
+            if ((err != null && err.code === 'ENOENT') || (err == null && stat.ino !== loginfo.logIno)) {
                 clearInterval(loginfo.watch);
                 loginfo.logStream.destroySoon();
                 openLogStream(loginfo);
@@ -124,14 +121,6 @@ tclog.warn = function () {
     }
     var args = [tclog._wfloginfo.logStream, 'WARNING'].concat(arguments);
     tclog.log.apply(null, args);
-};
-
-tclog.rigNotice = function () {
-    if (tclog.conf.level > tclog.logLevel.notice) {
-        return;
-    }
-    var args = [tclog._rigloginfo.logStream, '[RIG_NOTICE]'].concat(arguments);
-    tclog.rigLog.apply(null, args);
 };
 
 tclog.fatal = function () {
@@ -183,7 +172,6 @@ tclog.prepare = function (method, logInfos) {
     var errPos = (new Error()).stack.split('\n').slice(4)[0];
     var messages = [];
     messages.push(errPos);
-    console.log(logInfos);
     for (var i in logInfos) {
         if (typeof logInfos[i] === 'object') {
             var inspectStr = inspect(logInfos[i], false, 1);
@@ -215,7 +203,7 @@ tclog.genLog = function () {
 };
 
 function redictConsole() {
-    console.log(new Date(), "重定向console输出");
+    console.log(new Date(), '重写console输出');
     if (global) {
         global.console.error = tclog.fatal;
         global.console.log = tclog.notice;
