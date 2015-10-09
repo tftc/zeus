@@ -20,6 +20,7 @@ view(app, config.view);
 
 // 设置api
 api(app);
+app.use(require('koa-static')('client-pc'));
 
 tclog.init();
 // live-reload代理中间件
@@ -35,6 +36,9 @@ if (runEnv === 'dev') {
 
 // 设置路由
 router(app);
+
+
+
 app.use(function *error(next) {
     if (this.status === '404') {
         yield this.render('error/404');
@@ -51,6 +55,8 @@ app.use(function *(next) {
     this.req.logid = logid;
     yield next;
 });
+
+
 
 app.listen(8000);
 console.log('UI Server已经启动：http://127.0.0.1:8000');

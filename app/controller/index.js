@@ -6,14 +6,10 @@
  */
 module.exports = {
     test: function *() {
-        //yield this.render('user', {
-        //    users: [
-        //        {name: 'xiaoguangxiaoguan'}
-        //    ]
-        //});
-        yield this.api({
-            aaa: 1,
-            bbb: 2
+        yield this.render('user', {
+            users: [
+                {name: 'xiaoguangxiaoguan'}
+            ]
         });
     }
 };

@@ -1,0 +1,14 @@
+{
+  "name": "zeus",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tftc/zeus",
+  "authors": [
+    "tshawn <371614518@qq.com>"
+  ],
+  "description": "zeus",
+  "main": "app/bootstrap",
+  "keywords": [
+    "zeus"
+  ],
+  "license": "MIT"
+}
