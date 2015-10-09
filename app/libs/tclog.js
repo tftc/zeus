@@ -43,14 +43,18 @@ tclog.init = function () {
     tclog.wfloginfo = {
         path: tclog.conf.path + '.wf'
     };
+
+    tclog.devloginfo = {
+        path: tclog.conf.path + '.dev'
+    }
     tclog._watch = [];
     openLogStream(tclog.loginfo);
     openLogStream(tclog.wfloginfo);
-    //if (redictConsole) {
-    //    redictConsole();
-    //}
+    openLogStream(tclog.devloginfo);
+    if (redictConsole) {
+        redictConsole();
+    }
 };
-
 
 function openLogStream(loginfo) {
     var option = {
@@ -95,7 +99,7 @@ tclog.debug = function () {
     if (tclog.conf.level > tclog.logLevel.debug) {
         return;
     }
-    var args = [tclog.loginfo.logStream, 'DEBUG'].concat(arguments);
+    var args = [tclog.devloginfo.logStream, 'DEBUG'].concat(arguments);
     tclog.log.apply(null, args);
 };
 
@@ -103,7 +107,7 @@ tclog.trace = function () {
     if (tclog.conf.level > tclog.logLevel.trace) {
         return;
     }
-    var args = [tclog.loginfo.logStream, 'TRACE'].concat(arguments);
+    var args = [tclog.devloginfo.logStream, 'TRACE'].concat(arguments);
     tclog.log.apply(null, args);
 };
 
@@ -206,7 +210,7 @@ function redictConsole() {
     console.log(new Date(), '重写console输出');
     if (global) {
         global.console.error = tclog.fatal;
-        global.console.log = tclog.notice;
+        global.console.log = tclog.trace;
         global.console.info = tclog.debug;
     }
 }

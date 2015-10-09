@@ -13,15 +13,23 @@ var fs = require('fs');
 var runEnv = config.runEnv;
 var tclog = require('./libs/tclog.js');
 var genLogid = require('./libs/logid').genLogid;
+var api = require('./libs/api');
 
 // 设置模板
 view(app, config.view);
 
+// 设置api
+api(app);
+
+tclog.init();
 // live-reload代理中间件
 if (runEnv === 'dev') {
     app.use(function *(next) {
         yield next;
-        this.body += yield this.toHtml('reload');
+        console.log(this.type);
+        if(this.type === 'text/html') {
+            this.body += yield this.toHtml('reload');
+        }
     });
 }
 
@@ -35,8 +43,6 @@ app.use(function *error(next) {
         yield next;
     }
 });
-
-tclog.init();
 
 tclog.notice('sss');
 

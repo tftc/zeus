@@ -12,7 +12,7 @@ var ctrs = [];
 function getCtrs(app) {
     files.forEach(function(file) {
         var stat  = fs.statSync(__dirname + '/../controller/' + file);
-        if(!stat.isDirectory() && path.extname(file) === '.js') {
+        if (!stat.isDirectory() && path.extname(file) === '.js') {
             var fileName = path.basename(file, '.js');
             var ctr = require(__dirname + '/../controller/' + file);
             ctrs[fileName] = ctr;

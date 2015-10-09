@@ -38,7 +38,7 @@ module.exports = {
     log: {
         path: './log/tiancai.log',
         maxLength: 3000,
-        level: 3, // [ 1-debug, 2-trace, 3-notice, 4-warn, 5-fatal ]
+        level: 1, // [ 1-debug, 2-trace, 3-notice, 4-warn, 5-fatal ]
         printTty: false,
         printFile: true
     },
