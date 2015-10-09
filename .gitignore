@@ -3,4 +3,3 @@ node_modules/gulp-nodemon
 pid
 log/tiancai.log
 log/tiancai.log.*
-log/tiancai.log
