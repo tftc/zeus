@@ -6,23 +6,18 @@
  */
 
 var tclog = {};
-
 var logConf = require('../../conf/index.js').log;
-
 var fs = require('fs');
-
+var chalk = require('chalk');
 var inspect = require('util').inspect;
 
-
 tclog.logTemplate = '%s: pid::%s %d-%d-%d %d:%d:%d %s\n';
-
 tclog.conf = logConf;
-
 tclog.prefix = {
     debug: 'DEBUG',
     trace: 'TRACE',
     notice: 'NOTICE',
-    warn: 'WARNING',
+    warning: 'WARNING',
     fatal: 'FATAL',
     error: 'ERROR'
 };
@@ -31,7 +26,7 @@ tclog.logLevel = {
     debug: 1,
     trace: 2,
     notice: 3,
-    warn: 4,
+    warning: 4,
     fatal: 5,
     error: 6
 };
@@ -43,16 +38,15 @@ tclog.init = function () {
     tclog.wfloginfo = {
         path: tclog.conf.path + '.wf'
     };
-
     tclog.devloginfo = {
         path: tclog.conf.path + '.dev'
-    }
+    };
     tclog._watch = [];
     openLogStream(tclog.loginfo);
     openLogStream(tclog.wfloginfo);
     openLogStream(tclog.devloginfo);
-    if (redictConsole) {
-        redictConsole();
+    if (tclog.conf.redictConsole) {
+        // redictConsole();
     }
 };
 
@@ -120,10 +114,10 @@ tclog.notice = function () {
 };
 
 tclog.warn = function () {
-    if (tclog.conf.level > tclog.logLevel.warn) {
+    if (tclog.conf.level > tclog.logLevel.warning) {
         return;
     }
-    var args = [tclog._wfloginfo.logStream, 'WARNING'].concat(arguments);
+    var args = [tclog.wfloginfo.logStream, 'WARNING'].concat(arguments);
     tclog.log.apply(null, args);
 };
 
@@ -131,24 +125,29 @@ tclog.fatal = function () {
     if (tclog.conf.level > tclog.logLevel.fatal) {
         return;
     }
-    var args = [tclog._wfloginfo.logStream, 'FATAL'].concat(arguments);
+    var args = [tclog.wfloginfo.logStream, 'FATAL'].concat(arguments);
     tclog.log.apply(null, args);
 };
 tclog.error = function () {
     if (tclog.conf.level > tclog.logLevel.error) {
         return;
     }
-    var args = [tclog._wfloginfo.logStream, 'ERROR'].concat(arguments);
+    var args = [tclog.wfloginfo.logStream, 'ERROR'].concat(arguments);
     tclog.log.apply(null, args);
 };
 
 tclog.log = function (stream, method, loginfos) {
-    var logArgs = tclog.prepare(method, loginfos);
-    var logStr = tclog.genLog.apply(null, logArgs);
+    var logArgs;
+    var logStr;
     if (tclog.conf.printTty) {
+        logArgs = tclog.prepare(method, loginfos, true);
+        logStr = tclog.genLog.apply(null, logArgs);
         console.log(logStr);
     }
+
     if (tclog.conf.printFile) {
+        logArgs = tclog.prepare(method, loginfos);
+        logStr = tclog.genLog.apply(null, logArgs);
         if (stream.writable) {
             stream.write(logStr);
         }
@@ -158,7 +157,7 @@ tclog.log = function (stream, method, loginfos) {
     }
 };
 
-tclog.prepare = function (method, logInfos) {
+tclog.prepare = function (method, logInfos, ifTtf) {
 
     var now = new Date();
     var month = now.getMonth() + 1;
@@ -171,8 +170,20 @@ tclog.prepare = function (method, logInfos) {
     hour < 10 ? hour = '0' + hour : null;
     min < 10 ? min = '0' + min : null;
     sec < 10 ? sec = '0' + sec : null;
-    var logArgs = [method, process.pid, now.getFullYear(), month, date, hour, min, sec];
-
+    var logArgs;
+    if (ifTtf) {
+        var methedChalk = chalk.green;
+        if (tclog.logLevel[method.toLowerCase()] === 4) {
+            methedChalk = chalk.yellow;
+        }
+        else if (tclog.logLevel[method.toLowerCase()] > 4){
+            methedChalk = chalk.red;
+        }
+        logArgs = [methedChalk(method), process.pid, now.getFullYear(), month, date, hour, min, sec];
+    }
+    else {
+        logArgs = [method, process.pid, now.getFullYear(), month, date, hour, min, sec];
+    }
     var errPos = (new Error()).stack.split('\n').slice(4)[0];
     var messages = [];
     messages.push(errPos);
@@ -187,13 +198,17 @@ tclog.prepare = function (method, logInfos) {
         }
         else {
 
+
         }
     }
     var logInfoMessage = messages.join(' ');
     if (logInfoMessage.length > tclog.conf.maxLength) {
         logInfoMessage = logInfoMessage.substr(0, tclog.conf.maxLength);
     }
-    logArgs.push(logInfoMessage.substr(0, tclog.conf.maxLength));
+    if (ifTtf) {
+        logInfoMessage = chalk.yellow(logInfoMessage);
+    }
+    logArgs.push(logInfoMessage);
     return logArgs;
 };
 
