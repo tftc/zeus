@@ -6,14 +6,32 @@ var program  = require('commander');
 var shell   = require('shelljs');
 
 program.on('--help', function () {
-    console.log('  =====示例如下:=====');
-    console.log('    [创建] ： zeus new (pc/h5)');
-    console.log('    [开发] ： zeus dev');
-    console.log('    [调试] ： zeus test');
-    console.log('    [提测] ： zeus test');
-    console.log('    [部署] ： zeus deploy');
+    var fallback = [
+        '            ====',
+        '           -_  _-',
+        '           - __ -',
+        '    ___====-_  _-====___',
+        '   _--^^^#/      \\#^^^--_',
+        '          ((    )) ',
+        '           |\\^^\/|   ',
+        '           (@::@)   ',
+        '            \\\\//   ',
+        '            (oo)    ',
+        '          // vv \\\\  ',
+        '        //        \\\\',
+        '      //            \\\\'
+    ].join('\n');
+    console.log(fallback);
     console.log('');
+    console.log('  -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --');
+    console.log('|             [创建] : zeus new (pc/h5)          |');
+    console.log('|             [开发] : zeus dev                  |');
+    console.log('|             [调试] : zeus test                 |');
+    console.log('|             [提测] : zeus test                 |');
+    console.log('|             [部署] : zeus deploy               |');
+    console.log('  ----------------------------------------------');
 });
+
 
 // new 创新应用
 program.on('new', function (x) {
