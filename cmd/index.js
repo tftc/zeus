@@ -43,7 +43,7 @@ program.on('new', function (x) {
 // new 创新应用
 program.on('dev', function () {
     shell.cd('../')
-    shell.exec('gulp dev');
+    shell.exec('gulp dev --color');
 });
 
 // 未知命令提示

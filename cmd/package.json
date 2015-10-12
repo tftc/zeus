@@ -11,5 +11,8 @@
   "dependencies": {
     "commander": "^2.8.1",
     "shelljs": "^0.5.3"
+  },
+  "bin": {
+    "zeus": "./index.js"
   }
 }
