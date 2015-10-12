@@ -24,9 +24,9 @@ gulp.task('start', function () {
         ext: 'js',
         execMap: {
             js: 'node --harmony'
-        }
+        },
+        args: ['--color']
     });
-
 });
 
 // livereload

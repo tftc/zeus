@@ -42,7 +42,7 @@ program.on('new', function (x) {
 
 // new 创新应用
 program.on('dev', function () {
-    shell.cd('../')
+    shell.cd('../');
     shell.exec('gulp dev --color');
 });
 
