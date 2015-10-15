@@ -1,0 +1,45 @@
+{
+  "name": "zeus",
+  "version": "0.1.0",
+  "description": "tiancai frontend",
+  "main": "index.js",
+  "bin": {
+    "zeus": "index.js"
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "commander": "^2.8.1",
+    "extend": "^3.0.0",
+    "koa": "^1.0.0",
+    "koa-ejs": "^2.0.1",
+    "koa-router": "^5.1.2",
+    "koa-static": "^1.4.9"
+  },
+  "devDependencies": {
+    "chalk": "^1.1.1",
+    "fecs": "^0.4.4",
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-nodemon": "^2.0.4",
+    "mocha": "^2.2.5",
+    "should": "^7.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tftc/zeus.git"
+  },
+  "keywords": [
+    "frontend",
+    "tiancai",
+    "zeus"
+  ],
+  "author": "xiaoguang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tftc/zeus/issues"
+  },
+  "homepage": "https://github.com/tftc/zeus#readme"
+}

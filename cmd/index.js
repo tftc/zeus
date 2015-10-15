@@ -8,7 +8,7 @@ var path = require('path');
 var chalk = require('chalk');
 
 program.on('--help', function () {
-    var fallback = [
+    var logo = [
         '            ====                ',
         '           -_  _-           ',
         '           - __ -           ====================',
@@ -23,7 +23,7 @@ program.on('--help', function () {
         '        //        \\\\          //',
         '      //            \\\\      ======================'
     ].join('\n');
-    console.log(fallback);
+    console.log(logo);
     console.log('');
     console.log('  -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --');
     console.log('|             [创建] : zeus new (pc/h5)          |');
@@ -45,26 +45,25 @@ program.on('new', function (args) {
     else {
         try {
             var fromPath = path.dirname(require.resolve('zeusjs')) + '/template/';
+            console.log(fromPath);
             var toPath = shell.pwd();
             shell.exec('cd '+toPath);
             console.log('clean dir...');
             //shell.exec('rm * -rf');
             console.log('install app...');
             console.log('init app...');
-            //initComFile(fromPath, toPath, 'app');
-            //initComFile(fromPath, toPath, 'conf');
-            //initComFile(fromPath, toPath, 'log');
-            //initComFile(fromPath, toPath, 'node_modules');
-            //initComFile(fromPath, toPath, 'gulpfiles.js');
-            //initComFile(fromPath, toPath, 'public');
+            initComFile(fromPath, toPath, 'app');
+            initComFile(fromPath, toPath, 'conf');
+            initComFile(fromPath, toPath, 'log');
+            initComFile(fromPath, toPath, 'node_modules');
+            initComFile(fromPath, toPath, 'public');
             initComFile(fromPath, toPath, 'package.json');
-            //initComFile(fromPath, toPath, 'zesh.sh');
-            //initComFile(fromPath, toPath, 'public');
+            initComFile(fromPath, toPath, 'gulpfile.js');
             if (args[0].toLowerCase() === 'h5') {
-                initSpecFile(formPath + '/client-h5', toPath + 'client');
+                initSpecFile(fromPath + '/client-h5', toPath + '/client');
             }
             else {
-                initSpecFile(fromPath + '/client-pc', toPath + 'client');
+                initSpecFile(fromPath + '/client-pc', toPath + '/client');
             }
             console.log(chalk.green('安装完毕'));
         }
@@ -77,9 +76,9 @@ program.on('new', function (args) {
 // 文件拷贝操作
 function initComFile(fromPath, toPath, fileName) {
     try {
-        console.log('doing' + fromPath + '/' + fileName + ' ->' + toPath + '/' + fileName + '...');
+        console.log('doing ' + fromPath + '/' + fileName + ' ->' + toPath + '/' + fileName + '  ...');
         shell.exec('cp ' + fromPath + '/' + fileName + ' ' + toPath + '/' + fileName + ' -r');
-        console.log(chalk.green('done'));
+        console.log(chalk.green('done!'));
     }
     catch (e) {
         console.log(chalk.red(e));
@@ -90,8 +89,8 @@ function initComFile(fromPath, toPath, fileName) {
 // 个性化文件
 function initSpecFile(from, to) {
     try {
-        console.log('doing' + from + ' ->' + to + '...');
-        shell.exec('mv ' + from + ' ' + to);
+        console.log('doing ' + from + ' ->' + to + '  ...');
+        shell.exec('cp ' + from + ' ' + to);
         console.log('done');
     }
     catch (e) {
@@ -102,7 +101,7 @@ function initSpecFile(from, to) {
 
 // 开发模式
 program.on('dev', function () {
-    shell.cd('../');
+    console.log('change dir to ' + shell.pwd());
     shell.exec('gulp dev --color');
 });
 
