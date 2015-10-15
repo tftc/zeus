@@ -5,6 +5,7 @@
 var program  = require('commander');
 var shell   = require('shelljs');
 var path = require('path');
+var chalk = require('chalk');
 
 program.on('--help', function () {
     var fallback = [
@@ -43,29 +44,61 @@ program.on('new', function (args) {
     }
     else {
         try {
-            var from = path.dirname(require.resolve('zeus')) + '/template/*';
-            var to = shell.pwd();
+            var fromPath = path.dirname(require.resolve('zeusjs')) + '/template/';
+            var toPath = shell.pwd();
+            shell.exec('cd '+toPath);
             console.log('clean dir...');
-            shell.exec('rm * -rf');
+            //shell.exec('rm * -rf');
             console.log('install app...');
-            shell.exec('cp ' + from + ' ' + to + ' -r');
             console.log('init app...');
+            //initComFile(fromPath, toPath, 'app');
+            //initComFile(fromPath, toPath, 'conf');
+            //initComFile(fromPath, toPath, 'log');
+            //initComFile(fromPath, toPath, 'node_modules');
+            //initComFile(fromPath, toPath, 'gulpfiles.js');
+            //initComFile(fromPath, toPath, 'public');
+            initComFile(fromPath, toPath, 'package.json');
+            //initComFile(fromPath, toPath, 'zesh.sh');
+            //initComFile(fromPath, toPath, 'public');
             if (args[0].toLowerCase() === 'h5') {
-                shell.exec('rm client-pc -r');
-                // 这部分时间较长，待优化
-                shell.exec('mv client-h5 client');
+                initSpecFile(formPath + '/client-h5', toPath + 'client');
             }
             else {
-                shell.exec('rm client-h5 -r');
-                shell.exec('mv client-pc client');
+                initSpecFile(fromPath + '/client-pc', toPath + 'client');
             }
-            console.log('安装完毕');
+            console.log(chalk.green('安装完毕'));
         }
         catch(e) {
-            console.log('未安装zues模块');
+            console.log(chalk.red('安装出错' + e));
         }
     }
 });
+
+// 文件拷贝操作
+function initComFile(fromPath, toPath, fileName) {
+    try {
+        console.log('doing' + fromPath + '/' + fileName + ' ->' + toPath + '/' + fileName + '...');
+        shell.exec('cp ' + fromPath + '/' + fileName + ' ' + toPath + '/' + fileName + ' -r');
+        console.log(chalk.green('done'));
+    }
+    catch (e) {
+        console.log(chalk.red(e));
+    }
+
+}
+
+// 个性化文件
+function initSpecFile(from, to) {
+    try {
+        console.log('doing' + from + ' ->' + to + '...');
+        shell.exec('mv ' + from + ' ' + to);
+        console.log('done');
+    }
+    catch (e) {
+        console.log(chalk.red(e));
+    }
+
+}
 
 // 开发模式
 program.on('dev', function () {

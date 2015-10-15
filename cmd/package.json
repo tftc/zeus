@@ -1,14 +1,15 @@
 {
-  "name": "zeus",
-  "version": "1.0.0",
+  "name": "zeusjs",
+  "version": "0.0.1",
   "description": "zeus-init",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "tshawn",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^1.1.1",
     "commander": "^2.8.1",
     "shelljs": "^0.5.3"
   },
