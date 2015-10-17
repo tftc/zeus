@@ -11,7 +11,7 @@ if (!checkNodeVersion()) {
     process.exit();
 }else{
     
-    var logo = [
+    var logo = chalk.green([
             '            ====                ',
             '           -_  _-           ',
             '           - __ -           ====================',
@@ -25,7 +25,7 @@ if (!checkNodeVersion()) {
             '          // vv \\\\              //',
             '        //        \\\\          //',
             '      //            \\\\      ======================'
-        ].join('\n');
+        ].join('\n'));
 }
 program.on('--help', function () {
     console.log(logo);
@@ -117,14 +117,14 @@ function initSpecFile(from, to) {
 // 检查全局依赖
 
 function checkGlb() {
-    var glbList = ['pm2', 'gulp'];
+    var glbList = ['pm2', 'gulp', 'cnpm'];
     glbList.forEach(function (glb) {
         try {
             var tmp = require.resolve(glb);
         }
         catch(e) {
             console.log('install global module' + glb);
-            shell.exec('npm install ' + glb + ' -g -d');
+            shell.exec('npm install ' + glb + ' -g -d --registry=https://registry.npm.taobao.org');
         }
     });
 }
@@ -144,7 +144,7 @@ function checkNodeVersion() {
 function installDepd(pwd) {
     console.log('install dependencies start')
     shell.cd(pwd);
-    shell.exec('npm install -d --color');
+    shell.exec('cnpm install -d --color');
 }
 
 
