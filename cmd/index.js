@@ -9,24 +9,25 @@ var chalk = require('chalk');
 
 if (!checkNodeVersion()) {
     process.exit();
-}
-
-program.on('--help', function () {
+}else{
+    
     var logo = [
-        '            ====                ',
-        '           -_  _-           ',
-        '           - __ -           ====================',
-        '    ___====-_  _-====___                      //',
-        '   _--^^^#/      \\#^^^--_                   //',
-        '          ((    ))                        //',
-        '           |\\^^\/|                       //',
-        '           (@::@)                     //',
-        '            \\\\//                    //',
-        '            (oo)                  //',
-        '          // vv \\\\              //',
-        '        //        \\\\          //',
-        '      //            \\\\      ======================'
-    ].join('\n');
+            '            ====                ',
+            '           -_  _-           ',
+            '           - __ -           ====================',
+            '    ___====-_  _-====___                      //',
+            '   _--^^^#/      \\#^^^--_                   //',
+            '          ((    ))                        //',
+            '           |\\^^\/|                       //',
+            '           (@::@)                     //',
+            '            \\\\//                    //',
+            '            (oo)                  //',
+            '          // vv \\\\              //',
+            '        //        \\\\          //',
+            '      //            \\\\      ======================'
+        ].join('\n');
+}
+program.on('--help', function () {
     console.log(logo);
     console.log('');
     console.log('  -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --');
@@ -56,11 +57,12 @@ program.on('new', function (args) {
             console.log('zeusjs 未安装正确, 请重新安装后执行');
         }
         if (fromPath) {
+            console.log(logo);
+            checkGlb();
             var toPath = shell.pwd() + '/' + appName;
             console.log('install app start...');
             console.log('makedir' + appName + '...');
             shell.exec('mkdir ' + appName);
-
             console.log('init app...');
             initComFile(fromPath, toPath, 'app');
             initComFile(fromPath, toPath, 'conf');
@@ -88,7 +90,7 @@ program.on('new', function (args) {
 // 文件拷贝操作
 function initComFile(fromPath, toPath, fileName) {
     try {
-        console.log('doing ' + fromPath + '/' + fileName + ' ->' + toPath + '/' + fileName + '  ...');
+        console.log('doing ' + fromPath + '/' + fileName + ' ->' + toPath + '/' + fileName);
         shell.exec('cp -r ' + fromPath + '/' + fileName + ' ' + toPath + '/' + fileName);
         console.log(chalk.green('done!'));
     }
@@ -110,6 +112,21 @@ function initSpecFile(from, to) {
         console.log(chalk.red(e));
     }
 
+}
+
+// 检查全局依赖
+
+function checkGlb() {
+    var glbList = ['pm2', 'gulp'];
+    glbList.forEach(function (glb) {
+        try {
+            var tmp = require.resolve(glb);
+        }
+        catch(e) {
+            console.log('install global module' + glb);
+            shell.exec('npm install ' + glb + ' -g -d');
+        }
+    });
 }
 
 // 检查node版本
