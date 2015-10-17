@@ -4,3 +4,4 @@ pid
 log/tiancai.log
 log/tiancai.log.*
 cmd/npm-debug.log
+cmd/npm-debug.log

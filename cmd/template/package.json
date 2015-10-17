@@ -11,7 +11,6 @@
     "commander": "^2.8.1",
     "extend": "^3.0.0",
     "koa": "^1.0.0",
-    "koa-ejs": "^2.0.1",
     "koa-router": "^5.1.2",
     "koa-static": "^1.4.9"
   },

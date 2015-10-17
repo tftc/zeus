@@ -6,7 +6,7 @@
  */
 var config = require('../conf');
 var koa = require('koa');
-var view = require('koa-ejs');
+var view = require('koa-ejs-mod');
 var router = require('./router');
 var app = koa();
 var fs = require('fs');
