@@ -89,7 +89,7 @@ program.on('new', function (args) {
 function initComFile(fromPath, toPath, fileName) {
     try {
         console.log('doing ' + fromPath + '/' + fileName + ' ->' + toPath + '/' + fileName + '  ...');
-        shell.exec('cp ' + fromPath + '/' + fileName + ' ' + toPath + '/' + fileName + ' -r');
+        shell.exec('cp -r ' + fromPath + '/' + fileName + ' ' + toPath + '/' + fileName);
         console.log(chalk.green('done!'));
     }
     catch (e) {
