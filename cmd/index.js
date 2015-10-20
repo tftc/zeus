@@ -14,7 +14,7 @@ if (!checkNodeVersion()) {
     var logo = chalk.green([
             '            ====                ',
             '           -_  _-           ',
-            '           - __ -           ====================',
+            '           - __ -            =====================',
             '    ___====-_  _-====___                      //',
             '   _--^^^#/      \\#^^^--_                   //',
             '          ((    ))                        //',
@@ -117,14 +117,14 @@ function initSpecFile(from, to) {
 // 检查全局依赖
 
 function checkGlb() {
-    var glbList = ['pm2', 'gulp', 'cnpm'];
+    var glbList = ['pm2', 'gulp'];
     glbList.forEach(function (glb) {
         try {
             var tmp = require.resolve(glb);
         }
         catch(e) {
             console.log('install global module' + glb);
-            shell.exec('npm install ' + glb + ' -g -d --registry=https://registry.npm.taobao.org');
+            shell.exec('npm install ' + glb + ' -g -d --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist');
         }
     });
 }
@@ -144,7 +144,7 @@ function checkNodeVersion() {
 function installDepd(pwd) {
     console.log('install dependencies start')
     shell.cd(pwd);
-    shell.exec('cnpm install -d --color');
+    shell.exec('npm install -d --color --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist');
 }
 
 
