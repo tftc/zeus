@@ -6,15 +6,12 @@ var program  = require('commander');
 var shell   = require('shelljs');
 var path = require('path');
 var chalk = require('chalk');
+var os = require('os');
 
-if (!checkNodeVersion()) {
-    process.exit();
-}else{
-    
-    var logo = chalk.green([
+var logo = [
             '            ====                ',
             '           -_  _-           ',
-            '           - __ -            =====================',
+            '           - __ -           ====================',
             '    ___====-_  _-====___                      //',
             '   _--^^^#/      \\#^^^--_                   //',
             '          ((    ))                        //',
@@ -25,8 +22,8 @@ if (!checkNodeVersion()) {
             '          // vv \\\\              //',
             '        //        \\\\          //',
             '      //            \\\\      ======================'
-        ].join('\n'));
-}
+        ].join('\n');
+
 program.on('--help', function () {
     console.log(logo);
     console.log('');
@@ -67,7 +64,6 @@ program.on('new', function (args) {
             initComFile(fromPath, toPath, 'app');
             initComFile(fromPath, toPath, 'conf');
             initComFile(fromPath, toPath, 'log');
-            initComFile(fromPath, toPath, 'node_modules');
             initComFile(fromPath, toPath, 'public');
             initComFile(fromPath, toPath, 'package.json');
             initComFile(fromPath, toPath, 'gulpfile.js');
@@ -81,6 +77,7 @@ program.on('new', function (args) {
             console.log('change dir to' + toPath + '...');
             shell.cd(toPath);
             console.log(shell.pwd());
+            initBin(fromPath,toPath);
             installDepd(toPath);
             console.log(chalk.green('安装完毕'));
         }
@@ -91,7 +88,7 @@ program.on('new', function (args) {
 function initComFile(fromPath, toPath, fileName) {
     try {
         console.log('doing ' + fromPath + '/' + fileName + ' ->' + toPath + '/' + fileName);
-        shell.exec('cp -r ' + fromPath + '/' + fileName + ' ' + toPath + '/' + fileName);
+        shell.exec('cp -r "' + fromPath + '/"' + fileName + ' ' + toPath + '/' + fileName);
         console.log(chalk.green('done!'));
     }
     catch (e) {
@@ -104,7 +101,7 @@ function initComFile(fromPath, toPath, fileName) {
 function initSpecFile(from, to) {
     try {
         console.log('doing ' + from + ' ->' + to + '  ...');
-        shell.exec('cp -r ' + from + ' ' + to);
+        shell.exec('cp -r "' + from + '" ' + to);
         console.log('cp -r ' + from + ' ' + to)
         console.log(chalk.green('done'));
     }
@@ -113,6 +110,33 @@ function initSpecFile(from, to) {
     }
 
 }
+
+// 初始化可执行文件
+
+function initBin(fromPath, toPath){
+    console.log('doing mkdir bin ...');
+    shell.exec('mkdir bin');
+    var nodePath = fromPath + '/bin/node/'
+    switch(os.type()){
+        case('Linux'):
+            nodePath = nodePath + 'node-linux'
+            break;
+        case('Windows_NT'):
+            nodePath = nodePath + 'node.exe'
+            break;
+        case('Darwin'):
+            nodePath = nodePath +'node-mac'
+            break;
+        default:
+            console.log(chalk.red('当前系统不被支持'));
+    }
+    console.log('doing ' + nodePath + ' ->' + toPath + '/bin/');
+    shell.exec('cp "' + nodePath + '" ' + toPath + '/bin/');
+    console.log(chalk.green('done!'));
+    console.log('change dir to' + toPath);
+    shell.cd(toPath);
+}
+
 
 // 检查全局依赖
 

@@ -7,6 +7,18 @@
 var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 var livereload = require('gulp-livereload');
+var os = require('os');
+
+var binPath = process.cwd() + '/bin/';
+
+if (os.platform() == 'win32') {
+   var nodePath = binPath + 'node.exe';
+}
+else {
+   var nodePath = binPath + 'node';
+}
+
+
 
 // 监听静态文件修改
 gulp.task('watch', function () {
@@ -23,7 +35,7 @@ gulp.task('start', function () {
         script: './app/bootSrtap.js',
         ext: 'js',
         execMap: {
-            js: 'node --harmony'
+            js: nodePath + ' --harmony'
         },
         args: ['--color']
     });
