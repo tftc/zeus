@@ -114,6 +114,9 @@ function initSpecFile(from, to) {
 // 初始化可执行文件
 
 function initBin(fromPath, toPath){
+    shell.cd(fromPath + '/bin/node');
+    shell.exec('tar zxvf node.tar.gz');
+    shell.cd(toPath);
     console.log('doing mkdir bin ...');
     shell.exec('mkdir bin');
     var nodePath = fromPath + '/bin/node/'
