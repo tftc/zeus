@@ -2,7 +2,6 @@
 
 'use strict';
 
-
 var program  = require('commander');
 var shell   = require('shelljs');
 var path = require('path');
@@ -118,24 +117,10 @@ function initBin(fromPath, toPath){
     shell.cd(fromPath + '/bin/node');
     shell.exec('tar zxvf node.tar.gz');
     shell.cd(toPath);
-    console.log('doing mkdir bin ...');
-    shell.exec('mkdir bin');
-    var nodePath = fromPath + '/bin/node/'
-    switch(os.type()){
-        case('Linux'):
-            nodePath = nodePath + 'node-linux'
-            break;
-        case('Windows_NT'):
-            nodePath = nodePath + 'node.exe'
-            break;
-        case('Darwin'):
-            nodePath = nodePath +'node-mac'
-            break;
-        default:
-            console.log(chalk.red('当前系统不被支持'));
-    }
-    console.log('doing ' + nodePath + ' ->' + toPath + '/bin/');
-    shell.exec('cp "' + nodePath + '" ' + toPath + '/bin/');
+    shell.exec('cp "' + nodePath + '/bin/node/node.tar.gz"' + toPath + '/bin/node.tar.gz"');
+    console.log('doing ' + nodePath + '/bin/node/node.tar.gz' + '->' + toPath + '/bin/node.tar.gz');
+    shell.cd(toPath);
+    shell.exec('tar zxvf node.tar.gz');
     console.log(chalk.green('done!'));
     console.log('change dir to' + toPath);
     shell.cd(toPath);
