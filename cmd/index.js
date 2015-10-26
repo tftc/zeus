@@ -94,7 +94,6 @@ function initComFile(fromPath, toPath, fileName) {
     catch (e) {
         console.log(chalk.red(e));
     }
-
 }
 
 // 个性化文件
