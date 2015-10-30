@@ -205,9 +205,7 @@ tclog.prepare = function (method, logInfos, ifTtf) {
     if (logInfoMessage.length > tclog.conf.maxLength) {
         logInfoMessage = logInfoMessage.substr(0, tclog.conf.maxLength);
     }
-    if (ifTtf) {
-        logInfoMessage = chalk.yellow(logInfoMessage);
-    }
+
     logArgs.push(logInfoMessage);
     return logArgs;
 };

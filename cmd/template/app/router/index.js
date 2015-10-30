@@ -24,13 +24,14 @@ function set(app) {
     getC(app).then(function (ctrs) {
         setMap(ctrs);
     }).catch(function (e) {
-
+        console.log(e);
     });
 }
 
-
 function setMap(ctrs) {
     router.get('/index', ctrs.index.test);
+    router.get('/login',ctrs.login.show);
+    router.post('/login',ctrs.login.login);
 }
 
 module.exports = set;

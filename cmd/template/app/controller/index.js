@@ -6,10 +6,9 @@
  */
 module.exports = {
     test: function *() {
-        yield this.render('user', {
-            users: [
-                {name: 'xiaoguangxiaoguan'}
-            ]
+        var self = this;
+        yield self.render('user', {
+            userInfo : self.userInfo||{}
         });
     }
 };
