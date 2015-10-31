@@ -11,9 +11,10 @@ var co = require('co');
 module.exports = {
     show: function *() {
         yield this.render('login',{
-            userInfo : this.userInfo||{}
+            userInfo : this.userInfo
         });
     },
+
     login: function *() {
         var postBody = this.request.body;
         var loginData = {
@@ -23,8 +24,11 @@ module.exports = {
         } 
        var data = yield passportModel.login(loginData);
        var loginName = data.user.loginName;
-       this.cookies.set('tiancainame', loginName , { signed: true });
-       this.session[loginName] = data.user;
+       if(this.app.redisIsOk){
+            this.cookies.set('tiancainame', loginName , { signed: true });
+            console.log(this.session);
+            this.session['hallo'] = data.user; 
+       }
        this.response.redirect('index');
     }
 };

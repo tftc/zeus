@@ -29,7 +29,7 @@ function set(app) {
 }
 
 function setMap(ctrs) {
-    router.get('/index', ctrs.index.test);
+    router.get('/index', ctrs.index.show);
     router.get('/login',ctrs.login.show);
     router.post('/login',ctrs.login.login);
 }
