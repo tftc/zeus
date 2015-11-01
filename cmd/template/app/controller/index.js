@@ -5,11 +5,10 @@
  * @date 2015/9/25
  */
 module.exports = {
-    test: function *() {
-        yield this.render('user', {
-            users: [
-                {name: 'xiaoguangxiaoguan'}
-            ]
+    show: function *() {
+        var self = this;
+        yield self.render('user', {
+            userInfo : self.userInfo||null
         });
     }
 };

@@ -11,56 +11,114 @@ var router = require('./router');
 var app = koa();
 var fs = require('fs');
 var runEnv = config.runEnv;
+var bodyParser = require('koa-bodyparser');
+var session = require('koa-generic-session');
+var redisStore = require('koa-redis');
 var tclog = require('./libs/tclog.js');
 var genLogid = require('./libs/logid').genLogid;
 var api = require('./libs/api');
+
+app.keys = ['tiancai', 'xiaoguang'];
+
+app.use(function* (next) {
+    if(this.url == '/favicon.ico'){
+        //favicon return
+    }else{
+        yield next;
+    }
+})
+
+
+var checkRedis = function () {
+    return new Promise(function (resovel, reject) {
+    var redis = redisStore();
+    resovel(redis);
+    /*
+    redis.on('disconnect',function (e) {
+        reject(e);
+    });
+    redis.on('connect',function (e) {
+        resovel(redis);
+    });
+*/
+    })
+}
+
+console.log(app);
+
+
+checkRedis().then(function(redis){
+    console.log('连接到redis成功');
+    console.log(app);
+
+    app.use(session({
+      store: redis
+    }));
+    app.redisIsOk = true;
+
+}).catch(function(e){
+    console.log('连接到redis失败');
+    app.redisIsOk = false;
+})
+
+//todo，promise对后续操作的保证，后面的注册进一步封装出来
+// 这里相当于是注册在所有的use的后面。对于注册顺序需要有保证
 
 // 设置模板
 view(app, config.view);
 
 // 设置api
 api(app);
-app.use(require('koa-static')('client-pc'));
-
+app.use(require('koa-static')('client'));
+app.use(bodyParser());
 tclog.init();
 // live-reload代理中间件
 if (runEnv === 'dev') {
     app.use(function *(next) {
         yield next;
-        console.log(this.type);
         if(this.type === 'text/html') {
             this.body += yield this.toHtml('reload');
         }
     });
 }
 
-// 设置路由
-router(app);
-
-
-
 app.use(function *error(next) {
-    if (this.status === '404') {
-        yield this.render('error/404');
-    }
-    else {
-        yield next;
+    yield next;
+    if (this.status === 404) {
+        yield this.render('error/404',{});
     }
 });
 
-tclog.notice('sss');
 
 app.use(function *(next) {
     var logid = genLogid();
     this.req.logid = logid;
+    console.log(app.redisIsOk);
+    if(app.redisIsOk){
+        var tiancainame = this.cookies.get('tiancainame',{ signed: true });
+        //console.log(this.session);
+        tclog.notice(this.session);
+        try{
+            var userInfo = this.session[tiancainame];
+            this.userInfo = userInfo;
+        }
+        catch(e){
+            this.userInfo = null;
+        }
+    }else{
+        this.userInfo = null;
+    }
+    
+    tclog.notice({logid:logid,type:'pv',method:this.req.method,url:this.url,userInfo:userInfo})
     yield next;
 });
 
 
+// 设置路由
+router(app);
 
 app.listen(8000);
-console.log('UI Server已经启动：http://127.0.0.1:8000');
-
+tclog.notice('UI Server已经启动：http://127.0.0.1:8000');
 // 启动后通过IO通知watch
 if (runEnv === 'dev') {
     fs.writeFile('./pid', new Date().getTime());

@@ -1,0 +1,253 @@
+<style>
+
+.page-login {
+  margin-bottom: 50px;
+  padding-top: 50px;
+}
+.page-login #page-404 .main-wrapper,
+.page-login #page-500 .main-wrapper,
+.page-login #page-login .main-wrapper {
+  margin-top: -10px;
+  padding-bottom: 10px;
+  background: url('/img/images/signin-5fa09034.gif') top center;
+  padding-top: 45px;
+}
+
+.container-wrap-outer {
+    background: #fff;
+}
+.page-login .login {
+  background: #fff;
+  padding: 50px 50px;
+  border: 6px solid #E9E9E9;
+  border-radius: 10px;
+  max-width: 500px;
+  *height: 500px;
+  height: auto;
+  margin: 0 auto;
+}
+.page-login #page-404 .login,
+.page-login #page-500 .login {
+  height: 300px;
+  margin-top: 100px;
+  margin-bottom: 300px;
+}
+.page-login .formax {
+  padding: 0 30px;
+}
+.page-login .formax-inner {
+  padding-left: 75px;
+}
+.page-login .signin-directly {
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #ccc;
+}
+.page-login .formax-inner p {
+  color: #666;
+}
+.page-login .formax-inner .btn {
+  padding: 13px 110px;
+  border-radius: 5px;
+  border: none;
+}
+.page-login .signin-directly .btn {
+  background: #ff7a21;
+}
+.page-login h2 {
+  color: #2b6799;
+}
+.page-login .password > h2 {
+  font-size: 16px;
+  margin: 0;
+}
+.page-login .password .input-group {
+  margin-top: 20px;
+}
+.page-login .password .input-group > span.input-group-addon i {
+  width: 11px;
+}
+.page-login .password .form-control {
+  font-size: 15px;
+}
+.page-login .password .buttons {
+  width: 100%;
+}
+.page-login .password .buttons .btn {
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 16px;
+}
+.page-login .password .buttons > span {
+  display: inline-block;
+  float: right;
+  padding-top: 7px;
+}
+.page-login .password h3.fast-reg {
+  margin-top: 12px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+}
+.page-login .password h3.fast-reg a {
+  color: #368ab8;
+}
+.page-login .password h3.fast-reg .register {
+  width: 130px;
+  float: left;
+  height: 32px;
+}
+.page-login .password h3.fast-reg .other {
+  width: 94px;
+  float: right;
+  text-align: right;
+  height: 32px;
+  cursor: pointer;
+  background: url('/img/images/login-40e857da.png') 0px 0px;
+}
+.page-login .password h3.fast-reg .other2 {
+  background: url('/public/dist/img/images/other-0c5c9aa7.png') 0px 0px;
+}
+.page-login .vhide {
+  visibility: hidden;
+}
+.space1 {
+  height: 19px;
+  border-bottom: 1px solid #64808c;
+}
+
+</style>
+
+<div class="full-line"></div>
+<div style="height:500px;" class="main container page-login">
+    <div class="row">
+        <div class="login">
+            <div id="hintBox" class="alert alert-danger alert-dismissable" style="display:none;">
+                <button aria-hidden="true" data-dismiss="alert" type="button" class="close">×</button>
+                <span class="hint-msg"></span>
+            </div>
+            <div class="password">
+                <form method="post" id="loginForm" role="form">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-user"></i>
+                        </span>
+                        <input type="text" name="loginName" autocomplete="off" data-msg="用户名" placeholder="用户名或手机号码" class="form-control input-lg check-null" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="password" id="input-password" name="password" data-msg="密码" placeholder="密码" autocomplete="off" class="form-control input-lg check-null"/>
+                        <input type="hidden" id="public-key" name="publicKey"/>
+                    </div>
+                    <div class="input-group buttons">
+                        <button type="button" class="btn btn-orange submit-btn">立即登录</button>
+                        <span><a href="/forgot-password">忘记密码？</a></span>
+                    </div>
+                </form>
+                <div class="space1"></div>
+                <h3 class="fast-reg center">
+                    <a href="/register">没有账号？立即注册</a>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+zeus = {
+    page: function(pageObj){
+        $(function(){
+            var initMethods = ['initDatas','initParts','bindEvent'];
+            window['self'] = pageObj;
+            var methodHasSet = true;
+            $.each(initMethods, function(i, methodName){
+                if(typeof self[methodName] !== 'function'){
+                    methodHasSet = false;
+                    return false;
+                }
+            });
+            if(!methodHasSet){
+                throw '初始化page出错，需要有完整的initDatas，initParts，bindEvent方法';
+            }else{
+                self['initDatas']();
+                self['initParts']();
+                self['bindEvent']();
+            }
+        })
+    }
+}
+
+
+
+zeus.page({
+    initDatas: function(){
+
+    },
+    //初始化部件
+    initParts: function(){
+        self.parts = {
+            $form: $('#loginForm'),
+            $hintBox: $('#hintBox')
+        }
+    },
+    //事件绑定
+    bindEvent: function(){
+        var $submitBtn = self.parts.$form.find('.submit-btn');
+        $submitBtn.on('click',function(){self.submitForm()});
+
+        var $inputs = self.parts.$form.find('input');
+        $inputs.on('click',function(){self.removeMsg()});
+        
+        var $closeBtn = self.parts.$hintBox.find('.close');
+        $closeBtn.on('click', function(){self.removeMsg()});
+
+    },
+    //提交表单
+    submitForm: function(){
+        var checkResult = self.checkValue()
+        if(!checkResult.code){
+            self.showMsg(checkResult.msg);
+        }else{
+            self.setLoginStatus();
+            self.parts.$form.submit();
+        }
+    },
+    //检查属性
+    checkValue: function(){
+        var hasNull = null;
+        $checkInputs = self.parts.$form.find('.check-null');
+        $.each($checkInputs, function(i, item){
+            if($.trim($(item).val()) === ''){
+                hasNull = item;
+                return false;
+            }
+        });
+        if(hasNull){
+            return {
+                code: 0,
+                msg: $(hasNull).data('msg')+'不能为空',
+                item: hasNull
+            }
+        }else{
+            return {code: 1};
+        }
+        
+    },
+    //显示提示信息
+    showMsg: function(msg){
+        self.parts.$hintBox.find('.hint-msg').html(msg);
+        self.parts.$hintBox.show();
+    },
+    //消除提示信息
+    removeMsg: function(){
+        self.parts.$hintBox.find('.hint-msg').html('');
+        self.parts.$hintBox.hide();
+    },
+    //设置登陆状态,防止二次登陆
+    setLoginStatus: function(){
+        var $submitButton = self.parts.$form.find('.submit-btn');
+        $submitButton.html('<i class="white icon-cog icon-spin"></i> 正在登录…').addClass("disabled");
+    }
+})
+
+</script>
+

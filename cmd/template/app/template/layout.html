@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="UTF-8">
-      <title>甜菜金融 - 泛生活互联网投资平台</title>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <meta name="keywords" content="甜菜金融,甜菜网,P2P理财,理财产品,互联网金融,P2P网贷"><meta name="description" content="甜菜金融作为天风证券旗下互联网投资平台，借鉴券商风控体系的宝贵经验及自身专业团队，为您提供低门槛，安全、稳固收益的理财产品，致力于成长为泛生活领域互联网金融服务专家。">
-      <link rel="stylesheet" href="/public/dist/css/new/common-f99763be.css">
+        <meta charset="UTF-8">
+        <title>甜菜金融 - 泛生活互联网投资平台</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="keywords" content="甜菜金融,甜菜网,P2P理财,理财产品,互联网金融,P2P网贷"><meta name="description" content="甜菜金融作为天风证券旗下互联网投资平台，借鉴券商风控体系的宝贵经验及自身专业团队，为您提供低门槛，安全、稳固收益的理财产品，致力于成长为泛生活领域互联网金融服务专家。">
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="/bower_components/jquery-ui/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/css/common/common.css">
+        <link rel="stylesheet" href="/css/page/index.css">
+        <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.js"></script>
   </head>
   <body>
-    <%- body %>
+    <div class="tc-container">
+        <% include blocks/header.html %>
+        <div class="container-wrap-outer">
+            <%- body %>
+        </div>
+        <% include blocks/footer.html %>
+    </div>
+   
   </body>
 </html>

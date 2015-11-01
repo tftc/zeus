@@ -11,8 +11,12 @@
     "commander": "^2.8.1",
     "extend": "^3.0.0",
     "koa": "^1.0.0",
+    "koa-bodyparser": "^2.0.1",
+    "koa-generic-session": "^1.9.2",
+    "koa-redis": "^1.0.1",
     "koa-router": "^5.1.2",
     "koa-static": "^1.4.9",
+    "thrift": "^0.9.3",
     "zeus-template": "*"
   },
   "devDependencies": {
