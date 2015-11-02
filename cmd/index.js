@@ -2,6 +2,7 @@
 
 'use strict';
 
+
 var program  = require('commander');
 var shell   = require('shelljs');
 var path = require('path');
@@ -112,7 +113,7 @@ function checkGlb() {
     var glbList = ['pm2', 'gulp'];
     glbList.forEach(function (glb) {
         console.log('install global module ' + glb);
-        spawn('npm.cmd', ['install',glb,'-g','-d','--registry=https://registry.npm.taobao.org','--disturl=https://npm.taobao.org/dist'], {
+        spawn('npm', ['install',glb,'-g','-d','--registry=https://registry.npm.taobao.org','--disturl=https://npm.taobao.org/dist'], {
           stdio: "inherit"
         });
     });
@@ -133,7 +134,7 @@ function checkNodeVersion() {
 function installDepd(pwd) {
     console.log('install dependencies start')
     shell.cd(pwd);
-    var install = spawn('npm.cmd', ['install','-d','--registry=https://registry.npm.taobao.org','--disturl=https://npm.taobao.org/dist'], {
+    var install = spawn('npm', ['install','-d','--registry=https://registry.npm.taobao.org','--disturl=https://npm.taobao.org/dist'], {
         stdio: "inherit"
     });
     install.on('close', function(){
