@@ -46,8 +46,8 @@ module.exports = {
 
     // 后端连接相关配置
     thirft: {
-        backend: '10.42.83.16',
-        port: 3000,
+        host: '123.57.227.107',
+        port: 9999,
         timeout: 3000
     },
 
