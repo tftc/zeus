@@ -53,7 +53,7 @@ module.exports = {
 
     // redis连接相关配置
     redis: {
-        host: '127.0.0.1',
+        host: '182.254.209.32',
         port: 6379
     }
 }

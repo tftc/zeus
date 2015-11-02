@@ -46,7 +46,6 @@ if (runEnv === 'dev') {
     });
 }
 
-console.log(config.redis.host)
 var redis = redisStore({
     host: config.redis.host,
     port: config.redis.port
@@ -59,8 +58,6 @@ redis.on('disconnect',function(){
 app.use(session({
     store: redis
 }));
-
-
 
 
 app.use(function *(next) {
