@@ -28,60 +28,6 @@ app.use(function *(next) {
     }
 })
 
-
-
-/*
-   try{
-        var redis = checkRedis;
-        console.log(redis);
-        app.use(session({
-          store: redis
-        }));
-        app.redisIsOk = true;
-   }
-   catch(e){
-    app.use(session());
-    console.log('no');
-    app.redisIsOk = false;
-   }
-*/
-
-
-
-/*
-app.use(function *(next){
-       var checkRedis = new Promise(function (resovel, reject) {
-        var redis = redisStore();
-        redis.on('disconnect',function (e) {
-            app.redisIsOk = false;
-            console.log(e);
-            reject(e);
-        });
-        redis.on('connect',function (e) {
-            app.redisIsOk = true;
-            resovel(redis);
-        });
-    });
-    console.log(checkRedis);
-    var redis = yield checkRedis;
-
-    yield next;
-})
-*/
-
-var redis = redisStore();
-app.redisIsOk = true;
-redis.on('disconnect',function(){
-    app.redisIsOk = false;
-})
-app.use(session({
-    store: redis
-}));
-
-
-//todo，promise对后续操作的保证，后面的注册进一步封装出来
-// 这里相当于是注册在所有的use的后面。对于注册顺序需要有保证
-
 // 设置模板
 view(app, config.view);
 
@@ -100,24 +46,30 @@ if (runEnv === 'dev') {
     });
 }
 
-app.use(function *error(next) {
-    yield next;
-    if (this.status === 404) {
-        yield this.render('error/404',{});
-    }
+console.log(config.redis.host)
+var redis = redisStore({
+    host: config.redis.host,
+    port: config.redis.port
 });
+
+app.redisIsOk = true;
+redis.on('disconnect',function(){
+    app.redisIsOk = false;
+})
+app.use(session({
+    store: redis
+}));
+
+
 
 
 app.use(function *(next) {
     var logid = genLogid();
     this.req.logid = logid;
-    console.log(app.redisIsOk);
     if(app.redisIsOk){
         var tiancainame = this.cookies.get('tiancainame',{ signed: true });
-        //console.log(this.session);
         try{
             var userInfo = this.session[tiancainame];
-            console.log(userInfo);
             this.userInfo = userInfo;
         }
         catch(e){
@@ -127,13 +79,21 @@ app.use(function *(next) {
         this.userInfo = null;
     }
     
-    tclog.notice({logid:logid,type:'pv',method:this.req.method,url:this.url,userInfo:userInfo})
+    tclog.notice({logid:logid,type:'pv',method:this.req.method,url:this.url,userInfo:this.userInfo})
     yield next;
 });
 
-
 // 设置路由
 router(app);
+
+app.use(function *error(next) {
+    if (this.status === 404) {
+        yield this.render('error/404',{noWrap:true});
+    }else{
+        yield next;
+    }
+});
+
 
 app.listen(8000);
 tclog.notice('UI Server已经启动：http://127.0.0.1:8000');

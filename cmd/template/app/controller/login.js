@@ -11,7 +11,8 @@ var co = require('co');
 module.exports = {
     show: function *() {
         yield this.render('login',{
-            userInfo : this.userInfo
+            noWrap: false,
+            userInfo: this.userInfo
         });
     },
 

@@ -26,12 +26,15 @@ gulp.task('start', function () {
         execMap: {
             js: 'node --harmony'
         },
-        args: ['--color']
+        args: ['--color'],
+        ignore: ['conf/index.js']
     });
 });
 
 // livereload
 gulp.task('reload', function () {
+    gulp.src('conf/dev/index.js')
+        .pipe(gulp.dest('conf'));
     gulp.src('').pipe(livereload());
 });
 

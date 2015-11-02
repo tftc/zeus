@@ -20,7 +20,7 @@ function getC(app) {
 
 function set(app) {
     app.use(router.routes());
-    app.use(router.allowedMethods());
+    //app.use(router.allowedMethods());
     getC(app).then(function (ctrs) {
         setMap(ctrs);
     }).catch(function (e) {

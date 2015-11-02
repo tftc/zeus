@@ -44,7 +44,6 @@ module.exports = {
         redictConsole: true
     },
 
-
     // 后端连接相关配置
     thirft: {
         backend: '10.42.83.16',
@@ -54,9 +53,7 @@ module.exports = {
 
     // redis连接相关配置
     redis: {
-        backend: '10.42.83.16',
-        port: 3000,
-        timeout: 3000
+        host: '127.0.0.1',
+        port: 6379
     }
-
 }
