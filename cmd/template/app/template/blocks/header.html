@@ -28,7 +28,21 @@
                   <li><a href="#">帮助</a></li>
                   <li><a href="#">关于我们</a></li>
                   <% if(userInfo) {%>
-                  <li class="login"><a href="#"><%=userInfo.loginName %></a></li>
+                  <!--<li class="login"><a href="#"><%=userInfo.loginName %></a></li>-->
+
+                  <li id="myAccount" class="my-account">
+                    <a href="/account" class="my-acc"><i class="iconfont icon-user"></i>我的账户<i class="iconfont icon-down"></i></a>
+                    <div id="accountMenu" class="diag-box">
+                    <div class="role"><img src="./img/role.gif" width="15" height="15"></div>
+                    <p>用户名: <%=userInfo.loginName %></p>
+                    <p>余额:<span class="red">&nbsp;￥0.00</span>
+                    <br>待收本息: ￥0.00</p>
+                    <div class="btn-group">
+                    <a href="/account/recharge">充值</a><a href="/account/withdraw" class="cash">提现</a></div>
+                    <hr><a href="/account/invest"><i class="iconfont icon-right"></i>投资管理</a><a href="/account/funds">  <i class="iconfont icon-right"></i>资金记录</a>
+                    <hr><a href="/logout">退出</a>
+                    </div>
+                  </li>
                   <% } else { %>
                   <li class="login"><a href="/login">登录</a></li> 
                   <li class="register"><a  href="/register"><i class="iconfont icon-user"></i>免费注册</a></li>

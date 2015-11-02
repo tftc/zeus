@@ -31,6 +31,7 @@ function set(app) {
 function setMap(ctrs) {
     router.get('/index', ctrs.index.show);
     router.get('/login',ctrs.login.show);
+    router.get('/logout',ctrs.login.logout);
     router.post('/login',ctrs.login.login);
 }
 

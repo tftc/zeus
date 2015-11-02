@@ -20,7 +20,7 @@ var api = require('./libs/api');
 
 app.keys = ['tiancai', 'xiaoguang'];
 
-app.use(function* (next) {
+app.use(function *(next) {
     if(this.url == '/favicon.ico'){
         //favicon return
     }else{
@@ -29,37 +29,55 @@ app.use(function* (next) {
 })
 
 
-var checkRedis = function () {
-    return new Promise(function (resovel, reject) {
-    var redis = redisStore();
-    resovel(redis);
-    /*
-    redis.on('disconnect',function (e) {
-        reject(e);
-    });
-    redis.on('connect',function (e) {
-        resovel(redis);
-    });
+
+/*
+   try{
+        var redis = checkRedis;
+        console.log(redis);
+        app.use(session({
+          store: redis
+        }));
+        app.redisIsOk = true;
+   }
+   catch(e){
+    app.use(session());
+    console.log('no');
+    app.redisIsOk = false;
+   }
 */
-    })
-}
-
-console.log(app);
 
 
-checkRedis().then(function(redis){
-    console.log('连接到redis成功');
-    console.log(app);
 
-    app.use(session({
-      store: redis
-    }));
-    app.redisIsOk = true;
+/*
+app.use(function *(next){
+       var checkRedis = new Promise(function (resovel, reject) {
+        var redis = redisStore();
+        redis.on('disconnect',function (e) {
+            app.redisIsOk = false;
+            console.log(e);
+            reject(e);
+        });
+        redis.on('connect',function (e) {
+            app.redisIsOk = true;
+            resovel(redis);
+        });
+    });
+    console.log(checkRedis);
+    var redis = yield checkRedis;
 
-}).catch(function(e){
-    console.log('连接到redis失败');
+    yield next;
+})
+*/
+
+var redis = redisStore();
+app.redisIsOk = true;
+redis.on('disconnect',function(){
     app.redisIsOk = false;
 })
+app.use(session({
+    store: redis
+}));
+
 
 //todo，promise对后续操作的保证，后面的注册进一步封装出来
 // 这里相当于是注册在所有的use的后面。对于注册顺序需要有保证
@@ -97,9 +115,9 @@ app.use(function *(next) {
     if(app.redisIsOk){
         var tiancainame = this.cookies.get('tiancainame',{ signed: true });
         //console.log(this.session);
-        tclog.notice(this.session);
         try{
             var userInfo = this.session[tiancainame];
+            console.log(userInfo);
             this.userInfo = userInfo;
         }
         catch(e){

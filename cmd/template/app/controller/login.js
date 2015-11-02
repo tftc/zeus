@@ -26,9 +26,15 @@ module.exports = {
        var loginName = data.user.loginName;
        if(this.app.redisIsOk){
             this.cookies.set('tiancainame', loginName , { signed: true });
-            console.log(this.session);
-            this.session['hallo'] = data.user; 
+            this.session[loginName] = data.user; 
        }
        this.response.redirect('index');
+    },
+
+    logout: function *(){
+//console.log(1111);
+        this.cookies.set('tiancainame', null, { signed: true });
+        this.session = null;
+        this.response.redirect('index');
     }
 };
