@@ -1,7 +1,7 @@
 {
   "name": "zeusjs",
-  "version": "0.0.9",
-  "description": "zeus-init",
+  "version": "0.1.0",
+  "description": "zeus-command",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
