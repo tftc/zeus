@@ -6,7 +6,6 @@
  */
 var passportModel = require('../model/passport.js');
 var tclog = require('../libs/tclog.js');
-var co = require('co');
 
 module.exports = {
     show: function *() {
@@ -22,7 +21,7 @@ module.exports = {
             credential: postBody.loginName,
             password: postBody.password,
             source: 1
-        } 
+        }
        var data = yield passportModel.login(loginData);
        var loginName = data.user.loginName;
        if(this.app.redisIsOk){
@@ -33,7 +32,6 @@ module.exports = {
     },
 
     logout: function *(){
-//console.log(1111);
         this.cookies.set('tiancainame', null, { signed: true });
         this.session = null;
         this.response.redirect('index');

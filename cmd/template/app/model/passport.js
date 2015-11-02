@@ -8,22 +8,22 @@
 var thrift = require('thrift');
 var PassportService = require('./service/PassportService');
 var ttypes = require('./service/passport_types');
+var thriftConf = require('../../conf/index.js').thirft;
 
 module.exports = {
     //登陆
     login: function(longinInfo){
-        
         return new Promise(function (resovel, reject) {
             var user = new ttypes.UserLogin({
-                credential:longinInfo.credential,
+                credential: longinInfo.credential,
                 password: longinInfo.password,
                 source: 2
             });
             var transport = thrift.TFramedTransport;
             var protocol = thrift.TBinaryProtocol;
-            var connection = thrift.createConnection('123.57.227.107', 9999, {
-              transport : transport,
-              protocol : protocol
+            var connection = thrift.createConnection(thriftConf.host, thriftConf.port, {
+                transport : transport,
+                protocol : protocol
             });
 
             connection.on('error', function(err) {
@@ -32,7 +32,6 @@ module.exports = {
 
             connection.on('connect', function(err) {
                 var client = thrift.createClient(PassportService, connection);
-
                 client.login(user, function(err,response){
                     if(err){
                         reject(err);
@@ -59,7 +58,6 @@ module.exports = {
         });
     },
 
-    //
     getUserInfo: function(userId){
         return new Promise(function (resovel, reject) {
             client.userInfo(userId, function(err, response){

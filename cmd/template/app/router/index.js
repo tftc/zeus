@@ -20,7 +20,6 @@ function getC(app) {
 
 function set(app) {
     app.use(router.routes());
-    //app.use(router.allowedMethods());
     getC(app).then(function (ctrs) {
         setMap(ctrs);
     }).catch(function (e) {
@@ -29,10 +28,11 @@ function set(app) {
 }
 
 function setMap(ctrs) {
+    router.get('/', ctrs.index.show);
     router.get('/index', ctrs.index.show);
-    router.get('/login',ctrs.login.show);
-    router.get('/logout',ctrs.login.logout);
-    router.post('/login',ctrs.login.login);
+    router.get('/login', ctrs.login.show);
+    router.get('/logout', ctrs.login.logout);
+    router.get('/api/getTestData', ctrs.api.getTestData);
+    router.post('/login', ctrs.login.login);
 }
-
 module.exports = set;
