@@ -7,6 +7,7 @@ var shell   = require('shelljs');
 var path = require('path');
 var chalk = require('chalk');
 var os = require('os');
+var spawn = require('child_process').spawn;
 
 var logo = [
             '            ====                ',
@@ -61,13 +62,10 @@ program.on('new', function (args) {
             console.log('makedir' + appName + '...');
             shell.exec('mkdir ' + appName);
             console.log('init app...');
-            initComFile(fromPath, toPath, 'app');
-            initComFile(fromPath, toPath, 'conf');
-            initComFile(fromPath, toPath, 'log');
-            initComFile(fromPath, toPath, 'public');
-            initComFile(fromPath, toPath, 'package.json');
-            initComFile(fromPath, toPath, 'gulpfile.js');
-            initComFile(fromPath, toPath, 'pid');
+            var copyList = ['app','conf','log','public','package.json','gulpfile.js','pid'];
+            copyList.forEach(function (fileName){
+                initComFile(fromPath, toPath, fileName);
+            }) 
             if (appType === 'h5') {
                 initSpecFile(fromPath + '/client-h5', toPath + '/client');
             }
@@ -77,9 +75,8 @@ program.on('new', function (args) {
             console.log('change dir to' + toPath + '...');
             shell.cd(toPath);
             console.log(shell.pwd());
-            initBin(fromPath,toPath);
             installDepd(toPath);
-            console.log(chalk.green('安装完毕'));
+            
         }
     }
 });
@@ -110,34 +107,14 @@ function initSpecFile(from, to) {
 
 }
 
-// 初始化可执行文件
-
-function initBin(fromPath, toPath){
-    shell.cd(fromPath + '/bin/node');
-    shell.exec('tar zxvf node.tar.gz');
-    shell.cd(toPath);
-    shell.exec('cp "' + nodePath + '/bin/node/node.tar.gz"' + toPath + '/bin/node.tar.gz"');
-    console.log('doing ' + nodePath + '/bin/node/node.tar.gz' + '->' + toPath + '/bin/node.tar.gz');
-    shell.cd(toPath);
-    shell.exec('tar zxvf node.tar.gz');
-    console.log(chalk.green('done!'));
-    console.log('change dir to' + toPath);
-    shell.cd(toPath);
-}
-
-
-// 检查全局依赖
-
+//全局依赖检查
 function checkGlb() {
     var glbList = ['pm2', 'gulp'];
     glbList.forEach(function (glb) {
-        try {
-            var tmp = require.resolve(glb);
-        }
-        catch(e) {
-            console.log('install global module' + glb);
-            shell.exec('npm install ' + glb + ' -g -d --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist');
-        }
+        console.log('install global module ' + glb);
+        spawn('npm.cmd', ['install',glb,'-g','-d','--registry=https://registry.npm.taobao.org','--disturl=https://npm.taobao.org/dist'], {
+          stdio: "inherit"
+        });
     });
 }
 
@@ -156,9 +133,13 @@ function checkNodeVersion() {
 function installDepd(pwd) {
     console.log('install dependencies start')
     shell.cd(pwd);
-    shell.exec('npm install -d --color --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist');
+    var install = spawn('npm.cmd', ['install','-d','--registry=https://registry.npm.taobao.org','--disturl=https://npm.taobao.org/dist'], {
+        stdio: "inherit"
+    });
+    install.on('close', function(){
+        console.log(chalk.green('安装完毕!'));
+    })
 }
-
 
 // 开发模式
 program.on('dev', function () {
@@ -175,7 +156,6 @@ program.on('deploy', function () {
     shell.exec('pm2 start ./app/bootStrap.js');
 })
 
-
 // 未知命令提示
 program
     .command('*')
@@ -183,8 +163,6 @@ program
     .action(function () {
         program.outputHelp();
     });
-
-
 
 program.parse(process.argv);
 
