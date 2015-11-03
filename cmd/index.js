@@ -8,7 +8,7 @@ var shell   = require('shelljs');
 var path = require('path');
 var chalk = require('chalk');
 var os = require('os');
-var spawn = require('child_process').spawn;
+var spawn = require('child_process').spawnSync;
 
 var logo = [
             '            ====                ',
@@ -57,7 +57,7 @@ program.on('new', function (args) {
         }
         if (fromPath) {
             console.log(logo);
-            checkGlb();
+            //checkGlb();
             var toPath = shell.pwd() + '/' + appName;
             console.log('install app start...');
             console.log('makedir' + appName + '...');
@@ -137,9 +137,6 @@ function installDepd(pwd) {
     var install = spawn('npm', ['install','-d','--registry=https://registry.npm.taobao.org','--disturl=https://npm.taobao.org/dist'], {
         stdio: "inherit"
     });
-    install.on('close', function(){
-        console.log(chalk.green('安装完毕!'));
-    })
 }
 
 // 开发模式
