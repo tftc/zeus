@@ -33,7 +33,7 @@ view(app, config.view);
 
 // 设置api
 api(app);
-app.use(require('koa-static')('client'));
+app.use(require('koa-static')(config.statics.staticRoute));
 app.use(bodyParser());
 tclog.init();
 // live-reload代理中间件
