@@ -7,6 +7,7 @@ var program  = require('commander');
 var shell   = require('shelljs');
 var path = require('path');
 var chalk = require('chalk');
+
 var os = require('os');
 var spawn = require('child_process').spawnSync;
 
@@ -32,7 +33,7 @@ program.on('--help', function () {
     console.log('  -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --');
     console.log('|             [创建] : zeus new (pc/h5)          |');
     console.log('|             [开发] : zeus dev                  |');
-    console.log('|             [调试] : zeus test                 |');
+    console.log('|             [调试] : zeus debug                 |');
     console.log('|             [提测] : zeus test                 |');
     console.log('|             [部署] : zeus deploy               |');
     console.log('  ----------------------------------------------');
