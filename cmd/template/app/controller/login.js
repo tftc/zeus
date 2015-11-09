@@ -11,6 +11,7 @@ module.exports = {
     show: function *() {
         yield this.render('login',{
             noWrap: false,
+            pageName: 'login',
             userInfo: this.userInfo
         });
     },

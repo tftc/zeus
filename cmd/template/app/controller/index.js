@@ -9,7 +9,8 @@ module.exports = {
         var self = this;
         yield self.render('user', {
             userInfo : self.userInfo||null,
-            noWrap: false
+            noWrap: false,
+            pageName: 'index'
         });
     }
 };
