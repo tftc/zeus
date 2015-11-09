@@ -8,6 +8,7 @@
 - 将本地的nodejs升级到0.12.0以上
 
 		建议使用彻底重新安装、或者使用nvm的方式
+                node -v 命令后显示版本超过0.12.0以上，再往下面的步骤继续
 - 快速全局安装PM2模块
 
 		sudo npm install -g -d pm2 --registry=https://registry.npm.taobao.org
