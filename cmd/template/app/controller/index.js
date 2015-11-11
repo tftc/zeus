@@ -8,9 +8,7 @@ module.exports = {
     show: function *() {
         var self = this;
         yield self.render('user', {
-            userInfo : self.userInfo||null,
-            noWrap: false,
-            pageName: 'index'
+            userInfo : self.userInfo||null
         });
     }
 };
