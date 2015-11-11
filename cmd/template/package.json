@@ -16,6 +16,7 @@
     "koa-redis": "^1.0.1",
     "koa-router": "^5.1.2",
     "koa-static": "^1.4.9",
+    "opn": "^3.0.3",
     "thrift": "^0.9.3",
     "zeus-template": "*"
   },
@@ -29,7 +30,6 @@
     "gulp-less": "^3.0.3",
     "gulp-uglify": "^1.4.2",
     "gulp-minify-css": "^1.2.1",
-    "gulp-watch": "^4.3.5",
     "fecs-gulp": "^0.1.1",
     "mocha": "^2.2.5",
     "should": "^7.1.0"

@@ -13,6 +13,7 @@ var less = require('gulp-less');
 var minifyCss = require('gulp-minify-css');
 var fecs = require('fecs-gulp');
 var fs = require('fs');
+var opn = require('opn');
 
 // 监听静态文件和模板以及pid修改，并刷新页面
 gulp.task('watch', function () {
@@ -23,7 +24,8 @@ gulp.task('watch', function () {
         'client/src/**/*.!(less)'
     ], function (event) {
         gulp.src('').pipe(livereload());
-    });
+    }).pipe(opn('http://127.0.0.1:8000', {app: ['google chrome']}))
+
 });
 
 gulp.task('start', function () {
@@ -138,5 +140,6 @@ gulp.task('dev', [
 ]);
 gulp.task('test', [
     'build',
-    'startTest'
+    'startTest',
+    'watch'
 ]);
