@@ -24,9 +24,12 @@ gulp.task('watch', function () {
         'client/src/**/*.!(less)'
     ], function (event) {
         gulp.src('').pipe(livereload());
-    }).pipe(opn('http://127.0.0.1:8000', {app: ['google chrome']}))
-
+    })
 });
+
+gulp.task('open', function () {
+	opn('http://127.0.0.1:8000', {app: ['google chrome']})
+})
 
 gulp.task('start', function () {
     gulp.src('conf/dev/index.js')
@@ -136,10 +139,12 @@ gulp.task('reload', function () {
 // 运行Gulp时，默认的Task
 gulp.task('dev', [
     'start',
-    'watch'
+    'watch',
+    'open'
 ]);
 gulp.task('test', [
     'build',
     'startTest',
-    'watch'
+    'watch',
+    'open'
 ]);
