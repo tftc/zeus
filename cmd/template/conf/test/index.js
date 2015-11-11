@@ -7,7 +7,7 @@
 var path = require('path');
 module.exports = {
 	// 当前运行模式
-	runEnv: 'dev',
+	runEnv: 'test',
 
 	// 应用全局配置
 	app: {
@@ -31,7 +31,8 @@ module.exports = {
 		layout: 'layout',
 		viewExt: 'html',
 		cache: false,
-		debug: true
+		debug: true,
+		useLess: false
 	},
 
 	// 日志相关配置
@@ -45,11 +46,11 @@ module.exports = {
 	},
 
 	// 后端连接相关配置
-	thirft: {
-		backend: '10.42.83.16',
-		port: 3000,
-		timeout: 3000
-	},
+    thirft: {
+        host: '123.57.227.107',
+        port: 9999,
+        timeout: 3000
+    },
 
 	// redis连接相关配置
 	redis: {

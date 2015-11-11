@@ -32,7 +32,8 @@ module.exports = {
         layout: 'layout',
         viewExt: 'html',
         cache: false,
-        debug: true
+        debug: true,
+        useLess: true
     },
 
     // 日志相关配置
