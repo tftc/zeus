@@ -7,14 +7,15 @@ var program  = require('commander');
 var shell   = require('shelljs');
 var path = require('path');
 var chalk = require('chalk');
-
 var os = require('os');
-var spawn = require('child_process').spawnSync;
-
+var open = require('opn');
+var child_process = require('child_process');
+var spawnSync = child_process.spawnSync;
+var spawn = child_process.spawn;
 var logo = [
             '            ====                ',
             '           -_  _-           ',
-            '           - __ -           ====================',
+            '           - __ -            ====================',
             '    ___====-_  _-====___                      //',
             '   _--^^^#/      \\#^^^--_                   //',
             '          ((    ))                        //',
@@ -24,7 +25,7 @@ var logo = [
             '            (oo)                  //',
             '          // vv \\\\              //',
             '        //        \\\\          //',
-            '      //            \\\\      ======================'
+            '      //            \\\\      ====================='
         ].join('\n');
 
 program.on('--help', function () {
@@ -114,8 +115,8 @@ function checkGlb() {
     var glbList = ['pm2', 'gulp'];
     glbList.forEach(function (glb) {
         console.log('install global module ' + glb);
-        spawn('npm', ['install',glb,'-g','-d','--registry=https://registry.npm.taobao.org','--disturl=https://npm.taobao.org/dist'], {
-          stdio: "inherit"
+        spawnSync('npm', ['install',glb,'-g','-d','--registry=https://registry.npm.taobao.org','--disturl=https://npm.taobao.org/dist'], {
+          stdio: 'inherit'
         });
     });
 }
@@ -135,8 +136,8 @@ function checkNodeVersion() {
 function installDepd(pwd) {
     console.log('install dependencies start')
     shell.cd(pwd);
-    var install = spawn('npm', ['install','-d','--registry=https://registry.npm.taobao.org','--disturl=https://npm.taobao.org/dist'], {
-        stdio: "inherit"
+    var install = spawnSync('npm', ['install','-d','--registry=https://registry.npm.taobao.org','--disturl=https://npm.taobao.org/dist'], {
+        stdio: 'inherit'
     });
 }
 
@@ -151,8 +152,16 @@ program.on('test', function () {
     shell.exec('gulp test --color');
 });
 
+//node debug 模式
+program.on('debug', function () {
+    spawn('node', ['--debug', '--harmony', './app/bootSrtap.js']);
+    open('http://127.0.0.1:8080/?port=5858', {app: ['google chrome']})
+    console.log('Node调试模式已经开启，请在新打开的页面完成js加载后进行调试');
+    shell.exec('node-inspector');
+});
+
 program.on('deploy', function () {
-    shell.exec('pm2 start ./app/bootStrap.js');
+   
 })
 
 // 未知命令提示
