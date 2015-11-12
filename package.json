@@ -1,6 +1,6 @@
 {
   "name": "zeus",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "tiancai frontend",
   "main": "index.js",
   "bin": {
