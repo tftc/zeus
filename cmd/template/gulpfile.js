@@ -14,6 +14,7 @@ var minifyCss = require('gulp-minify-css');
 var fecs = require('fecs-gulp');
 var fs = require('fs');
 var opn = require('opn');
+var gulpSequence = require('gulp-sequence')
 
 // 监听静态文件和模板以及pid修改，并刷新页面
 gulp.task('watch', function () {
@@ -71,26 +72,22 @@ gulp.task('build', function () {
 
     // common代码合并压缩
     var jsArr = [];
-    fs.readFile('client/src/js/common.js', 'utf8', function (err, data) {
-        if (err) {
-            throw err;
-        }
-
-        var arr = data.split('\n');
-        for (var i = 0, len = arr.length; i < len; i++) {
-            var regx = /src=\"(.+)\"/;
-            if (regx.test(arr[i])) {
-                var jsItem = arr[i].match(regx)[1];
-                if (jsItem !== '') {
-                    jsArr.push('client/src' + jsItem);
-                }
+    var data = fs.readFileSync('client/src/js/common.js', 'utf8');
+    var arr = data.split('\n');
+    for (var i = 0, len = arr.length; i < len; i++) {
+        var regx = /src=\"(.+)\"/;
+        if (regx.test(arr[i])) {
+            var jsItem = arr[i].match(regx)[1];
+            if (jsItem !== '') {
+                jsArr.push('client/src' + jsItem);
             }
-
         }
-        gulp.src(jsArr).pipe(concat('common.js'))
-            .pipe(uglify())
-            .pipe(gulp.dest('client/build/js/'));
-    });
+    }
+
+    gulp.src(jsArr).pipe(concat('common.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('client/build/js/'));
+
 
     // page部分的压缩合并
     gulp.src('client/src/js/page/**/*.js')
@@ -137,14 +134,14 @@ gulp.task('reload', function () {
 });
 
 // 运行Gulp时，默认的Task
-gulp.task('dev', [
+gulp.task('dev', gulpSequence(
     'start',
     'watch',
     'open'
-]);
-gulp.task('test', [
+));
+gulp.task('test', gulpSequence(
     'build',
     'startTest',
     'watch',
     'open'
-]);
+));
