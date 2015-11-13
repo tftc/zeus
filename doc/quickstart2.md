@@ -12,8 +12,8 @@
 
 ## 调试使用方法 ##
 - 说明 
-
-		这里说的debug是指nodejs的debug，浏览器端的debug，直接使用zeus dev命令，切换到开发模式，页面中加载的js和less均为编译前的源码，可以直接用chrome的开发工具进行相关调试。nodejs的debug需要zeus debug命令开启专门征对node的调试功能
+	
+	这里说的debug是指nodejs的debug，浏览器端的debug，直接使用zeus dev命令，切换到开发模式，页面中加载的js和less均为编译前的源码，可以直接用chrome的开发工具进行相关调试。nodejs的debug需要zeus debug命令开启专门征对node的调试功能
 
 - 执行命令
 		
