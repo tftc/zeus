@@ -5,7 +5,7 @@
 
 - 参考zeusjs的安装步骤，完成安装和初始化（安装最新版本，用最新的版本新建新的项目，之前已经初始化并开发的项目可以diff合并，最简单的方式是可以新建一个项目，把业务代码合并过来，目前特殊时期，一边在开发zeujs，一边在用，以后骨架稳定后就不需要频繁合并了）
 
-		移步参考 [ https://github.com/tftc/zeus/blob/master/doc/quickstart.md](https://github.com/tftc/zeus/blob/master/doc/quickstart.md "https://github.com/tftc/zeus/blob/master/doc/quickstart.md")
+	移步参考 [ https://github.com/tftc/zeus/blob/master/doc/quickstart.md](https://github.com/tftc/zeus/blob/master/doc/quickstart.md "https://github.com/tftc/zeus/blob/master/doc/quickstart.md")
 - 增加安装一个全局依赖node-inspector
 
 		sudo npm install -g -d node-inspector --registry=https://registry.npm.taobao.org
