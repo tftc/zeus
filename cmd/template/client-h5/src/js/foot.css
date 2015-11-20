@@ -1,0 +1,78 @@
+#footer {
+	position: fixed;
+    z-index: 999;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    background: #fff;
+    border-top: 1px #ff4d4d solid;
+}
+#footer nav aside {
+  overflow: hidden;
+  float: left;
+  color: #7d7d7d;
+  width: 25%;
+  text-align: center;
+}
+#footer nav aside.sel i {
+  color: #ff3737;
+}
+#footer nav aside i {
+  display: block;
+  width: 50px;
+  height: 25px;
+  margin: 0 auto;
+  margin-top: -10px;
+  font-size: 24px;
+}
+#footer nav aside i.index {
+  font-size: 28px;
+}
+#footer nav aside p {
+  font-size: .5rem;
+}
+#footer nav:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.owl-carousel {
+  margin-bottom: 30px;
+}
+.owl-carousel .banner_lop {
+  height: 7.1rem;
+}
+.owl-pagination {
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  margin-left: -20px;
+}
+.owl-theme .owl-controls .owl-page span {
+  background: #e6e6e6;
+  opacity: 0.8;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+  background: #f17420;
+  opacity: 1;
+}
+@keyframes spinner-circle-clipper {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes spinner-circle {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
