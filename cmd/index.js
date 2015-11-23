@@ -65,16 +65,15 @@ program.on('new', function (args) {
             console.log('makedir' + appName + '...');
             shell.exec('mkdir ' + appName);
             console.log('init app...');
-            var copyList = ['app','conf','log','public','package.json','gulpfile.js','pid'];
+            var copyList = ['app','conf','log','client','public','package.json','gulpfile.js','pid'];
+            var h5Patch = ['app','package.json','client','gulpfile.js'];
             copyList.forEach(function (fileName){
-                initComFile(fromPath, toPath, fileName);
-            }) 
-            if (appType === 'h5') {
-                initSpecFile(fromPath + '/client-h5', toPath + '/client');
-            }
-            else {
-                initSpecFile(fromPath + '/client-pc', toPath + '/client');
-            }
+                var formFile = fileName;
+                if(appType === 'h5' && h5Patch.indexOf(fileName) !== -1){
+                    formFile = 'h5-patch/'+fileName;
+                }
+                initComFile(fromPath, toPath, formFile, fileName);
+            })
             console.log('change dir to' + toPath + '...');
             shell.cd(toPath);
             console.log(shell.pwd());
@@ -85,10 +84,10 @@ program.on('new', function (args) {
 });
 
 // 文件拷贝操作
-function initComFile(fromPath, toPath, fileName) {
+function initComFile(fromPath, toPath, formFile, toFile) {
     try {
-        console.log('doing ' + fromPath + '/' + fileName + ' ->' + toPath + '/' + fileName);
-        shell.exec('cp -r "' + fromPath + '/"' + fileName + ' ' + toPath + '/' + fileName);
+        console.log('doing ' + fromPath + '/' + formFile + ' ->' + toPath + '/' + toFile);
+        shell.exec('cp -r "' + fromPath + '/"' + formFile + ' ' + toPath + '/' + toFile);
         console.log(chalk.green('done!'));
     }
     catch (e) {
