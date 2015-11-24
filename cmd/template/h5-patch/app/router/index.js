@@ -29,10 +29,5 @@ function set(app) {
 
 function setMap(ctrs) {
     router.get('/', ctrs.index.show);
-    router.get('/index', ctrs.index.show);
-    router.get('/login', ctrs.login.show);
-    router.get('/logout', ctrs.login.logout);
-    router.get('/api/getTestData', ctrs.api.getTestData);
-    router.post('/login', ctrs.login.login);
 }
 module.exports = set;

@@ -7,7 +7,7 @@
 module.exports = {
     show: function *() {
         var self = this;
-        yield self.render('user', {
+        yield self.render('index', {
             userInfo : self.userInfo||null
         });
     }
