@@ -1,12 +1,11 @@
-var React = require('react');
 require('./foot.css');
+var React = require('react');
 var Foot = React.createClass({
-	getInitialState(){
+	getInitialState : function(){
 		return {
 			activeIndex:1
 		};
 	},
-
 	render: function(){
     	return (
 			<footer id="footer">

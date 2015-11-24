@@ -69,7 +69,6 @@ gulp.task('startTest', function () {
 
 gulp.task('build', function () {
     // 单元测试
-
     // common代码合并压缩
     var jsArr = [];
     var data = fs.readFileSync('client/src/js/common.js', 'utf8');

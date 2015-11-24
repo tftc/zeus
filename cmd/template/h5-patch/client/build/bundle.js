@@ -50,12 +50,10 @@
 	var Reflux = __webpack_require__(165);
 	var Router = __webpack_require__(184).Router;
 	var Route = __webpack_require__(184).Route;
-
 	var Home = __webpack_require__(235);
 	var Crowd = __webpack_require__(249);
 	var Account = __webpack_require__(250);
 	var More = __webpack_require__(251);
-
 	var routers = (
 		React.createElement(Router, null, 
 	    	React.createElement(Route, {path: "/", component: Home}), 
@@ -103,7 +101,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  font-size: 20px;\n  -webkit-font-smoothing: antialiased;\n}\nhtml,\nbody {\n  background: #f7f7f7;\n  -webkit-overflow-scrolling: touch;\n}\n@media screen and (max-width: 414px) {\n  html {\n    font-size: 25.2px;\n  }\n}\n@media screen and (max-width: 393px) {\n  html {\n    font-size: 22px;\n  }\n}\n@media screen and (max-width: 375px) {\n  html {\n    font-size: 22px;\n  }\n}\n@media screen and (max-width: 360px) {\n  html {\n    font-size: 20px;\n  }\n}\n@media screen and (max-width: 320px) {\n  html {\n    font-size: 20px;\n  }\n}\n.clearfix {\n  zoom: 1;\n}\n.clearfix:after {\n  content: \".\";\n  display: block;\n  height: 0;\n  clear: both;\n  line-height: 0;\n  visibility: hidden;\n}\nul li {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\na:link,\na:visited,\na:hover,\na:active {\n  text-decoration: none;\n  color: #333;\n}\nbody, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, table, th, td, iframe, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {\n    margin: 0;\n    padding: 0;\n    font-family: Helvetica, \"Microsoft YaHei\", Arial;\n    -webkit-font-smoothing: antialiased;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url('/public/dist/font/iconfont-1647e00b.eot');\n  src: url('/public/dist/font/iconfont-1647e00b.eot?#iefix') format('embedded-opentype'),  \n  url(" + __webpack_require__(4) + ") format('woff'),  \n  url(" + __webpack_require__(5) + ") format('truetype'),  \n  url('/public/dist/font/iconfont-7c47fbca.svg#iconfont') format('svg');\n\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}", ""]);
+	exports.push([module.id, "html {\n  font-size: 20px;\n  -webkit-font-smoothing: antialiased;\n}\nhtml,\nbody {\n  background: #f7f7f7;\n  -webkit-overflow-scrolling: touch;\n}\n@media screen and (max-width: 414px) {\n  html {\n    font-size: 25.2px;\n  }\n}\n@media screen and (max-width: 393px) {\n  html {\n    font-size: 22px;\n  }\n}\n@media screen and (max-width: 375px) {\n  html {\n    font-size: 22px;\n  }\n}\n@media screen and (max-width: 360px) {\n  html {\n    font-size: 20px;\n  }\n}\n@media screen and (max-width: 320px) {\n  html {\n    font-size: 20px;\n  }\n}\n.clearfix {\n  zoom: 1;\n}\n.clearfix:after {\n  content: \".\";\n  display: block;\n  height: 0;\n  clear: both;\n  line-height: 0;\n  visibility: hidden;\n}\nul li {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\na:link,\na:visited,\na:hover,\na:active {\n  text-decoration: none;\n  color: #333;\n}\nbody, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, table, th, td, iframe, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {\n    margin: 0;\n    padding: 0;\n    font-family: Helvetica, \"Microsoft YaHei\", Arial;\n    -webkit-font-smoothing: antialiased;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url('/public/dist/font/iconfont-1647e00b.eot');\n  src: url('/public/dist/font/iconfont-1647e00b.eot?#iefix') format('embedded-opentype'),  \n  url(" + __webpack_require__(4) + ") format('woff'),  \n  url(" + __webpack_require__(5) + ") format('truetype'), \n  url('/public/dist/font/iconfont-7c47fbca.svg#iconfont') format('svg');\n\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n#content {\n\ttext-align: center;\n}", ""]);
 
 	// exports
 
@@ -26237,26 +26235,24 @@
 	var List = __webpack_require__(243);
 	var Home = React.createClass({displayName: "Home",
 		render: function(){
-	    	return React.createElement("div", {className: "sss"}, React.createElement(Banner, null), React.createElement(Foot, {currentPage: "home"}), React.createElement(List, null));
+	    	return (React.createElement("div", {className: "sss"}, React.createElement(Banner, null), React.createElement(Foot, {currentPage: "home"}), React.createElement(List, null)));
 	  	}
 	});
-	module.exports = Home
-
+	module.exports = Home;
 
 
 /***/ },
 /* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(7);
 	__webpack_require__(237);
+	var React = __webpack_require__(7);
 	var Foot = React.createClass({displayName: "Foot",
-		getInitialState(){
+		getInitialState : function(){
 			return {
 				activeIndex:1
 			};
 		},
-
 		render: function(){
 	    	return (
 				React.createElement("footer", {id: "footer"}, 
