@@ -66,7 +66,7 @@ program.on('new', function (args) {
             shell.exec('mkdir ' + appName);
             console.log('init app...');
             var copyList = ['app','conf','log','client','public','package.json','gulpfile.js','pid'];
-            var h5Patch = ['app','package.json','client','gulpfile.js'];
+            var h5Patch = ['app', 'conf', 'package.json','client','gulpfile.js'];
             copyList.forEach(function (fileName){
                 var formFile = fileName;
                 if(appType === 'h5' && h5Patch.indexOf(fileName) !== -1){
