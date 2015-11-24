@@ -29,5 +29,6 @@ function set(app) {
 
 function setMap(ctrs) {
     router.get('/', ctrs.index.show);
+    router.get('/api/getCrowdList', ctrs.api.getCrowdList);
 }
 module.exports = set;

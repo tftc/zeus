@@ -18,6 +18,5 @@ var routers = (
     	<Route path='/more' component={More}></Route>
   	</Router>
 );
-
 ReactDom.render(routers, document.getElementById('content'));
 
