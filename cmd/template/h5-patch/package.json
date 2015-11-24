@@ -19,6 +19,7 @@
     "koa-static": "^1.4.9",
     "opn": "^3.0.3",
     "react": "^0.14.2",
+    "react-bootstrap": "^0.28.1",
     "react-router": "^1.0.0",
     "reflux": "^0.3.0",
     "thrift": "^0.9.3",
