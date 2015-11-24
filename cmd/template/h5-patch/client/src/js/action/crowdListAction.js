@@ -1,6 +1,6 @@
 var Reflux = require('reflux');
 var crowdListAction = Reflux.createActions([
-  'fetchList',
-  'nextList'
+    'fetchList',
+    'nextList'
 ]);
 module.exports = crowdListAction;

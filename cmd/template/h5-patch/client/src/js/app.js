@@ -9,12 +9,12 @@ var Crowd = require('./layout/crowd');
 var Account = require('./layout/account');
 var More = require('./layout/more');
 var routers = (
-	<Router>
-    	<Route path='/' component={Home}></Route>
-    	<Route path='/account' component={Account}></Route>
-    	<Route path='/crowd' component={Crowd}></Route>
-    	<Route path='/more' component={More}></Route>
-  	</Router>
+    <Router>
+        <Route path='/' component={Home}></Route>
+        <Route path='/account' component={Account}></Route>
+        <Route path='/crowd' component={Crowd}></Route>
+        <Route path='/more' component={More}></Route>
+    </Router>
 );
 ReactDom.render(routers, document.getElementById('content'));
 

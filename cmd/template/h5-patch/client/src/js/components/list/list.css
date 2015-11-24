@@ -1,273 +1,273 @@
 #list {
-  padding: 0 .5rem;
-  margin-bottom: 3rem;
+    margin-bottom: 3rem;
+    padding: 0 0.5rem;
 }
 #list .fl {
-  float: left;
+    float: left;
 }
 #list .fr {
-  float: right;
+    float: right;
 }
 #list .item {
-  box-sizing: border-box;
-  border: 1px #ddd solid;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-bottom: .5rem;
-  background: #fff;
+    background: #fff;
+    border: 1px #ddd solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
 }
 
 #list .item header {
-  overflow: auto;
-  zoom: 1;
-  font-size: .6rem;
-  line-height: 1.2rem;
-  background: #fafafa;
-  color: #535353;
-  border-bottom: 1px #e7e7e7 solid;
-  padding-left: .6rem;
+    background: #fafafa;
+    border-bottom: 1px #e7e7e7 solid;
+    color: #535353;
+    font-size: 0.6rem;
+    line-height: 1.2rem;
+    overflow: auto;
+    padding-left: 0.6rem;
+    zoom: 1;
 }
 
 #list .item header span.regbg {
-  background: #b61c54;
-  font-size: .5rem;
-  display: block;
-  float: left;
-  padding: 0 2px;
-  min-width: 2.4rem;
-  max-width: 5rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  height: .85rem;
-  line-height: .85rem;
-  text-align: center;
-  color: #fff;
-  border-radius: 3px;
-  margin: 0.175rem 1.05rem 0.175rem 0;
+    background: #b61c54;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 0.5rem;
+    height: 0.85rem;
+    line-height: 0.85rem;
+    margin: 0.175rem 1.05rem 0.175rem 0;
+    max-width: 5rem;
+    min-width: 2.4rem;
+    overflow: hidden;
+    padding: 0 2px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #list .item header span .marq {
-  width: 5rem !important;
+    width: 5rem !important;
 }
 
 #list .item .contentR {
-  float: right;
-  width: 5rem;
-  text-align: center;
-  padding-left: 0;
-  padding-top: 0;
-  margin-top: .6rem;
+    float: right;
+    margin-top: 0.6rem;
+    padding-left: 0;
+    padding-top: 0;
+    text-align: center;
+    width: 5rem;
 }
 
 #list .item .contentR .desc {
-  font-size: .5rem;
-  margin-top: 8px;
+    font-size: 0.5rem;
+    margin-top: 8px;
 }
 
 #list .item .contentR .status {
-  box-sizing: border-box;
-  height: 1.9rem;
-  width: 1.9rem;
-  border-radius: 50%;
-  -webkit-border-top-left-radius: 50%;
-  -webkit-border-top-right-radius: 50%;
-  -webkit-border-bottom-left-radius: 50%;
-  -webkit-border-bottom-right-radius: 50%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 8;
-  overflow: hidden;
+    -webkit-border-bottom-left-radius: 50%;
+    -webkit-border-bottom-right-radius: 50%;
+    border-radius: 50%;
+    -webkit-border-top-left-radius: 50%;
+    -webkit-border-top-right-radius: 50%;
+    box-sizing: border-box;
+    height: 1.9rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 1.9rem;
+    z-index: 8;
 }
 
 #list .item .contentR .status aside {
-  position: absolute;
-  top: 0;
-  z-index: 2;
+    position: absolute;
+    top: 0;
+    z-index: 2;
 }
 
 #list .item .contentR .status aside span {
-  display: block;
-  position: absolute;
-  z-index: 1;
+    display: block;
+    position: absolute;
+    z-index: 1;
 }
 
 #list .item .contentR .status aside.cover {
-  box-sizing: border-box;
-  height: 1.9rem;
-  width: 1.9rem;
-  border: 2px #ddd solid;
-  z-index: 1;
-  border-radius: 50%;
+    border: 2px #ddd solid;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 1.9rem;
+    width: 1.9rem;
+    z-index: 1;
 }
 
 #list .item .contentR .status aside.cover.all {
-  border-color: red;
+    border-color: red;
 }
 
 #list .item .contentR .status aside.left {
-  left: 0;
-  width: 0.95rem;
-  height: 1.9rem;
-  clip: rect(0, 0.95rem, 1.9rem, 0);
-  z-index: 6;
+    clip: rect(0, 0.95rem, 1.9rem, 0);
+    height: 1.9rem;
+    left: 0;
+    width: 0.95rem;
+    z-index: 6;
 }
 
 #list .item .contentR .status aside.left .leftin {
-  left: 0;
-  clip: rect(0, 0.95rem, 1.9rem, 0);
-  box-sizing: border-box;
-  width: 1.9rem;
-  height: 1.9rem;
-  border: 2px solid red;
-  background: transparent;
-  border-radius: 50%;
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  transform: rotate(-180deg);
+    background: transparent;
+    border: 2px solid red;
+    border-radius: 50%;
+    box-sizing: border-box;
+    clip: rect(0, 0.95rem, 1.9rem, 0);
+    height: 1.9rem;
+    left: 0;
+    -webkit-transform: rotate(-180deg);
+       -moz-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    width: 1.9rem;
 }
 
 #list .item .contentR .status aside.left span {
-  height: 100%;
-  width: 50%;
-  background: #ff2d2d;
-  left: 0;
-  top: 0;
+    background: #ff2d2d;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 50%;
 }
 
 #list .item .contentR .status aside.right {
-  right: 0;
-  width: 0.95rem;
-  height: 1.9rem;
-  clip: rect(0, 0.95rem, 1.9rem, 0);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  z-index: 5;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    clip: rect(0, 0.95rem, 1.9rem, 0);
+    height: 1.9rem;
+    right: 0;
+    width: 0.95rem;
+    z-index: 5;
 }
 
 #list .item .contentR .status aside.right .rightin {
-  right: 0;
-  clip: rect(0, 0.95rem, 1.9rem, 0);
-  box-sizing: border-box;
-  width: 1.9rem;
-  height: 1.9rem;
-  border: 2px solid red;
-  background: transparent;
-  border-radius: 50%;
-  transform: rotate(0deg);
+    background: transparent;
+    border: 2px solid red;
+    border-radius: 50%;
+    box-sizing: border-box;
+    clip: rect(0, 0.95rem, 1.9rem, 0);
+    height: 1.9rem;
+    right: 0;
+    transform: rotate(0deg);
+    width: 1.9rem;
 }
 
 #list .item .contentR .status aside.right span {
-  height: 100%;
-  width: 50%;
-  background: #ff2d2d;
-  right: 0;
-  top: 0;
+    background: #ff2d2d;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 50%;
 }
 
 #list .item .contentR .status aside.inner {
-  height: 1.9rem;
-  line-height: 1.9rem;
-  width: 1.9rem;
-  background: transparent;
-  border-radius: 50%;
-  z-index: 10;
-  text-align: center;
-  color: #ff2d2d;
+    background: transparent;
+    border-radius: 50%;
+    color: #ff2d2d;
+    height: 1.9rem;
+    line-height: 1.9rem;
+    text-align: center;
+    width: 1.9rem;
+    z-index: 10;
 }
 
 #list .item .contentR .status aside.inner.start {
-  font-size: .75rem;
+    font-size: 0.75rem;
 }
 
 #list .item .contentR .status aside.inner.backing {
-  font-size: .5rem;
-  line-height: 1.95rem;
+    font-size: 0.5rem;
+    line-height: 1.95rem;
 }
 
 #list .item .contentR .status aside.inner.end {
-  box-sizing: border-box;
-  line-height: .75rem !important;
-  padding: 5px;
-  font-size: .5rem;
+    box-sizing: border-box;
+    font-size: 0.5rem;
+    line-height: 0.75rem !important;
+    padding: 5px;
 }
 
 #list .item .contentR .status aside.inner.hasDate {
-  right: 0;
-  bottom: 0;
+    bottom: 0;
+    right: 0;
 }
 
 #list .item .contentR .status aside.inner.hasDate p {
-  margin-top: .6rem;
-  font-size: .35rem;
-  line-height: .4rem;
-  height: .3rem;
+    font-size: 0.35rem;
+    height: 0.3rem;
+    line-height: 0.4rem;
+    margin-top: 0.6rem;
 }
 
 #list .item .contentR .status aside.inner.hasDate p:last-child {
-  margin-top: .2rem;
-  font-size: .35rem;
-  line-height: .35rem;
+    font-size: 0.35rem;
+    line-height: 0.35rem;
+    margin-top: 0.2rem;
 }
 
 #list .item .content {
-  padding: .85rem .75rem .5rem;
-  background: #fff;
-  float: left;
-  width: 9rem;
-  padding-right: 0;
+    background: #fff;
+    float: left;
+    padding: 0.85rem 0.75rem 0.5rem;
+    padding-right: 0;
+    width: 9rem;
 }
 
 #list .item .content .percent,
 #list .item .content .percentPlus {
-  font-size: 1.2rem;
-  line-height: 1.2rem;
-  color: #f90000;
+    color: #f90000;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
 }
 
 #list .item .content .percent span,
 #list .item .content .percentPlus span {
-  font-size: .6rem;
+    font-size: 0.6rem;
 }
 
 #list .item .content .percent span.plus,
 #list .item .content .percentPlus span.plus {
-  float: left;
-  font-size: 1.2rem;
-  margin-top: 0rem;
+    float: left;
+    font-size: 1.2rem;
+    margin-top: 0rem;
 }
 
 #list .item .content .percent span.plus:before,
 #list .item .content .percentPlus span.plus:before {
-  content: "+";
-  margin: 0 3px;
-  line-height: 1rem;
-  display: block;
-  float: left;
+    content: "+";
+    display: block;
+    float: left;
+    line-height: 1rem;
+    margin: 0 3px;
 }
 
 #list .item .content .percent span:first-child {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 #list .item .content .base {
-  width: 4rem;
+    width: 4rem;
 }
 
 #list .item .content .dateTime {
-  font-size: .625rem;
-  margin-top: .2rem;
-  font-weight: bold;
+    font-size: 0.625rem;
+    font-weight: bold;
+    margin-top: 0.2rem;
 }
 
 #list .item .content:after {
-  display: block;
-  content: "";
-  clear: both;
+    clear: both;
+    content: "";
+    display: block;
 }
 
 #list .item .content .btm {
-  font-size: .5rem;
-  margin-top: 13px;
+    font-size: 0.5rem;
+    margin-top: 13px;
 }
