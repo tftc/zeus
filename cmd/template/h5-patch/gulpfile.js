@@ -16,6 +16,8 @@ var fs = require('fs');
 var opn = require('opn');
 var gulpSequence = require('gulp-sequence');
 var webpack = require('webpack-stream');
+var wp = require('webpack-stream/node_modules/webpack');
+var rename = require('gulp-rename');
 
 gulp.task('start', function () {
     gulp.src('conf/dev/index.js')
@@ -26,7 +28,6 @@ gulp.task('start', function () {
         execMap: {
             js: 'node --harmony'
         },
-
         args: [
             '--color'
         ],
@@ -38,26 +39,46 @@ gulp.task('start', function () {
     });
 });
 
+
+gulp.task('startTest', function () {
+    gulp.src('conf/test/index.js')
+        .pipe(gulp.dest('conf'));
+    nodemon({
+        script: './app/bootSrtap.js',
+        ext: 'js',
+        execMap: {
+            js: 'node --harmony'
+        },
+        args: [
+            '--color'
+        ],
+        ignore: [
+            'conf/index.js',
+            'client/**/**',
+            'gulpfile.js'
+        ]
+    });
+});
+
+
 // 监听静态文件和模板以及pid修改，并刷新页面
 gulp.task('watch', function () {
     livereload.listen();
     gulp.watch([
-        'client/src/**/*.!(less)',
-        '!client/src/js/bundle/app.js'
-    ], ['react'])
+        'client/src/**/*.*'
+    ], ['react']);
 });
 
 gulp.task('open', function () {
-	opn('http://127.0.0.1:8000', {app: ['google chrome']})
+	opn('http://127.0.0.1:8000', {app: ['google chrome']});
 })
 
 gulp.task('react', function () {
 	return gulp.src('client/src/js/app.js')
 	.pipe(webpack(
 		{
-		    watch: true,
 		    output: {
-		        filename: 'app.js',
+		        filename: 'bundle.js',
 		    },
 		    module: {
 		      loaders: [
@@ -72,9 +93,38 @@ gulp.task('react', function () {
 		    },
 		}
 	))
-	.pipe(gulp.dest('client/src/js/bundle'))
+	.pipe(gulp.dest('client/build'))
 	.pipe(livereload());
 })
+
+
+gulp.task('build', function () {
+	return gulp.src('client/src/js/app.js')
+	.pipe(webpack(
+		{
+		    output: {
+		        filename: 'bundle.js',
+		    },
+		    plugins: [
+    			new wp.optimize.UglifyJsPlugin({minimize: true})
+    		],
+		    module: {
+		      loaders: [
+		        {test: /\.js$/, loader: "jsx-loader"},
+                {test: /\.css$/, loader: "style-loader!css-loader"},
+                {test: /\.woff$/, loader: "url?limit=10000&minetype=application/font-woff"},
+                {test: /\.ttf$/, loader: "file"},
+                {test: /\.eot$/, loader: "file"},
+                {test: /\.svg$/, loader: "file"},
+                {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8111192'}
+		      ],
+		    },
+		}
+	))
+	.pipe(gulp.dest('client/build'))
+	.pipe(livereload());
+})
+
 
 // 运行Gulp时，默认的Task
 gulp.task('dev', gulpSequence(
@@ -82,5 +132,11 @@ gulp.task('dev', gulpSequence(
     'watch',
     'open',
     'react'
-    
+));
+
+gulp.task('test', gulpSequence(
+    'startTest',
+    'watch',
+    'open',
+    'build'
 ));
