@@ -159,19 +159,30 @@ program.on('debug', function () {
     shell.exec('node-inspector');
 });
 
+//切换上线配置文件
+function changeOnline () {
+	console.log('切换配置文件');
+	shell.exec('rm ./conf/index.js');
+	shell.exec('cp ./conf/online/index.js ./conf/index.js');
+}
+
+
 program.on('deploy', function (args) {
     var cmd	= args[0].toLowerCase();
     switch(cmd){
     	case 'start':
+    		changeOnline()
     		shell.exec('pm2 start --node-args="--harmony" ./app/bootSrtap.js')
     		break;
     	case 'stop':
     		shell.exec('pm2 stop ./app/bootSrtap.js');
     		break;
     	case 'restart':
+    		changeOnline()
     		shell.exec('pm2 restart ./app/bootSrtap.js');
     		break;
     	case 'realod':
+    		changeOnline()
     		shell.exec('pm2 realod all');
     		break;
     	case 'del':
