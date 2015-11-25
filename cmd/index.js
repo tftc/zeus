@@ -159,8 +159,25 @@ program.on('debug', function () {
     shell.exec('node-inspector');
 });
 
-program.on('deploy', function () {
-   
+program.on('deploy', function (args) {
+    var cmd	= args[0].toLowerCase();
+    switch(cmd){
+    	case 'start':
+    		shell.exec('pm2 start --node-args="--harmony" ./app/bootSrtap.js')
+    		break;
+    	case 'stop':
+    		shell.exec('pm2 stop ./app/bootSrtap.js');
+    		break;
+    	case 'restart':
+    		shell.exec('pm2 restart ./app/bootSrtap.js');
+    		break;
+    	case 'realod':
+    		shell.exec('pm2 realod all');
+    		break;
+    	case 'del':
+    		shell.exec('pm2  delete ./app/bootSrtap.js');
+    		break;
+    }
 })
 
 // 未知命令提示
