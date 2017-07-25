@@ -1,6 +1,6 @@
 {
   "name": "zeusjs",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "zeus-command",
   "main": "index.js",
   "scripts": {
