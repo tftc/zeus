@@ -1,45 +1,35 @@
 {
   "name": "zeus",
-  "version": "0.1.1",
-  "description": "tiancai frontend",
+  "version": "0.2.0",
+  "description": "zeus init tool",
   "main": "index.js",
-  "bin": {
-    "zeus": "index.js"
-  },
-  "dependencies": {
-    "co": "^4.6.0",
-    "commander": "^2.8.1",
-    "extend": "^3.0.0",
-    "koa": "^1.0.0",
-    "koa-ejs": "^2.0.1",
-    "koa-router": "^5.1.2",
-    "koa-static": "^1.4.9"
-  },
-  "devDependencies": {
-    "chalk": "^1.1.1",
-    "fecs": "^0.4.4",
-    "gulp": "^3.9.0",
-    "gulp-livereload": "^3.8.0",
-    "gulp-nodemon": "^2.0.4",
-    "mocha": "^2.2.5",
-    "should": "^7.1.0"
+  "directories": {
+    "lib": "lib"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tftc/zeus.git"
+    "url": "ssh://woshiwanting@123.57.227.107:29418/zeus"
   },
-  "keywords": [
-    "frontend",
-    "tiancai",
-    "zeus"
-  ],
-  "author": "xiaoguang",
+  "author": "fe",
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tftc/zeus/issues"
-  },
-  "homepage": "https://github.com/tftc/zeus#readme"
+  "dependencies": {
+    "assert": "^1.4.1",
+    "colors": "^1.1.2",
+    "compressing": "^1.2.3",
+    "glob": "^7.1.2",
+    "inquirer": "^3.3.0",
+    "mem-fs": "^1.1.3",
+    "mem-fs-editor": "^3.0.2",
+    "mkdirp": "^0.5.1",
+    "mz-modules": "^2.0.0",
+    "node-homedir": "^1.1.0",
+    "urllib": "^2.25.1",
+    "yargs": "^10.0.3"
+  }
 }

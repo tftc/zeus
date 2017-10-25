@@ -1,7 +1,2 @@
-node_modules/gulp-nodemon
+node_modules
 .idea
-pid
-log/tiancai.log
-log/tiancai.log.*
-cmd/npm-debug.log
-cmd/npm-debug.log
