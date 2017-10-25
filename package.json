@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://woshiwanting@123.57.227.107:29418/zeus"
+    "url": "https://github.com/tftc/zeus/"
   },
   "author": "fe",
   "engines": {
@@ -19,13 +19,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "assert": "^1.4.1",
-    "colors": "^1.1.2",
-    "compressing": "^1.2.3",
-    "glob": "^7.1.2",
-    "inquirer": "^3.3.0",
-    "mem-fs": "^1.1.3",
-    "mem-fs-editor": "^3.0.2",
     "mkdirp": "^0.5.1",
     "mz-modules": "^2.0.0",
     "node-homedir": "^1.1.0",
