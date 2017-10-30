@@ -1,24 +1,42 @@
 {
-  "name": "zeus",
-  "version": "0.2.0",
+  "name": "zeusjs",
+  "version": "0.2.2",
   "description": "zeus init tool",
-  "main": "index.js",
+  "main": "lib/Command.js",
   "directories": {
     "lib": "lib"
   },
+  "preferGlobal": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "https://github.com/tftc/zeus/",
+  "bugs": "https://github.com/tftc/zeus/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/tftc/zeus/"
   },
+  "bin": {
+    "zeus": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "author": "fe",
   "engines": {
     "node": ">=6.0.0"
   },
   "license": "ISC",
   "dependencies": {
+    "assert": "^1.4.1",
+    "co": "^4.6.0",
+    "colors": "^1.1.2",
+    "compressing": "^1.2.3",
+    "glob": "^7.1.2",
+    "inquirer": "^3.3.0",
+    "mem-fs": "^1.1.3",
+    "mem-fs-editor": "^3.0.2",
     "mkdirp": "^0.5.1",
     "mz-modules": "^2.0.0",
     "node-homedir": "^1.1.0",
